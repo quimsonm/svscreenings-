@@ -1,0 +1,117 @@
+---
+import type { Package } from '../data/packages';
+
+interface Props {
+  pkg: Package;
+  showDetails?: boolean;
+}
+
+const { pkg, showDetails = false } = Astro.props;
+const isGold = pkg.slug === 'gold-standard';
+const isHighlighted = pkg.highlighted;
+---
+
+<div class:list={[
+  'relative rounded-card bg-white flex flex-col overflow-hidden transition-all duration-300',
+  isHighlighted ? 'ring-2 ring-gold shadow-xl scale-[1.02] lg:scale-105' : 'shadow-lg hover:shadow-xl',
+  isGold && 'ring-2 ring-gold/40',
+]}>
+  {/* Badge */}
+  {pkg.badge && (
+    <div class:list={[
+      'absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider',
+      isHighlighted ? 'bg-gold text-white' : 'bg-gold/10 text-gold',
+    ]}>
+      {pkg.badge}
+    </div>
+  )}
+
+  {/* Header */}
+  <div class:list={[
+    'px-6 pt-8 pb-6',
+    isGold && 'bg-gradient-to-br from-navy to-navy-dark text-white',
+  ]}>
+    <h3 class:list={[
+      'font-sans font-bold text-lg',
+      isGold ? 'text-gold-light' : 'text-charcoal',
+    ]}>{pkg.name}</h3>
+    <div class="mt-2 flex items-baseline gap-1">
+      <span class:list={[
+        'text-4xl font-serif',
+        isGold ? 'text-white' : 'text-charcoal',
+      ]}>${pkg.price}</span>
+    </div>
+    {showDetails && (
+      <p class:list={[
+        'mt-2 text-sm',
+        isGold ? 'text-white/70' : 'text-slate',
+      ]}>{pkg.description}</p>
+    )}
+  </div>
+
+  {/* Features */}
+  <div class="px-6 py-5 flex-1 border-t border-warmgray/40">
+    {showDetails && (
+      <div class="mb-4">
+        <p class="text-xs font-sans font-semibold uppercase tracking-wider text-slate mb-1">Best for</p>
+        <p class="text-sm text-charcoal font-sans">{pkg.bestFor}</p>
+      </div>
+    )}
+    {showDetails && (
+      <div class="flex gap-4 mb-4 text-xs text-slate font-sans">
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          {pkg.duration}
+        </span>
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+          {pkg.location}
+        </span>
+      </div>
+    )}
+
+    <p class="text-xs font-sans font-semibold uppercase tracking-wider text-slate mb-3">Included Screenings</p>
+    <ul class="space-y-2.5">
+      {pkg.features.map((feature) => (
+        <li class="flex items-start gap-2.5 text-sm text-charcoal font-sans">
+          <svg class="w-4 h-4 mt-0.5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          {feature}
+        </li>
+      ))}
+    </ul>
+
+    {pkg.extras && (
+      <div class="mt-4 pt-4 border-t border-warmgray/40">
+        <ul class="space-y-2.5">
+          {pkg.extras.map((extra) => (
+            <li class="flex items-start gap-2.5 text-sm font-sans font-medium text-gold-hover">
+              <svg class="w-4 h-4 mt-0.5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+              </svg>
+              {extra}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+
+  {/* CTA */}
+  <div class="px-6 pb-6">
+    <a
+      href={pkg.squareUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={[
+        'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
+        isHighlighted || isGold
+          ? 'bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md'
+          : 'border-2 border-gold text-gold hover:bg-gold hover:text-white',
+      ]}
+    >
+      Book {pkg.name}
+    </a>
+  </div>
+</div>

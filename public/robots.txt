@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svscreenings.com/sitemap-index.xml

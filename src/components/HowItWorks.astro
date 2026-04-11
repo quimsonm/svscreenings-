@@ -1,0 +1,58 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Book Online',
+    description: 'Choose your screening package and select a Saturday time slot that works for you.',
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>`,
+  },
+  {
+    number: '2',
+    title: 'Get Screened',
+    description: 'Visit our clinic or we come to you. Your screening takes 45–90 minutes — no special prep required.',
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>`,
+  },
+  {
+    number: '3',
+    title: 'Get Your Results',
+    description: 'Receive a detailed report within 48 hours. Gold Standard includes board-certified physician interpretation.',
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.745 3.745 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>`,
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-site">
+    <div class="text-center max-w-2xl mx-auto mb-14 fade-in-up">
+      <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Simple. Fast. Life-Saving.</h2>
+      <p class="mt-3 text-lg text-slate font-sans">Three steps to peace of mind</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
+      <!-- Connecting line (desktop only) -->
+      <div class="hidden md:block absolute top-16 left-[20%] right-[20%] h-px border-t-2 border-dashed border-gold/30"></div>
+
+      {steps.map((step) => (
+        <div class="flex flex-col items-center text-center fade-in-up">
+          <!-- Number circle -->
+          <div class="relative mb-5">
+            <div class="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+              <span set:html={step.icon} />
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-gold rounded-full flex items-center justify-center text-white text-xs font-sans font-bold">
+              {step.number}
+            </div>
+          </div>
+          <h3 class="text-xl font-sans font-semibold text-charcoal mb-2">{step.title}</h3>
+          <p class="text-slate font-sans text-sm leading-relaxed max-w-xs">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 fade-in-up">
+      <a href="/pricing#booking" class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+        Book Your Screening Today
+      </a>
+    </div>
+  </div>
+</section>

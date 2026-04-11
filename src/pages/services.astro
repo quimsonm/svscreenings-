@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import { services } from '../data/services';
+import { faqs } from '../data/faq';
+
+const serviceFaqs = faqs.filter((f) => f.category === 'About Our Screenings').slice(0, 4);
+
+const iconMap: Record<string, string> = {
+  artery: `<svg class="w-16 h-16" fill="none" viewBox="0 0 48 48" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="16" /><path d="M24 8v32M16 16c4 4 8 4 12 0M16 32c4-4 8-4 12 0" stroke-linecap="round"/></svg>`,
+  aorta: `<svg class="w-16 h-16" fill="none" viewBox="0 0 48 48" stroke="currentColor" stroke-width="1.5"><path d="M24 6v8M24 34v8M20 14c-4 4-6 8-6 14s2 6 6 6h8c4 0 6 0 6-6s-2-10-6-14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3"/></svg>`,
+  heart: `<svg class="w-16 h-16" fill="none" viewBox="0 0 48 48" stroke="currentColor" stroke-width="1.5"><path d="M24 42s-16-8.4-16-20.25c0-4.97 3.73-9 8.33-9 3.07 0 5.72 1.67 7.67 4.33 1.95-2.66 4.6-4.33 7.67-4.33 4.6 0 8.33 4.03 8.33 9C40 33.6 24 42 24 42z" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 24h6l2-4 4 8 2-4h6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  leg: `<svg class="w-16 h-16" fill="none" viewBox="0 0 48 48" stroke="currentColor" stroke-width="1.5"><path d="M22 6c0 4-2 10-2 16s2 10 2 16M26 6c0 4 2 10 2 16s-2 10-2 16" stroke-linecap="round"/><path d="M18 18h12M18 30h12" stroke-linecap="round" opacity="0.5"/></svg>`,
+};
+---
+
+<BaseLayout
+  title="Ultrasound Screening Services | Heart, Carotid, Aorta, Vascular | Signal View Screenings"
+  description="Comprehensive non-invasive ultrasound screenings: echocardiogram, carotid artery, aorta aneurysm, peripheral artery disease. Certified sonographers in Las Vegas."
+>
+  <PageHero
+    title="Our Screening Services"
+    subtitle="Hospital-grade ultrasound technology for early detection of life-threatening conditions"
+    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
+  />
+
+  <!-- Service Detail Sections -->
+  {services.map((service, i) => (
+    <section id={service.slug} class:list={['section-padding', i % 2 === 0 ? 'bg-white' : 'bg-ivory']}>
+      <div class="container-site">
+        <div class:list={['grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start', i % 2 !== 0 && 'lg:grid-flow-dense']}>
+          <!-- Text column -->
+          <div class:list={['fade-in-up', i % 2 !== 0 && 'lg:col-start-2']}>
+            <div class="text-gold mb-4" set:html={iconMap[service.icon] || iconMap.heart} />
+            <h2 class="text-3xl md:text-4xl font-serif text-charcoal">{service.title}</h2>
+
+            <div class="mt-6 space-y-6">
+              <div>
+                <h3 class="font-sans font-semibold text-base text-charcoal mb-2">What It Is</h3>
+                <p class="text-slate font-sans leading-relaxed">{service.whatItIs}</p>
+              </div>
+
+              <div>
+                <h3 class="font-sans font-semibold text-base text-charcoal mb-2">Why It Matters</h3>
+                <p class="text-slate font-sans leading-relaxed">{service.whyItMatters}</p>
+              </div>
+
+              <div>
+                <h3 class="font-sans font-semibold text-base text-charcoal mb-2">Who Should Get Screened</h3>
+                <ul class="space-y-2">
+                  {service.whoShouldGet.map((item) => (
+                    <li class="flex items-start gap-2.5 text-sm text-slate font-sans">
+                      <svg class="w-4 h-4 mt-0.5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-sans font-semibold text-base text-charcoal mb-2">What to Expect</h3>
+                <p class="text-slate font-sans leading-relaxed">{service.whatToExpect}</p>
+              </div>
+
+              <!-- Package badges -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-sans font-medium text-slate uppercase tracking-wider">Included in:</span>
+                {service.includedIn.map((pkg) => (
+                  <span class="px-3 py-1 bg-gold/10 text-gold-hover text-xs font-sans font-semibold rounded-full">{pkg}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual column -->
+          <div class:list={['fade-in-up', i % 2 !== 0 && 'lg:col-start-1']}>
+            <div class="bg-gradient-to-br from-navy/5 to-gold/5 rounded-2xl aspect-[4/3] flex items-center justify-center border border-warmgray/30">
+              <div class="text-center p-8">
+                <div class="text-gold/30 mx-auto mb-4" set:html={iconMap[service.icon] || iconMap.heart} />
+                <p class="text-sm text-slate/60 font-sans italic">Professional imagery coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Package Comparison CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-site text-center fade-in-up">
+      <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Find the Right Package for You</h2>
+      <p class="mt-3 text-lg text-slate font-sans max-w-xl mx-auto">Compare our three screening packages to find the level of care that fits your needs.</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/pricing" class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+          Compare Packages
+        </a>
+        <a href="tel:+17028436612" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Or call us at 702.843.6612
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Snippet -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-10 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Common Questions</h2>
+      </div>
+      <div class="fade-in-up">
+        <FAQAccordion items={serviceFaqs} />
+      </div>
+      <p class="text-center mt-8 text-sm text-slate font-sans">
+        <a href="/faq" class="text-navy font-medium hover:text-gold transition-colors">See all frequently asked questions →</a>
+      </p>
+    </div>
+  </section>
+
+  <CTABanner heading="Ready to Get Screened?" subtext="Take the first step toward peace of mind. Book your screening today." />
+</BaseLayout>
