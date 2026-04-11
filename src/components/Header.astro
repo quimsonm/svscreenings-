@@ -1,12 +1,13 @@
 ---
 import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
 
 const navLinks = [
-  { label: 'Services', href: '/services' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Services', href: link('/services') },
+  { label: 'Pricing', href: link('/pricing') },
+  { label: 'About', href: link('/about') },
+  { label: 'FAQ', href: link('/faq') },
+  { label: 'Contact', href: link('/contact') },
 ];
 ---
 
@@ -14,7 +15,7 @@ const navLinks = [
   <div class="container-site">
     <div class="flex items-center justify-between h-20 transition-all duration-300" id="header-inner">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 shrink-0">
+      <a href={link('/')} class="flex items-center gap-3 shrink-0">
         <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
           <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 8C16 8 10 14 10 22C10 30 16 40 24 44C32 40 38 30 38 22C38 14 32 8 24 8Z" stroke="#C8963E" stroke-width="2.5" fill="none"/>
@@ -48,7 +49,7 @@ const navLinks = [
           {siteConfig.phone}
         </a>
 
-        <a href="/pricing#booking" class="hidden sm:inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-hover text-white text-sm font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+        <a href={link('/pricing#booking')} class="hidden sm:inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-hover text-white text-sm font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
           Book Your Screening
         </a>
 
@@ -77,7 +78,7 @@ const navLinks = [
           </svg>
           {siteConfig.phone}
         </a>
-        <a href="/pricing#booking" class="flex items-center justify-center py-3 bg-gold hover:bg-gold-hover text-white text-base font-sans font-semibold rounded-lg transition-colors">
+        <a href={link('/pricing#booking')} class="flex items-center justify-center py-3 bg-gold hover:bg-gold-hover text-white text-base font-sans font-semibold rounded-lg transition-colors">
           Book Your Screening
         </a>
       </div>

@@ -5,6 +5,7 @@ import CTABanner from '../components/CTABanner.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import { services } from '../data/services';
 import { faqs } from '../data/faq';
+import { link } from '../utils/links';
 
 const serviceFaqs = faqs.filter((f) => f.category === 'About Our Screenings').slice(0, 4);
 
@@ -23,7 +24,7 @@ const iconMap: Record<string, string> = {
   <PageHero
     title="Our Screening Services"
     subtitle="Hospital-grade ultrasound technology for early detection of life-threatening conditions"
-    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Services' }]}
   />
 
   <!-- Service Detail Sections -->
@@ -77,11 +78,18 @@ const iconMap: Record<string, string> = {
           </div>
 
           <!-- Visual column -->
+          {/* To add a real image: import it at top of file, then replace the placeholder div below with:
+              <img src={yourImage.src} alt="Description" class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg" /> */}
           <div class:list={['fade-in-up', i % 2 !== 0 && 'lg:col-start-1']}>
-            <div class="bg-gradient-to-br from-navy/5 to-gold/5 rounded-2xl aspect-[4/3] flex items-center justify-center border border-warmgray/30">
-              <div class="text-center p-8">
-                <div class="text-gold/30 mx-auto mb-4" set:html={iconMap[service.icon] || iconMap.heart} />
-                <p class="text-sm text-slate/60 font-sans italic">Professional imagery coming soon</p>
+            <div class="relative rounded-2xl aspect-[4/3] overflow-hidden border border-warmgray/20 shadow-lg">
+              <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy-dark to-navy"></div>
+              <div class="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-gold/5"></div>
+              <div class="relative h-full flex flex-col items-center justify-center p-8">
+                <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                  <div class="text-gold/60" set:html={iconMap[service.icon] || iconMap.heart} />
+                </div>
+                <p class="text-white/40 text-sm font-sans font-medium tracking-wide uppercase">{service.shortTitle}</p>
+                <div class="mt-4 w-16 h-px bg-gold/30"></div>
               </div>
             </div>
           </div>
@@ -96,7 +104,7 @@ const iconMap: Record<string, string> = {
       <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Find the Right Package for You</h2>
       <p class="mt-3 text-lg text-slate font-sans max-w-xl mx-auto">Compare our three screening packages to find the level of care that fits your needs.</p>
       <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/pricing" class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+        <a href={link('/pricing')} class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
           Compare Packages
         </a>
         <a href="tel:+17028436612" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
@@ -119,7 +127,7 @@ const iconMap: Record<string, string> = {
         <FAQAccordion items={serviceFaqs} />
       </div>
       <p class="text-center mt-8 text-sm text-slate font-sans">
-        <a href="/faq" class="text-navy font-medium hover:text-gold transition-colors">See all frequently asked questions →</a>
+        <a href={link('/faq')} class="text-navy font-medium hover:text-gold transition-colors">See all frequently asked questions →</a>
       </p>
     </div>
   </section>

@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
 
 interface Props {
   heading?: string;
@@ -13,7 +14,7 @@ const {
   heading = "Your Health Can't Wait",
   subtext = 'Limited Saturday appointments available. Book your screening today.',
   ctaText = 'Book Your Screening',
-  ctaHref = '/pricing#booking',
+  ctaHref = link('/pricing#booking'),
   showPhone = true,
 } = Astro.props;
 ---

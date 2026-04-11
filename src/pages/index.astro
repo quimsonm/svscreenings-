@@ -9,6 +9,7 @@ import CTABanner from '../components/CTABanner.astro';
 import { services } from '../data/services';
 import { packages } from '../data/packages';
 import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
 ---
 
 <BaseLayout
@@ -65,10 +66,10 @@ import { siteConfig } from '../data/siteConfig';
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="/pricing#booking" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-base">
+          <a href={link('/pricing#booking')} class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-base">
             Book Your Screening
           </a>
-          <a href="/pricing" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white font-sans font-medium rounded-lg transition-all duration-200 text-base">
+          <a href={link('/pricing')} class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white font-sans font-medium rounded-lg transition-all duration-200 text-base">
             View Our Packages
           </a>
         </div>
@@ -130,7 +131,7 @@ import { siteConfig } from '../data/siteConfig';
 
       <p class="text-center mt-8 text-sm text-slate font-sans fade-in-up">
         All screenings performed by certified sonographers with 5+ years experience.
-        <a href="/pricing" class="text-navy font-medium hover:text-gold transition-colors ml-1">View full pricing details →</a>
+        <a href={link('/pricing')} class="text-navy font-medium hover:text-gold transition-colors ml-1">View full pricing details →</a>
       </p>
     </div>
   </section>
@@ -174,7 +175,7 @@ import { siteConfig } from '../data/siteConfig';
           </ul>
 
           <div class="mt-8">
-            <a href="/pricing#booking" class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            <a href={link('/pricing#booking')} class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
               Take Control of Your Health
             </a>
           </div>

@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
 ---
 
 <footer class="bg-navy-dark text-white">
@@ -7,7 +8,7 @@ import { siteConfig } from '../data/siteConfig';
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
       <!-- Column 1: Brand -->
       <div class="sm:col-span-2 lg:col-span-1">
-        <a href="/" class="flex items-center gap-3 mb-4">
+        <a href={link('/')} class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
             <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 8C16 8 10 14 10 22C10 30 16 40 24 44C32 40 38 30 38 22C38 14 32 8 24 8Z" stroke="#C8963E" stroke-width="2.5" fill="none"/>
@@ -39,15 +40,15 @@ import { siteConfig } from '../data/siteConfig';
         <h4 class="font-sans font-semibold text-sm uppercase tracking-wider text-white/90 mb-4">Quick Links</h4>
         <ul class="space-y-2.5">
           {[
-            { label: 'Home', href: '/' },
-            { label: 'Services', href: '/services' },
-            { label: 'Pricing', href: '/pricing' },
-            { label: 'About Us', href: '/about' },
-            { label: 'FAQ', href: '/faq' },
-            { label: 'Contact', href: '/contact' },
-          ].map((link) => (
+            { label: 'Home', href: link('/') },
+            { label: 'Services', href: link('/services') },
+            { label: 'Pricing', href: link('/pricing') },
+            { label: 'About Us', href: link('/about') },
+            { label: 'FAQ', href: link('/faq') },
+            { label: 'Contact', href: link('/contact') },
+          ].map((item) => (
             <li>
-              <a href={link.href} class="text-sm text-white/70 hover:text-gold transition-colors">{link.label}</a>
+              <a href={item.href} class="text-sm text-white/70 hover:text-gold transition-colors">{item.label}</a>
             </li>
           ))}
         </ul>
@@ -114,8 +115,8 @@ import { siteConfig } from '../data/siteConfig';
     <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/50">
       <p>&copy; {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.</p>
       <div class="flex gap-4">
-        <a href="/privacy" class="hover:text-white/80 transition-colors">Privacy Policy</a>
-        <a href="/terms" class="hover:text-white/80 transition-colors">Terms of Service</a>
+        <a href={link('/privacy')} class="hover:text-white/80 transition-colors">Privacy Policy</a>
+        <a href={link('/terms')} class="hover:text-white/80 transition-colors">Terms of Service</a>
       </div>
     </div>
   </div>

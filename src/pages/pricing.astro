@@ -6,6 +6,7 @@ import BookingForm from '../components/BookingForm.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { packages } from '../data/packages';
 import { services } from '../data/services';
+import { link } from '../utils/links';
 ---
 
 <BaseLayout
@@ -15,7 +16,7 @@ import { services } from '../data/services';
   <PageHero
     title="Transparent, Simple Pricing"
     subtitle="No hidden fees. No referrals. No insurance headaches."
-    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pricing' }]}
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Pricing' }]}
   />
 
   <!-- Package Cards -->
@@ -173,5 +174,5 @@ import { services } from '../data/services';
   <!-- Booking Form -->
   <BookingForm />
 
-  <CTABanner heading="Questions About Our Packages?" subtext="Our team is happy to help you choose the right screening for your needs." ctaText="Contact Us" ctaHref="/contact" />
+  <CTABanner heading="Questions About Our Packages?" subtext="Our team is happy to help you choose the right screening for your needs." ctaText="Contact Us" ctaHref={link('/contact')} />
 </BaseLayout>

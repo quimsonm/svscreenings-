@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
 ---
 
 <BaseLayout
@@ -12,7 +13,7 @@ import { siteConfig } from '../data/siteConfig';
   <PageHero
     title="Get in Touch"
     subtitle="Questions? We're here to help."
-    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Contact' }]}
   />
 
   <section class="section-padding bg-white">
@@ -104,7 +105,7 @@ import { siteConfig } from '../data/siteConfig';
     <div class="container-site text-center">
       <p class="text-lg text-white/80 font-sans mb-4">Ready to book? Skip the form.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/pricing#booking" class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200">
+        <a href={link('/pricing#booking')} class="inline-flex items-center px-8 py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200">
           Book Your Screening
         </a>
         <a href={`tel:${siteConfig.phoneTel}`} class="text-white/70 hover:text-white font-sans text-sm transition-colors">
