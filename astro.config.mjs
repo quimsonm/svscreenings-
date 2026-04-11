@@ -4,5 +4,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://svscreenings.com',
+  site: 'https://quimsonm.github.io',
+  base: '/svscreenings-',
 });
