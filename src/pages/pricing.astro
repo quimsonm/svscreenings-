@@ -141,12 +141,16 @@ import conciergeHome from '../assets/images/concierge-home.png';
       <div id="booking" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in-up">
         <!-- Left: Image + Benefits -->
         <div>
-          <img
-            src={conciergeHome.src}
-            alt="Couple welcoming concierge screening service at their Las Vegas home"
+          <video
+            id="gold-standard-video"
+            muted
+            playsinline
+            preload="metadata"
+            poster={conciergeHome.src}
             class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg mb-6"
-            loading="lazy"
-          />
+          >
+            <source src={link('/hero-video.mp4')} type="video/mp4" />
+          </video>
           <ul class="space-y-3">
             {['All ultrasound screenings included', 'We come to your home or office', 'Flexible scheduling at your convenience', 'Physician-signed screening report'].map((item) => (
               <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
@@ -286,6 +290,25 @@ import conciergeHome from '../assets/images/concierge-home.png';
 
   <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
+      // Auto-play video when arriving via anchor link
+      var video = document.getElementById('gold-standard-video');
+      if (video && (window.location.hash === '#gold-standard-inquiry' || window.location.hash === '#booking')) {
+        video.play();
+      }
+
+      // Also play when section scrolls into view
+      if (video) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              video.play();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+        observer.observe(video);
+      }
+
       var form = document.getElementById('gold-standard-form');
       if (!form) return;
 
