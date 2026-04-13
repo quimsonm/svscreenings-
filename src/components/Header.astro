@@ -64,7 +64,7 @@ const navLinks = [
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+  <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-white z-[999] transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
     <nav class="flex flex-col p-6 gap-1">
       {navLinks.map((link) => (
         <a href={link.href} class="text-lg font-sans font-medium text-charcoal hover:text-navy py-3 border-b border-warmgray/50 transition-colors">
