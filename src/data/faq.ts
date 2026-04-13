@@ -41,7 +41,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'About Our Screenings',
     question: 'Who performs the screenings?',
-    answer: 'All screenings are performed by highly trained, certified sonographers with 5+ years of experience. Our team has over a decade of partnership with Las Vegas clinics performing full diagnostic ultrasounds.',
+    answer: 'All screenings are performed by highly trained and experienced sonographers with 5+ years of hands-on diagnostic experience. Our team has over a decade of experience working with Las Vegas clinics performing full diagnostic ultrasounds.',
   },
 
   // Pricing & Payment
