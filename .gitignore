@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# raw assets (originals, not used by build)
+/assets/
+
 # macOS-specific files
 .DS_Store
 

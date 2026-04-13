@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+---
+
+<BaseLayout
+  title="Terms of Service | Signal View Screenings"
+  description="Terms of service for Signal View Screening Services. Please review these terms before booking your ultrasound screening appointment."
+>
+  <PageHero
+    title="Terms of Service"
+    subtitle="Please review before booking"
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Terms of Service' }]}
+  />
+
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-3xl">
+      <div class="prose prose-slate font-sans space-y-8">
+
+        <p class="text-sm text-slate">Last updated: April 12, 2026</p>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Agreement to Terms</h2>
+          <p class="text-slate leading-relaxed">
+            By accessing our website (svscreenings.com) or booking a screening with Signal View Screening Services ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Nature of Our Services</h2>
+          <p class="text-slate leading-relaxed mb-3">
+            Signal View Screening Services provides preventative ultrasound screenings performed by certified sonographers. It is important to understand:
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Our screenings are <strong>preventative in nature</strong> and are not a substitute for a comprehensive medical diagnosis.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Screening results should be reviewed with your personal physician or healthcare provider for clinical interpretation and follow-up care.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Our services do <strong>not</strong> establish a doctor-patient relationship between you and Signal View Screening Services.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>No screening is 100% accurate. Some conditions may not be detected by ultrasound screening alone.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Booking & Appointments</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Appointments are scheduled based on availability and confirmed upon booking.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We request at least 24 hours' notice for cancellations or rescheduling.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Late arrivals may result in a shortened screening time or the need to reschedule.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Payment Terms</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>All payments are processed securely through Square at the time of booking.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Prices are as listed on our website at the time of booking. We reserve the right to update pricing at any time.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Our screenings may be eligible for HSA/FSA reimbursement. Please check with your plan administrator.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We do not bill insurance directly. We are a self-pay screening service.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Gold Standard Mobile Service</h2>
+          <p class="text-slate leading-relaxed">
+            Our Gold Standard package includes mobile screening at your location within the Greater Las Vegas metro area. Scheduling is subject to sonographer availability. We will coordinate with you to find a mutually convenient time. Locations must provide a safe, accessible space for the screening to be performed.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Screening Results</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Screening reports are typically delivered within 48 hours of your appointment.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Gold Standard package results include interpretation signed by a board-certified physician.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We strongly recommend sharing your results with your primary care provider for any necessary follow-up.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Limitation of Liability</h2>
+          <p class="text-slate leading-relaxed">
+            Signal View Screening Services provides screening services to the best of our ability using qualified sonographers and hospital-grade equipment. However, we make no guarantees regarding the detection of all conditions. Our liability is limited to the cost of the screening package purchased. We are not liable for any decisions made based on screening results without consultation with a licensed physician.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Website Use</h2>
+          <p class="text-slate leading-relaxed">
+            The content on this website is for informational purposes only and does not constitute medical advice. All content, images, and design are the property of Signal View Screening Services and may not be reproduced without permission.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Changes to These Terms</h2>
+          <p class="text-slate leading-relaxed">
+            We may update these terms from time to time. Continued use of our services after any changes constitutes your acceptance of the updated terms.
+          </p>
+        </div>
+
+        <div class="bg-ivory rounded-card p-6 border border-warmgray/40">
+          <h2 class="text-xl font-serif text-charcoal mb-3">Questions?</h2>
+          <p class="text-slate leading-relaxed text-sm">
+            If you have questions about these terms, please contact us:
+          </p>
+          <p class="text-sm text-slate mt-2">
+            <strong>Email:</strong> <a href={`mailto:${siteConfig.email}`} class="text-navy hover:text-gold transition-colors">{siteConfig.email}</a><br />
+            <strong>Phone:</strong> <a href={`tel:${siteConfig.phoneTel}`} class="text-navy hover:text-gold transition-colors">{siteConfig.phone}</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -6,13 +6,11 @@ export const siteConfig = {
   phoneTel: '+17028436612',
   email: 'signalviewultrasound@gmail.com',
   domain: 'https://svscreenings.com',
-  address: {
-    clinic: 'Frontline Medical Group',
-    street: '3150 N Tenaya Wy Suite 400',
+  screeningLocation: {
+    area: 'Summerlin',
     city: 'Las Vegas',
     state: 'NV',
-    zip: '89128',
-    full: '3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128',
+    note: 'Exact address provided upon booking confirmation',
   },
   hours: 'Saturdays 9am – 1pm',
   googleReviewsUrl: 'https://g.page/r/CbQeS1Xa-WUYEBM/review',

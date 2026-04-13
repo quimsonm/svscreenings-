@@ -22,27 +22,18 @@ import conciergeHome from '../assets/images/concierge-home.png';
   <!-- Schema.org structured data -->
   <script slot="schema" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "MedicalBusiness"],
+    "@type": "MedicalBusiness",
     "name": siteConfig.legalName,
     "description": "Premium concierge ultrasound screening services in Las Vegas. Hospital-grade technology for early detection of heart disease, stroke risk, and vascular conditions.",
     "url": siteConfig.domain,
     "telephone": siteConfig.phoneTel,
     "email": siteConfig.email,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": siteConfig.address.street,
-      "addressLocality": siteConfig.address.city,
-      "addressRegion": siteConfig.address.state,
-      "postalCode": siteConfig.address.zip
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "13:00"
+    "areaServed": {
+      "@type": "City",
+      "name": "Las Vegas",
+      "containedInPlace": { "@type": "State", "name": "Nevada" }
     },
     "priceRange": "$199 - $597",
-    "areaServed": siteConfig.serviceAreas,
     "medicalSpecialty": "Diagnostic Radiology"
   })} />
 
@@ -55,7 +46,7 @@ import conciergeHome from '../assets/images/concierge-home.png';
       playsinline
       preload="auto"
       class="absolute inset-0 w-full h-full object-cover"
-      poster=""
+      poster={conciergeHome.src}
     >
       <source src={link('/hero-video.mp4')} type="video/mp4" />
     </video>

@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+---
+
+<BaseLayout
+  title="Privacy Policy | Signal View Screenings"
+  description="Privacy policy for Signal View Screening Services. Learn how we collect, use, and protect your personal information."
+>
+  <PageHero
+    title="Privacy Policy"
+    subtitle="How we handle your information"
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Privacy Policy' }]}
+  />
+
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-3xl">
+      <div class="prose prose-slate font-sans space-y-8">
+
+        <p class="text-sm text-slate">Last updated: April 12, 2026</p>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Overview</h2>
+          <p class="text-slate leading-relaxed">
+            Signal View Screening Services ("we," "us," or "our") is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you use our website (svscreenings.com) and our screening services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Information We Collect</h2>
+          <p class="text-slate leading-relaxed mb-3">We collect only the information necessary to schedule and provide your screening services:</p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span><strong>Contact information:</strong> Name, phone number, and email address — provided when you submit our booking or contact forms.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span><strong>Screening preferences:</strong> Selected screening package and preferred appointment date/time.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span><strong>Payment information:</strong> Processed securely through Square. We do not store your credit card or payment details on our servers.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">How We Use Your Information</h2>
+          <p class="text-slate leading-relaxed mb-3">Your information is used exclusively to:</p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Schedule and confirm your screening appointments</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Communicate with you about your appointment or screening results</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Process payments through our secure payment partner, Square</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>Respond to your questions or requests</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">What We Do Not Do</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We do <strong>not</strong> use your information for unsolicited marketing or spam.</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate">
+              <span class="text-gold font-bold mt-0.5">•</span>
+              <span>We do <strong>not</strong> store payment card details on our website or servers.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Third-Party Services</h2>
+          <p class="text-slate leading-relaxed">
+            We use Square for secure payment processing. When you make a payment, your transaction is handled directly by Square under their privacy policy and PCI-compliant security standards. We encourage you to review <a href="https://squareup.com/us/en/legal/general/privacy" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-gold transition-colors underline">Square's Privacy Policy</a> for details on how they handle your payment data.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Data Security</h2>
+          <p class="text-slate leading-relaxed">
+            We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Your Rights</h2>
+          <p class="text-slate leading-relaxed">
+            You may request access to, correction of, or deletion of your personal information at any time by contacting us. We will respond to your request within a reasonable timeframe.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-serif text-charcoal mb-3">Changes to This Policy</h2>
+          <p class="text-slate leading-relaxed">
+            We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.
+          </p>
+        </div>
+
+        <div class="bg-ivory rounded-card p-6 border border-warmgray/40">
+          <h2 class="text-xl font-serif text-charcoal mb-3">Contact Us</h2>
+          <p class="text-slate leading-relaxed text-sm">
+            If you have questions about this privacy policy or how we handle your data, please contact us:
+          </p>
+          <p class="text-sm text-slate mt-2">
+            <strong>Email:</strong> <a href={`mailto:${siteConfig.email}`} class="text-navy hover:text-gold transition-colors">{siteConfig.email}</a><br />
+            <strong>Phone:</strong> <a href={`tel:${siteConfig.phoneTel}`} class="text-navy hover:text-gold transition-colors">{siteConfig.phone}</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
