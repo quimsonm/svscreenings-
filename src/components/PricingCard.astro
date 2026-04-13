@@ -1,5 +1,6 @@
 ---
 import type { Package } from '../data/packages';
+import { link } from '../utils/links';
 
 interface Props {
   pkg: Package;
@@ -102,7 +103,7 @@ const isHighlighted = pkg.highlighted;
   <div class="px-6 pb-6">
     {isGold ? (
       <a
-        href="#gold-standard-inquiry"
+        href={link('/pricing#gold-standard-inquiry')}
         class="block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md"
       >
         Request Your Appointment
