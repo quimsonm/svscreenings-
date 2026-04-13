@@ -20,6 +20,15 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+
+    <!-- Google Analytics (GA4) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CZRBE70YJM"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CZRBE70YJM');
+    </script>
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
