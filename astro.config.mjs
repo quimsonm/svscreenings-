@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
-  site: 'https://quimsonm.github.io',
-  base: '/svscreenings-',
+  site: 'https://svscreenings.com',
+  base: '/',
 });
