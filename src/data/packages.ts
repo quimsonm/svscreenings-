@@ -21,7 +21,7 @@ export const packages: Package[] = [
     highlighted: false,
     description: 'Three critical vascular screenings to evaluate your stroke risk, aneurysm risk, and leg circulation.',
     bestFor: 'General cardiovascular health check',
-    duration: '~45 minutes',
+    duration: '~20 minutes',
     location: 'At our clinic',
     features: [
       'Carotid Artery Ultrasound',
@@ -38,7 +38,7 @@ export const packages: Package[] = [
     highlighted: true,
     description: 'Our most comprehensive in-clinic package — everything in Essential Wellness plus a full cardiac ultrasound.',
     bestFor: 'Comprehensive heart and vascular health',
-    duration: '~60 minutes',
+    duration: '~30 minutes',
     location: 'At our clinic',
     features: [
       'Carotid Artery Ultrasound',
@@ -56,7 +56,7 @@ export const packages: Package[] = [
     highlighted: false,
     description: 'The ultimate concierge screening experience — we come to you, on your schedule, with all screenings and physician-signed reports included.',
     bestFor: 'Complete peace of mind with maximum convenience',
-    duration: '~90 minutes',
+    duration: '~45 minutes',
     location: 'We come to you — anywhere in Greater Las Vegas',
     features: [
       'Carotid Artery Ultrasound',
