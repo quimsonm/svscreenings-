@@ -10,7 +10,7 @@ interface Props {
   canonical?: string;
 }
 
-const { title, description, ogImage = '/og-image.jpg', canonical } = Astro.props;
+const { title, description, ogImage = '/og-image.png', canonical } = Astro.props;
 const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreenings.com').href;
 ---
 
@@ -42,7 +42,7 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <title>{title}</title>
 
