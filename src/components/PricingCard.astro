@@ -100,18 +100,27 @@ const isHighlighted = pkg.highlighted;
 
   {/* CTA */}
   <div class="px-6 pb-6">
-    <a
-      href={pkg.squareUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class:list={[
-        'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
-        isHighlighted || isGold
-          ? 'bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md'
-          : 'border-2 border-gold text-gold hover:bg-gold hover:text-white',
-      ]}
-    >
-      Book {pkg.name}
-    </a>
+    {isGold ? (
+      <a
+        href="#gold-standard-inquiry"
+        class="block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md"
+      >
+        Request Your Appointment
+      </a>
+    ) : (
+      <a
+        href={pkg.squareUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={[
+          'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
+          isHighlighted
+            ? 'bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md'
+            : 'border-2 border-gold text-gold hover:bg-gold hover:text-white',
+        ]}
+      >
+        Book {pkg.name}
+      </a>
+    )}
   </div>
 </div>

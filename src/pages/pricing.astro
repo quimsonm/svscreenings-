@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import PricingCard from '../components/PricingCard.astro';
-import BookingForm from '../components/BookingForm.astro';
+import { siteConfig } from '../data/siteConfig';
 import CTABanner from '../components/CTABanner.astro';
 import { packages } from '../data/packages';
 import { services } from '../data/services';
@@ -135,26 +135,20 @@ import conciergeHome from '../assets/images/concierge-home.png';
     </div>
   </section>
 
-  <!-- Gold Standard Concierge -->
-  <section class="section-padding bg-white">
+  <!-- Gold Standard Concierge Inquiry -->
+  <section id="gold-standard-inquiry" class="section-padding bg-white">
     <div class="container-site max-w-5xl">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
+      <div id="booking" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in-up">
+        <!-- Left: Image + Benefits -->
         <div>
           <img
             src={conciergeHome.src}
             alt="Couple welcoming concierge screening service at their Las Vegas home"
-            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg mb-6"
             loading="lazy"
           />
-        </div>
-        <div>
-          <p class="overline text-gold mb-3">The Gold Standard Experience</p>
-          <h2 class="text-3xl md:text-4xl font-serif text-charcoal">We Come to You</h2>
-          <p class="mt-4 text-slate font-sans leading-relaxed">
-            Our premium concierge package brings hospital-grade ultrasound screenings directly to your home or office — anywhere in the Greater Las Vegas area. No clinic visits, no waiting rooms. Just expert care on your schedule.
-          </p>
-          <ul class="mt-6 space-y-3">
-            {['All ultrasound screenings included', 'Flexible scheduling at your convenience', 'Physician-signed screening report', 'True white-glove experience'].map((item) => (
+          <ul class="space-y-3">
+            {['All ultrasound screenings included', 'We come to your home or office', 'Flexible scheduling at your convenience', 'Physician-signed screening report'].map((item) => (
               <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
                 <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
@@ -163,6 +157,88 @@ import conciergeHome from '../assets/images/concierge-home.png';
               </li>
             ))}
           </ul>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div>
+          <p class="overline text-gold mb-3">The Gold Standard — $597</p>
+          <h2 class="text-2xl md:text-3xl font-serif text-charcoal mb-2">Request Your Concierge Appointment</h2>
+          <p class="text-slate font-sans text-sm mb-6">Tell us your preferred schedule and location. We'll call you within 24 hours to confirm.</p>
+
+          <form id="gold-standard-form" class="bg-ivory rounded-card border border-warmgray/40 p-6 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="gs-name" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Full Name *</label>
+                <input type="text" id="gs-name" name="name" required
+                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                  placeholder="Your full name" />
+              </div>
+              <div>
+                <label for="gs-phone" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Phone Number *</label>
+                <input type="tel" id="gs-phone" name="phone" required
+                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                  placeholder="(702) 555-0123" />
+              </div>
+            </div>
+
+            <div>
+              <label for="gs-email" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Email Address *</label>
+              <input type="email" id="gs-email" name="email" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="you@example.com" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="gs-dates" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Date(s) *</label>
+                <input type="text" id="gs-dates" name="dates" required
+                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                  placeholder="e.g. Any Saturday in May" />
+              </div>
+              <div>
+                <label for="gs-time" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Time</label>
+                <select id="gs-time" name="time"
+                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white">
+                  <option value="flexible">Flexible</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="evening">Evening</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="gs-location" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Screening Location *</label>
+              <input type="text" id="gs-location" name="location" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="Home address or preferred location" />
+            </div>
+
+            <div>
+              <label for="gs-notes" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Special Notes</label>
+              <textarea id="gs-notes" name="notes" rows="2"
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
+                placeholder="Any questions or special requests..."></textarea>
+            </div>
+
+            <!-- Honeypot -->
+            <div class="hidden" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+              Request Your Appointment
+            </button>
+
+            <p class="text-center text-xs text-slate font-sans">
+              We'll call you within 24 hours to confirm. Payment processed securely via Square after scheduling.
+            </p>
+          </form>
+
+          <p class="text-center mt-4 text-sm text-slate font-sans">
+            Prefer to call?
+            <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-medium hover:text-gold transition-colors">{siteConfig.phone}</a>
+          </p>
         </div>
       </div>
     </div>
@@ -206,8 +282,42 @@ import conciergeHome from '../assets/images/concierge-home.png';
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <BookingForm />
-
   <CTABanner heading="Questions About Our Packages?" subtext="Our team is happy to help you choose the right screening for your needs." ctaText="Contact Us" ctaHref={link('/contact')} />
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('gold-standard-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var honeypot = form.querySelector('input[name="website"]');
+        if (honeypot && honeypot.value) return;
+
+        var data = new FormData(form);
+        var entries = {};
+        data.forEach(function(value, key) { entries[key] = value; });
+
+        var subject = encodeURIComponent('Gold Standard Concierge Request');
+        var body = encodeURIComponent(
+          'Name: ' + entries.name +
+          '\nPhone: ' + entries.phone +
+          '\nEmail: ' + entries.email +
+          '\nPreferred Date(s): ' + entries.dates +
+          '\nPreferred Time: ' + entries.time +
+          '\nLocation: ' + entries.location +
+          '\nNotes: ' + (entries.notes || 'None')
+        );
+        window.location.href = 'mailto:signalviewultrasound@gmail.com?subject=' + subject + '&body=' + body;
+
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+          btn.textContent = 'Opening Email — Thank You!';
+          btn.classList.remove('bg-gold', 'hover:bg-gold-hover');
+          btn.classList.add('bg-green-600');
+          btn.disabled = true;
+        }
+      });
+    });
+  </script>
 </BaseLayout>
