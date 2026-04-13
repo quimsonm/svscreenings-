@@ -10,7 +10,8 @@ interface Props {
   canonical?: string;
 }
 
-const { title, description, ogImage = '/og-image.png', canonical } = Astro.props;
+import logo from '../assets/images/logo.png';
+const { title, description, ogImage = logo.src, canonical } = Astro.props;
 const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreenings.com').href;
 ---
 
