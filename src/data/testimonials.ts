@@ -6,28 +6,28 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: 'I had no idea I was at risk for a stroke until Signal View found significant plaque buildup in my carotid arteries. The screening was quick, painless, and may have saved my life. I tell everyone I know to get screened.',
-    name: 'Robert M.',
+    quote: 'Outstanding! Highly recommended for everyone to get your health in check. Greatly appreciated their work.',
+    name: 'Alaktrician O.',
     rating: 5,
   },
   {
-    quote: 'The whole experience was incredibly professional and comfortable. From booking to getting my results, everything was smooth. The sonographer explained everything as she went and I felt genuinely cared for.',
-    name: 'Sandra L.',
+    quote: 'Excellent service.',
+    name: 'Del Q.',
     rating: 5,
   },
   {
-    quote: 'I chose the Gold Standard package and they came right to my home. It felt like having a private medical team. The convenience alone was worth it, but the peace of mind I got from my results was priceless.',
-    name: 'Michael T.',
+    quote: 'Mike and his ultrasound technicians were professional and made my experience very comfortable.',
+    name: 'Joseph',
     rating: 5,
   },
   {
-    quote: 'As a nurse, I know how important preventative screening is. Signal View makes it affordable and accessible. I brought my entire family and we all got screened in one Saturday morning. Highly recommend.',
-    name: 'Patricia K.',
+    quote: 'Quick service, very efficient, staff was welcoming, professional, and kind, office organized and pleasant. Made our medical visit painless and reassuring.',
+    name: 'Caleb T.',
     rating: 5,
   },
   {
-    quote: 'My father passed from an aortic aneurysm. Getting screened gave me answers and peace of mind. The staff was compassionate and thorough. This service is truly life-saving.',
-    name: 'James R.',
+    quote: 'Mike and his team of ultrasound techs were knowledgeable, efficient and courteous. I highly recommend their services.',
+    name: 'Kathy B.',
     rating: 5,
   },
 ];
