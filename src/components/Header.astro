@@ -65,7 +65,7 @@ const navLinks = [
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-white z-[999] transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-white z-[999] transform translate-x-full pointer-events-none transition-transform duration-300 ease-in-out overflow-y-auto">
     <nav class="flex flex-col p-6 gap-1">
       {navLinks.map((link) => (
         <a href={link.href} class="text-lg font-sans font-medium text-charcoal hover:text-navy py-3 border-b border-warmgray/50 transition-colors">
@@ -96,27 +96,27 @@ const navLinks = [
   const mobileMenu = document.getElementById('mobile-menu');
   let isOpen = false;
 
+  function openMenu() {
+    mobileMenu?.classList.remove('translate-x-full', 'pointer-events-none');
+    mobileMenu?.classList.add('translate-x-0', 'pointer-events-auto');
+    document.body.style.overflow = 'hidden';
+    isOpen = true;
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.add('translate-x-full', 'pointer-events-none');
+    mobileMenu?.classList.remove('translate-x-0', 'pointer-events-auto');
+    document.body.style.overflow = '';
+    isOpen = false;
+  }
+
   menuBtn?.addEventListener('click', () => {
-    isOpen = !isOpen;
-    if (isOpen) {
-      mobileMenu?.classList.remove('translate-x-full');
-      mobileMenu?.classList.add('translate-x-0');
-      document.body.style.overflow = 'hidden';
-    } else {
-      mobileMenu?.classList.add('translate-x-full');
-      mobileMenu?.classList.remove('translate-x-0');
-      document.body.style.overflow = '';
-    }
+    isOpen ? closeMenu() : openMenu();
   });
 
   // Close menu on link click
   mobileMenu?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('translate-x-full');
-      mobileMenu?.classList.remove('translate-x-0');
-      document.body.style.overflow = '';
-      isOpen = false;
-    });
+    link.addEventListener('click', () => closeMenu());
   });
 
   // Header shrink on scroll
