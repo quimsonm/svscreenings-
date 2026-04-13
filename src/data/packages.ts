@@ -69,6 +69,6 @@ export const packages: Package[] = [
       'Flexible scheduling at your convenience',
       'Screening reports signed by a board-certified physician',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0YY91RC4GBKX/services/PA57N7OOXL7Z3Y6QCFZBKTD6',
+    squareUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0YY91RC4GBKX/services/4TZYQODZ6I6DUIR2SSRU7EXB',
   },
 ];
