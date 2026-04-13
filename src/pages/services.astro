@@ -7,6 +7,18 @@ import { services } from '../data/services';
 import { faqs } from '../data/faq';
 import { link } from '../utils/links';
 
+import serviceCarotid from '../assets/images/service-carotid.png';
+import serviceAorta from '../assets/images/service-aorta.png';
+import serviceEcho from '../assets/images/service-echo.png';
+import servicePad from '../assets/images/service-pad.png';
+
+const serviceImages: Record<string, ImageMetadata> = {
+  'carotid-artery': serviceCarotid,
+  'aorta-aneurysm': serviceAorta,
+  'echocardiogram': serviceEcho,
+  'peripheral-artery-disease': servicePad,
+};
+
 const serviceFaqs = faqs.filter((f) => f.category === 'About Our Screenings').slice(0, 4);
 
 const iconMap: Record<string, string> = {
@@ -78,20 +90,13 @@ const iconMap: Record<string, string> = {
           </div>
 
           <!-- Visual column -->
-          {/* To add a real image: import it at top of file, then replace the placeholder div below with:
-              <img src={yourImage.src} alt="Description" class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg" /> */}
           <div class:list={['fade-in-up', i % 2 !== 0 && 'lg:col-start-1']}>
-            <div class="relative rounded-2xl aspect-[4/3] overflow-hidden border border-warmgray/20 shadow-lg">
-              <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy-dark to-navy"></div>
-              <div class="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-gold/5"></div>
-              <div class="relative h-full flex flex-col items-center justify-center p-8">
-                <div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                  <div class="text-gold/60" set:html={iconMap[service.icon] || iconMap.heart} />
-                </div>
-                <p class="text-white/40 text-sm font-sans font-medium tracking-wide uppercase">{service.shortTitle}</p>
-                <div class="mt-4 w-16 h-px bg-gold/30"></div>
-              </div>
-            </div>
+            <img
+              src={serviceImages[service.slug]?.src}
+              alt={service.title}
+              class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

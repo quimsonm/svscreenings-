@@ -10,6 +10,9 @@ import { services } from '../data/services';
 import { packages } from '../data/packages';
 import { siteConfig } from '../data/siteConfig';
 import { link } from '../utils/links';
+
+import serviceResults from '../assets/images/service-results.png';
+import conciergeHome from '../assets/images/concierge-home.png';
 ---
 
 <BaseLayout
@@ -45,9 +48,21 @@ import { link } from '../utils/links';
 
   <!-- ===== HERO ===== -->
   <section class="relative bg-navy overflow-hidden min-h-[85vh] md:min-h-[80vh] flex items-center">
-    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-light/30"></div>
-    <div class="absolute top-20 right-10 w-72 h-72 bg-gold/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 left-10 w-96 h-96 bg-gold/[0.03] rounded-full blur-3xl"></div>
+    <!-- Video Background -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      class="absolute inset-0 w-full h-full object-cover"
+      poster=""
+    >
+      <source src={link('/hero-video.mp4')} type="video/mp4" />
+    </video>
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-navy/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/60 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ivory to-transparent"></div>
 
     <div class="container-site relative py-20 md:py-28">
@@ -181,28 +196,31 @@ import { link } from '../utils/links';
           </div>
         </div>
 
-        <div class="fade-in-up">
-          <div class="bg-navy rounded-2xl p-8 md:p-10 text-white relative overflow-hidden">
+        <div class="fade-in-up space-y-6">
+          <img
+            src={serviceResults.src}
+            alt="Sonographer reviewing ultrasound results with patient"
+            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+            loading="lazy"
+          />
+          <div class="bg-navy rounded-2xl p-6 text-white relative overflow-hidden">
             <div class="absolute top-0 right-0 w-48 h-48 bg-gold/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div class="relative">
-              <p class="overline text-gold mb-6">The cost of waiting</p>
-              <div class="space-y-6">
-                <div>
-                  <p class="text-sm text-white/60 font-sans">Average ER visit for a stroke</p>
-                  <p class="text-2xl font-serif text-white mt-1">$20,000+</p>
+              <p class="overline text-gold mb-4">The cost of waiting</p>
+              <div class="space-y-4">
+                <div class="flex items-baseline justify-between">
+                  <p class="text-sm text-white/60 font-sans">ER visit for stroke</p>
+                  <p class="text-lg font-serif text-white">$20,000+</p>
                 </div>
-                <div class="border-t border-white/10 pt-6">
-                  <p class="text-sm text-white/60 font-sans">Average heart surgery</p>
-                  <p class="text-2xl font-serif text-white mt-1">$100,000+</p>
+                <div class="border-t border-white/10 pt-4 flex items-baseline justify-between">
+                  <p class="text-sm text-white/60 font-sans">Heart surgery</p>
+                  <p class="text-lg font-serif text-white">$100,000+</p>
                 </div>
-                <div class="border-t border-white/10 pt-6">
-                  <p class="text-sm text-white/60 font-sans">Signal View screening — starting at</p>
-                  <p class="text-2xl font-serif text-gold mt-1">$199</p>
+                <div class="border-t border-white/10 pt-4 flex items-baseline justify-between">
+                  <p class="text-sm text-gold font-sans font-semibold">Signal View screening</p>
+                  <p class="text-lg font-serif text-gold">From $199</p>
                 </div>
               </div>
-              <p class="mt-8 text-sm text-white/50 font-sans italic">
-                Prevention isn't expensive. It's priceless.
-              </p>
             </div>
           </div>
         </div>

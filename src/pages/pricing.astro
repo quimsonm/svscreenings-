@@ -7,6 +7,8 @@ import CTABanner from '../components/CTABanner.astro';
 import { packages } from '../data/packages';
 import { services } from '../data/services';
 import { link } from '../utils/links';
+
+import conciergeHome from '../assets/images/concierge-home.png';
 ---
 
 <BaseLayout
@@ -129,6 +131,39 @@ import { link } from '../utils/links';
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Standard Concierge -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
+        <div>
+          <img
+            src={conciergeHome.src}
+            alt="Couple welcoming concierge screening service at their Las Vegas home"
+            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="overline text-gold mb-3">The Gold Standard Experience</p>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal">We Come to You</h2>
+          <p class="mt-4 text-slate font-sans leading-relaxed">
+            Our premium concierge package brings hospital-grade ultrasound screenings directly to your home or office — anywhere in the Greater Las Vegas area. No clinic visits, no waiting rooms. Just expert care on your schedule.
+          </p>
+          <ul class="mt-6 space-y-3">
+            {['All ultrasound screenings included', 'Flexible scheduling at your convenience', 'Physician-signed screening report', 'True white-glove experience'].map((item) => (
+              <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
