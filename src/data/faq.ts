@@ -26,7 +26,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'About Our Screenings',
     question: 'How long does a screening take?',
-    answer: 'Depending on your package, screenings take between 20–45 minutes. The Essential Wellness package takes approximately 20 minutes, the Executive Heart about 30 minutes, and The Gold Standard approximately 45 minutes.',
+    answer: 'Depending on your package, screenings take between 30–60 minutes. The Essential Wellness package takes approximately 30 minutes, the Executive Heart about 45 minutes, and The Gold Standard approximately 60 minutes.',
   },
   {
     category: 'About Our Screenings',
@@ -80,7 +80,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'What are your hours?',
-    answer: 'Our in-clinic screening appointments are available on Saturdays from 9am to 1pm. Gold Standard mobile appointments are available by arrangement during reasonable daytime and evening hours.',
+    answer: 'Our in-clinic screening appointments are available Wednesdays and Fridays from 12–5pm, and Saturdays from 9am–1pm. Gold Standard mobile appointments are available by arrangement during reasonable daytime and evening hours.',
   },
   {
     category: 'Booking & Location',
