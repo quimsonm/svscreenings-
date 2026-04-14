@@ -1,21 +1,9 @@
-# Cash-Pay Diagnostics Page — ANSWERS PROVIDED
+# Cash-Pay Diagnostics — ✅ COMPLETED
 
-## Status: ✅ READY TO BUILD — Mike answered all questions 04-13-2026
+> **Built and deployed: 2026-04-13**
+> Page live at: svscreenings.com/diagnostics
 
-> All prices are cash-pay only, include physician interpretation.
-> Patient is self-referred or with doctor referral.
-
-### 1. Services to list
-- [x] Full Echocardiogram
-- [x] Carotid Ultrasound
-- [x] Aorta Ultrasound
-- [x] Lower Extremity Venous
-- [x] Lower Extremity Arterial
-- [x] Abdominal Complete
-- [x] Thyroid Ultrasound
-- [x] Renal Ultrasound
-
-### 2. Cash-pay pricing
+## Services Listed
 | Service | Price |
 |---------|-------|
 | Echocardiogram | $300 |
@@ -27,17 +15,18 @@
 | Thyroid Ultrasound | $250 |
 | Renal Ultrasound | $250 |
 
-### 3. Booking method
-- TBD — Mike to confirm. Likely inquiry form since diagnostics may need a doctor's order.
+## Details
+- All include physician interpretation (radiologist + cardiologist confirmed)
+- Self-referred or with doctor's order
+- Booking: inquiry form (mailto to signalviewultrasound@gmail.com)
+- Subject line: "Diagnostic Ultrasound Request: [study name]"
+- Form collects: name, phone, email, study type, doctor's order status, notes
+- Cross-links to screening packages at bottom of page
+- Added to main navigation as "Diagnostics"
+- Cost comparison section showing cash-pay vs insurance pricing
 
----
-
-## What's Already Ready
-- Reading physicians: Radiologist + cardiologist confirmed
-- Equipment: Same as screenings
-- Techs: Already doing full diagnostics for clinic clients
-- Website architecture: Ready to add the page
-- Partners page: Live and accepting clinic inquiries
-
-## Once I Have Answers
-I'll build the page, add it to navigation, set up the booking flow, and push it live. Same day turnaround.
+## No Further Action Needed
+This item is complete. Future enhancements could include:
+- Adding Square direct booking for diagnostics (once volume justifies it)
+- Adding more studies (OB, musculoskeletal, etc.)
+- Creating targeted Google Ads campaign for diagnostic keywords

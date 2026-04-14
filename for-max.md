@@ -1,138 +1,181 @@
 # Signal View Screenings — Action Plan for Max
 
-> **Last updated by Max (Mike's orchestrator): 2026-04-13**
-> Items marked ✅ are DONE — no action needed from dev.
-
-## What We Built
-- Full 10-page website live at svscreenings.com
-- Hero video, real images, real Google reviews
-- Streamlined booking: Square for clinic packages, inquiry form for Gold Standard concierge
-- Partners page for physician/clinic B2B outreach
-- Privacy policy, terms of service, 404 page
-- SEO: structured data, sitemap, meta tags
-- New logo integrated across site + favicon + social sharing image
+> **Last updated: 2026-04-14**
+> Items marked ✅ are DONE. Items marked 🔄 are IN PROGRESS. Items marked ⬜ are TODO.
+> This file is the source of truth for the other Claude Code instance (Max's personal assistant).
 
 ---
 
-## Immediate Action Items (This Week)
+## What We Built (Complete Website)
 
-### 1. ✅ Google Analytics — DONE 04-13-2026
-- **Measurement ID: G-CZRBE70YJM**
-- Account created, data stream set up for svscreenings.com
-- Enhanced measurement ON (page views, scrolls, clicks, video, forms)
-- **ACTION FOR DEV:** Wire this gtag snippet into the `<head>` of svscreenings.com:
-```html
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZRBE70YJM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CZRBE70YJM');
-</script>
-```
+- 11-page website live at **svscreenings.com** (hosted on GitHub Pages)
+- GitHub repo: `quimsonm/svscreenings-`
+- Tech stack: Astro + Tailwind CSS, static site, GitHub Actions auto-deploy on push
+- Hero video (Seedance 2.0 generated, concierge home visit)
+- AI-generated images (Nano Banana 2) across all pages
+- Real Google reviews in testimonial carousel (5 reviews from actual patients)
+- New logo (signal wave icon, navy/gold) integrated site-wide + favicon + OG image
+- Google Analytics 4 tracking live (G-CZRBE70YJM)
 
-### 2. ✅ Google Search Console — DONE 04-13-2026
-- svscreenings.com verified as URL prefix property
-- Sitemap submitted: `https://svscreenings.com/sitemap-index.xml`
-- Google indexing pages now
+### Pages:
+1. **Home** (`/`) — Hero video, trust bar, how it works, service cards, pricing preview, testimonials, CTA
+2. **Services** (`/services`) — 4 screening services with symptom-focused images, FAQ snippet
+3. **Pricing** (`/pricing`) — 3 package cards, comparison table, Gold Standard inquiry form with video
+4. **Diagnostics** (`/diagnostics`) — 8 cash-pay diagnostic studies with pricing, inquiry form
+5. **About** (`/about`) — Story, credentials, where we screen, service areas
+6. **FAQ** (`/faq`) — 20+ questions with accordion
+7. **Contact** (`/contact`) — Contact form, phone, email, hours
+8. **Partners** (`/partners`) — For physicians & clinics, B2B inquiry form
+9. **Privacy** (`/privacy`) — Privacy policy
+10. **Terms** (`/terms`) — Terms of service
+11. **404** (`/404`) — Custom error page
 
-### 3. ✅ Google Business Profile — DONE 04-13-2026
-- New logo + banner uploaded
-- All screening packages listed with correct pricing:
-  - Essential Wellness — $199
-  - Executive Heart — $349
-  - The Gold Standard — $597
-- Cash-pay diagnostic ultrasounds listed:
-  - Echocardiogram — $300
-  - Carotid, Aorta, Lower Extremity Arterial, Lower Extremity Venous, Abdominal Complete, Thyroid, Renal — $250 each
-  - All include physician interpretation, self-referred or with doctor referral
-- First GBP post published (new website announcement)
+### Booking Flow:
+- **Essential Wellness ($199)** → Square direct booking
+- **Executive Heart ($349)** → Square direct booking
+- **Gold Standard ($597)** → Inquiry form on pricing page (mailto), owner calls to confirm, sends Square payment link
+- **Cash-Pay Diagnostics ($250-300)** → Inquiry form on diagnostics page (mailto)
 
-### 4. Start Asking for Reviews — IN PROGRESS
-- After every screening, text patients the review link
-- Goal: 15+ reviews within 30 days
-- Review link: https://g.page/r/CbQeS1Xa-WUYEBM/review
+### Business Details on Site:
+- Hours: Wed 12–5pm | Fri 12–5pm | Sat 9am–1pm
+- Location: Summerlin area clinic (3150 N Tenaya Way Suite 400) — address given upon booking confirmation, not published on site (partner clinic, not owned)
+- Gold Standard: mobile service, anywhere in Greater Las Vegas
+- Phone: 702.843.6612
+- Email: signalviewultrasound@gmail.com
 
 ---
 
-## This Month
+## ✅ COMPLETED ITEMS
 
-### 5. Google Ads Campaign
-- Create a Google Ads account at ads.google.com
-- Start with Search ads (not Display)
-- Target keywords:
-  - "ultrasound screening las vegas"
-  - "heart screening near me"
-  - "carotid artery screening las vegas"
-  - "preventative health screening las vegas"
-  - "echocardiogram las vegas"
-- Budget: $15-20/day to start
-- Landing page: svscreenings.com/pricing
-- Track conversions (Square booking clicks + Gold Standard form submissions)
+### Website & Technical
+- ✅ Full website built and deployed to svscreenings.com
+- ✅ Custom domain configured (Namecheap DNS → GitHub Pages)
+- ✅ SSL/HTTPS enabled via GitHub Pages
+- ✅ Google Analytics 4 wired up (G-CZRBE70YJM)
+- ✅ Google Search Console verified, sitemap submitted
+- ✅ Sitemap auto-generated via @astrojs/sitemap
+- ✅ Schema.org structured data (MedicalBusiness)
+- ✅ OG image for social sharing (Signal View Ultrasound logo)
+- ✅ Favicon updated to new logo
+- ✅ Privacy Policy and Terms of Service pages created
+- ✅ 404 error page created
+- ✅ Mobile hamburger menu fixed (was broken due to stacking context)
+- ✅ All internal links use link() helper for path flexibility
+- ✅ robots.txt with sitemap reference
 
-### 6. Social Media
-- Create Facebook + Instagram business pages
-- Post the hero video as your first post
-- Share symptom-focused images (chest pain, leg pain) with educational captions
-- Post 2-3x per week
-- Link bio to svscreenings.com
+### Content & Branding
+- ✅ Hero video generated (Seedance 2.0) and integrated
+- ✅ AI-generated images for all service pages (symptom-focused)
+- ✅ Real Google reviews replace placeholder testimonials
+- ✅ New logo generated (Nano Banana 2) and integrated everywhere
+- ✅ Google banner created (HTML template in `google-banner.html`)
+- ✅ "Certified sonographers" changed to "highly trained and experienced sonographers" site-wide
+- ✅ "Partner with us" changed to "Work with us" on partners page (contract, not partnership)
+- ✅ Location messaging updated — no specific address on site, "Summerlin area, address upon booking"
+- ✅ Google Maps embeds removed (not our location to claim)
 
-### 7. Meta Pixel (Facebook Ads)
-- Get your Pixel ID from Facebook Business Manager
-- Send it to me, I'll add it to the site
-- Run ads targeting Las Vegas adults 45+ 
-- Budget: $10-15/day
-- Use the symptom images as ad creative
+### Booking & Business Setup
+- ✅ Square booking configured with correct service links
+- ✅ Gold Standard Square link updated to correct service ID
+- ✅ Booking flow streamlined: Square for clinic packages, inquiry form for Gold Standard
+- ✅ Cash-pay diagnostics page built with all 8 services
+- ✅ Square availability set: Wed 12-5pm, Fri 12-5pm, Sat 9am-1pm
+- ✅ Square fake-it filter enabled at 40%
+- ✅ Square confirmation email configured with address and appointment details
+- ✅ Square settings: auto-accept bookings, locked to business timezone, accepts at business + customer location
+- ✅ Essential & Executive: "Same-day screening summary from sonographer" + "Physician interpretation available as add-on"
+- ✅ Gold Standard: includes physician-signed report
+
+### Marketing & Ads
+- ✅ Google Business Profile updated with all services, pricing, logo, banner
+- ✅ Google Ads account created (ID: 166-345-7449)
+- ✅ Advertiser verification completed (Quimson Development LLC)
+- ✅ First campaign created: "Ultrasound Screenings — $199"
+- ✅ Campaign set to active, awaiting first impressions
+- ✅ Google Reviews separated: view URL vs leave-review URL
+- ✅ "Leave Us a Review" CTA added to testimonial section
+
+### Pricing & Packages (Current)
+| Package | Price | Duration | Results |
+|---------|-------|----------|---------|
+| Essential Wellness | $199 | ~30 min | Same-day sonographer summary (physician interp add-on available) |
+| Executive Heart | $349 | ~45 min | Same-day sonographer summary (physician interp add-on available) |
+| The Gold Standard | $597 | ~60 min | Physician-signed report within 48 hours |
+
+### Cash-Pay Diagnostics (Current)
+| Service | Price |
+|---------|-------|
+| Echocardiogram | $300 |
+| Carotid Ultrasound | $250 |
+| Aorta Ultrasound | $250 |
+| Lower Extremity Arterial | $250 |
+| Lower Extremity Venous | $250 |
+| Abdominal Complete | $250 |
+| Thyroid Ultrasound | $250 |
+| Renal Ultrasound | $250 |
+
+All diagnostics include physician interpretation. Self-referred or with doctor's order.
 
 ---
 
-## Next 3-6 Months
+## 🔄 IN PROGRESS
 
-### 8. Cash-Pay Diagnostics Page
-- **Status: Waiting on your answers** — see `cash-pay-diagnostics-todo.md`
-- Need: service list, pricing, booking method
-- Reading physicians already confirmed
-- This is the high-margin growth play
-
-### 9. SEO Blog Content
-- I can add a blog section to the site
-- Target articles:
-  - "5 Warning Signs You Need a Carotid Screening"
-  - "Aortic Aneurysm: The Silent Killer You Can Screen For"  
-  - "What to Expect at Your First Ultrasound Screening"
-  - "Cash Pay Ultrasound vs. Insurance: What Las Vegas Patients Need to Know"
-- Each article drives organic Google traffic to your booking page
-
-### 10. Local Partnerships
-- Use the /partners page to reach out to:
-  - Primary care clinics without in-house ultrasound
-  - Corporate wellness programs (casinos, resorts, large employers)
-  - Health fairs and community events
-  - Urgent care centers
-
-### 11. Email Follow-Up System
-- Post-booking confirmation with address/details
-- Day-before reminder
-- Post-screening: review request
-- 6-month follow-up: "Time for your annual screening"
+- 🔄 **Google Ads** — Campaign active, awaiting first impressions/clicks. Monitor daily. Don't change anything for first week.
+- 🔄 **Google Reviews** — Currently 6 reviews. Goal: 15+ within 30 days. Review link: `https://g.page/r/CbQeS1Xa-WUYEBM/review`
+- 🔄 **Google Search Console** — Pages being indexed. Check back in a few days for search performance data.
 
 ---
 
-## Revenue Targets
+## ⬜ TODO — Next Actions
 
-| Month | Patients | Revenue | Net Profit |
-|-------|----------|---------|------------|
-| 1 | 10-12 | $3,000-4,800 | $1,800-3,600 |
-| 2 | 18-25 | $6,600-9,900 | $5,000-8,200 |
-| 3 | 30-40 | $12,900-18,600 | $9,700-15,400 |
+### This Week
+- ⬜ **Monitor Google Ads** — Check dashboard daily for impressions, clicks, and search terms. Add negative keywords for irrelevant searches (pregnancy, MRI, CT, jobs, school, free).
+- ⬜ **Share the website** — Text link to friends, family, existing patients, network contacts.
+- ⬜ **Stack Google reviews** — Text review link to every past patient.
+- ⬜ **Create Facebook + Instagram business pages** — Post hero video, announce new website.
+
+### This Month
+- ⬜ **Facebook/Instagram Ads** — Need Meta Pixel ID from Mike, then wire it into the site. Target Las Vegas adults 45+.
+- ⬜ **Review Google Ads performance** — After 1 week, review which keywords convert, pause losers, increase budget on winners.
+- ⬜ **Social media content** — Post 2-3x/week. Use symptom images with educational captions.
+
+### Next 1-3 Months
+- ⬜ **Blog section** — Add to site for SEO content ("5 Warning Signs You Need a Carotid Screening", etc.)
+- ⬜ **Email follow-up system** — Post-appointment thank you, review request, 6-month follow-up reminder.
+- ⬜ **Local partnerships** — Use /partners page to reach out to primary care clinics, corporate wellness programs, health fairs.
+- ⬜ **Optimize Google Ads** — Refine keywords, test new ad copy, add sitelink extensions.
+
+### Future Considerations
+- ⬜ **Trademark registration** — Register "Signal View" trademark, then apply in Google Ads to show brand name instead of LLC
+- ⬜ **Form backend** — Replace mailto: forms with Formspree or similar for reliable submission tracking
+- ⬜ **Migrate to ZimaOS** — If desired, move from GitHub Pages to self-hosted for full control
+- ⬜ **GA4 conversion tracking** — Set up proper conversion events for Square booking clicks and form submissions
 
 ---
 
-## What I Can Do Anytime — Just Ask
-- Add Google Analytics / Meta Pixel (need your IDs)
-- Build the cash-pay diagnostics page (need your pricing)
-- Add a blog section
-- Create ad landing pages
-- Update pricing, services, or content
-- Any website changes — same day turnaround
+## Key Contacts & Accounts
+
+| Service | Account/ID |
+|---------|-----------|
+| Domain Registrar | Namecheap (svscreenings.com) |
+| Hosting | GitHub Pages (quimsonm/svscreenings-) |
+| Google Analytics | G-CZRBE70YJM |
+| Google Ads | 166-345-7449 |
+| Google Ads Payments | Quimson Development LLC (9964-1158-8701) |
+| Square | Two booking profiles (clinic + Gold Standard) |
+| Google Business | g.page/r/CbQeS1Xa-WUYEBM |
+| Email | signalviewultrasound@gmail.com |
+
+---
+
+## Dev Notes for Claude Code
+
+- All site code is in `/workspace/svscreenings-rebuild/`
+- `astro.config.mjs` — currently set to `site: 'https://svscreenings.com'`, `base: '/'`
+- `src/utils/links.ts` — `link()` helper for all internal paths
+- `src/data/` — packages.ts, services.ts, faq.ts, testimonials.ts, siteConfig.ts (source of truth for business data)
+- Push to `main` branch triggers GitHub Actions auto-deploy
+- Images in `src/assets/images/`, video in `public/hero-video.mp4`
+- Raw/original assets in `/assets/` (gitignored, local only)
+- Forms use `is:inline` scripts with mailto: approach
+- Header mobile menu uses `is:inline` script with DOMContentLoaded (moved outside `<header>` to avoid stacking context issues)
