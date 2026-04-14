@@ -1,5 +1,8 @@
 # Signal View Screenings — Action Plan for Max
 
+> **Last updated by Max (Mike's orchestrator): 2026-04-13**
+> Items marked ✅ are DONE — no action needed from dev.
+
 ## What We Built
 - Full 10-page website live at svscreenings.com
 - Hero video, real images, real Google reviews
@@ -13,25 +16,40 @@
 
 ## Immediate Action Items (This Week)
 
-### 1. Google Analytics — GET THIS DONE FIRST
-- Go to analytics.google.com → Create account → Get your Measurement ID (starts with G-)
-- Send it to me, I'll wire it up in 2 minutes
-- Without this you can't measure anything
+### 1. ✅ Google Analytics — DONE 04-13-2026
+- **Measurement ID: G-CZRBE70YJM**
+- Account created, data stream set up for svscreenings.com
+- Enhanced measurement ON (page views, scrolls, clicks, video, forms)
+- **ACTION FOR DEV:** Wire this gtag snippet into the `<head>` of svscreenings.com:
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZRBE70YJM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CZRBE70YJM');
+</script>
+```
 
-### 2. Google Search Console
-- Go to search.google.com/search-console
-- Add svscreenings.com as a property
-- Verify via DNS (add a TXT record in Namecheap)
-- Submit sitemap: `https://svscreenings.com/sitemap-index.xml`
-- This gets Google to index all your pages faster
+### 2. ✅ Google Search Console — DONE 04-13-2026
+- svscreenings.com verified as URL prefix property
+- Sitemap submitted: `https://svscreenings.com/sitemap-index.xml`
+- Google indexing pages now
 
-### 3. Google Business Profile
-- Upload the new logo and banner
-- Add all screening services with pricing
-- Make your first Google Business post (announce the new website)
-- Link: business.google.com
+### 3. ✅ Google Business Profile — DONE 04-13-2026
+- New logo + banner uploaded
+- All screening packages listed with correct pricing:
+  - Essential Wellness — $199
+  - Executive Heart — $349
+  - The Gold Standard — $597
+- Cash-pay diagnostic ultrasounds listed:
+  - Echocardiogram — $300
+  - Carotid, Aorta, Lower Extremity Arterial, Lower Extremity Venous, Abdominal Complete, Thyroid, Renal — $250 each
+  - All include physician interpretation, self-referred or with doctor referral
+- First GBP post published (new website announcement)
 
-### 4. Start Asking for Reviews
+### 4. Start Asking for Reviews — IN PROGRESS
 - After every screening, text patients the review link
 - Goal: 15+ reviews within 30 days
 - Review link: https://g.page/r/CbQeS1Xa-WUYEBM/review

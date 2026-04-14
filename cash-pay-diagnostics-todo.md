@@ -1,34 +1,34 @@
-# Cash-Pay Diagnostics Page — Waiting on Answers
+# Cash-Pay Diagnostics Page — ANSWERS PROVIDED
 
-## Status: ON HOLD — Need input from Max
+## Status: ✅ READY TO BUILD — Mike answered all questions 04-13-2026
 
-Before I can build the cash-pay diagnostics page, I need answers to these three questions:
+> All prices are cash-pay only, include physician interpretation.
+> Patient is self-referred or with doctor referral.
 
-### 1. Which services to list?
-Options (check all that apply):
-- [ ] Full Echocardiogram
-- [ ] Carotid Duplex
-- [ ] Venous Duplex (legs)
-- [ ] Arterial Study (legs)
-- [ ] Abdominal Ultrasound
-- [ ] Thyroid Ultrasound
-- [ ] Renal Ultrasound
-- [ ] Other: ___________
+### 1. Services to list
+- [x] Full Echocardiogram
+- [x] Carotid Ultrasound
+- [x] Aorta Ultrasound
+- [x] Lower Extremity Venous
+- [x] Lower Extremity Arterial
+- [x] Abdominal Complete
+- [x] Thyroid Ultrasound
+- [x] Renal Ultrasound
 
-### 2. Cash-pay price for each service?
-| Service | Your Price |
-|---------|-----------|
-| Full Echo | $ |
-| Carotid Duplex | $ |
-| Venous Duplex | $ |
-| Arterial Study | $ |
-| Abdominal US | $ |
-| Thyroid US | $ |
+### 2. Cash-pay pricing
+| Service | Price |
+|---------|-------|
+| Echocardiogram | $300 |
+| Carotid Ultrasound | $250 |
+| Aorta Ultrasound | $250 |
+| Lower Extremity Arterial | $250 |
+| Lower Extremity Venous | $250 |
+| Abdominal Complete | $250 |
+| Thyroid Ultrasound | $250 |
+| Renal Ultrasound | $250 |
 
-### 3. Booking method?
-- [ ] Square (patient books + pays online like screening packages)
-- [ ] Inquiry form (patient submits request, you confirm — since diagnostics may need a doctor's order)
-- [ ] Both (Square for self-pay, inquiry for physician-referred)
+### 3. Booking method
+- TBD — Mike to confirm. Likely inquiry form since diagnostics may need a doctor's order.
 
 ---
 

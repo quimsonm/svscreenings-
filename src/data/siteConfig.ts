@@ -12,7 +12,7 @@ export const siteConfig = {
     state: 'NV',
     note: 'Exact address provided upon booking confirmation',
   },
-  hours: 'Saturdays 9am – 1pm',
+  hours: 'Wed 12–5pm | Fri 12–5pm | Sat 9am–1pm',
   googleReviewsUrl: 'https://g.page/r/CbQeS1Xa-WUYEBM',
   googleLeaveReviewUrl: 'https://g.page/r/CbQeS1Xa-WUYEBM/review',
   squareBookingBase: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0YY91RC4GBKX/services',

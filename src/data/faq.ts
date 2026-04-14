@@ -102,7 +102,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Medical & Results',
     question: 'When will I get my results?',
-    answer: 'You\'ll receive your screening results within 48 hours. Gold Standard patients receive reports signed by a board-certified physician. All results are explained in clear, easy-to-understand language.',
+    answer: 'Essential Wellness and Executive Heart patients receive a same-day screening summary from their sonographer. Gold Standard patients receive a full report signed by a board-certified physician within 48 hours. All results are explained in clear, easy-to-understand language.',
   },
   {
     category: 'Medical & Results',
