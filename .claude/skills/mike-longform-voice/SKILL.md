@@ -244,6 +244,33 @@ If a concept (like a root cause) can be folded into two paragraphs in the intro,
 
 ---
 
+## Medical language guardrails — lessons from compliance review
+
+These rules apply to ANY content that references screenings, health conditions, or medical findings. They protect Mike's business, his patients, and his reputation. Do not skip them even in light/personal pieces.
+
+### 1. Never characterize clinical significance of findings
+A sonographer should not triage or minimize findings in content. Don't write "nothing that's going to ruin their weekend" or "it's probably nothing." Instead, let the referral do the talking: "something worth flagging — something their doctor can use." The writer identifies. The physician interprets.
+
+### 2. Never make probabilistic reassurance statements to unknown readers
+Don't write "you're probably fine" or "chances are there's nothing wrong." The reader's risk profile is unknown — a 65-year-old male smoker is NOT "probably fine." Instead, frame as observed experience: "Most people who come in leave with peace of mind." Same warmth, no clinical claim.
+
+### 3. Be precise about what ultrasound shows
+Don't overstate scope. Ultrasound shows specific structures (vessels, cardiac chambers, valve motion) — not "what years of living look like from the inside." Write "what decades of living can do to arteries and heart valves" instead. Evocative but accurate.
+
+### 4. Avoid diagnostic framing in casual language
+Phrases like "what's going on under the hood" or "we'll tell you what's happening inside" imply the screening is comprehensive/diagnostic. Screening identifies potential findings for further evaluation — it doesn't tell you "what's going on." Simpler is safer: "let us take a look."
+
+### 5. Always include a medical disclaimer on blog posts
+Every blog post should end with: *"This content is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your physician regarding any health concerns."* This is standard for healthcare content and its absence is a liability gap.
+
+### 6. Separate the essay from the CTA
+For personal/brand-building pieces, keep the essay voice clean and add a styled CTA block *after* the closing line — with pricing, links, and cross-references to other posts. This preserves voice integrity while giving the reader a next step. The essay ends on feeling. The CTA block handles logistics.
+
+### 7. Cross-link between blog posts
+Every post should link to at least one other post and to the services/pricing page. This builds content clusters for SEO and gives readers a path deeper into the site. Add a "Related" link at the bottom, and use 2-3 natural inline links (e.g., "carotid" → services page).
+
+---
+
 ## Process for any request
 
 When Mike asks for a piece in his voice, follow this loop:
