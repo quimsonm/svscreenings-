@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CTABanner from '../../components/CTABanner.astro';
+import NewsletterSignup from '../../components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
 import { link } from '../../utils/links';
 
@@ -57,6 +58,8 @@ const posts = (await getCollection('blog')).sort(
       )}
     </div>
   </section>
+
+  <NewsletterSignup />
 
   <CTABanner
     heading="Ready to Get Screened?"
