@@ -1,7 +1,7 @@
 ---
 title: "5 Silent Vascular Conditions You Can Catch Before They Catch You"
 description: "The five most dangerous vascular conditions develop without symptoms. Learn what they are, who's at risk, and how a simple ultrasound screening can catch them early."
-author: "Mike Quimson, RDMS, RVT"
+author: "Signal View Screening Team"
 pubDate: 2026-04-14
 ---
 

@@ -1,6 +1,6 @@
 # 5 Silent Vascular Conditions You Can Catch Before They Catch You
 
-*By Mike Quimson, RDMS, RVT — Lead Sonographer at Signal View Screening Services, with over a decade of clinical vascular and cardiac ultrasound experience in Las Vegas.*
+*By Signal View Screening Team, with over a decade of clinical vascular and cardiac ultrasound experience in Las Vegas.*
 
 ---
 
