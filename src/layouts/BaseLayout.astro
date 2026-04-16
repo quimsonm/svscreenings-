@@ -28,6 +28,11 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CZRBE70YJM');
+      window.svs_track = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      };
     </script>
     <link rel="canonical" href={canonicalUrl} />
 
