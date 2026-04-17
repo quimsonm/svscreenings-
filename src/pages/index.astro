@@ -181,7 +181,10 @@ const team = [
             <img
               src={member.image.src}
               alt={`${member.name}, ${member.role}`}
-              class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover object-top mx-auto shadow-md border-2 border-warmgray/30"
+              class:list={[
+                'w-24 h-24 md:w-28 md:h-28 rounded-full object-cover mx-auto shadow-md border-2 border-warmgray/30',
+                member.name === 'Mike' ? 'object-center' : 'object-top',
+              ]}
               loading="lazy"
             />
             <p class="mt-3 text-sm font-sans font-semibold text-charcoal">{member.name}</p>
