@@ -13,7 +13,7 @@ import conciergeHome from '../assets/images/concierge-home.png';
 
 <BaseLayout
   title="Screening Packages & Pricing | From $199 | Signal View Screenings Las Vegas"
-  description="Transparent pricing for ultrasound screening packages. Essential Wellness $199, Executive Heart $349, Gold Standard $597 with mobile white-glove service. No hidden fees."
+  description="Transparent pricing for ultrasound screening packages. Essential Wellness $199, Executive Heart $349, Gold Standard $597 with mobile concierge service. No hidden fees."
 >
   <PageHero
     title="Transparent, Simple Pricing"
@@ -28,6 +28,17 @@ import conciergeHome from '../assets/images/concierge-home.png';
         {packages.map((pkg) => (
           <PricingCard pkg={pkg} showDetails={true} />
         ))}
+      </div>
+
+      <div class="max-w-2xl mx-auto mt-10 fade-in-up">
+        <div class="bg-white rounded-card p-6 border border-warmgray/40 text-center">
+          <p class="text-sm font-sans text-charcoal leading-relaxed">
+            Every screening includes a same-day summary explained in plain language by your sonographer. Want a formal report for your doctor? <strong>Add board-certified physician interpretation for $49.</strong> The Gold Standard package includes this at no extra cost.
+          </p>
+          <p class="text-sm text-slate font-sans mt-3">
+            Screenings are elective and cash-pay — HSA/FSA eligible.
+          </p>
+        </div>
       </div>
     </div>
   </section>

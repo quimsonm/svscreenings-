@@ -11,6 +11,18 @@ import { link } from '../utils/links';
 
 import serviceResults from '../assets/images/service-results.png';
 import conciergeHome from '../assets/images/concierge-home.png';
+
+import teamMike from '../assets/images/Mike.jpg';
+import teamJackie from '../assets/images/Jackie.jpg';
+import teamPriya from '../assets/images/Priya.jpg';
+import teamRemi from '../assets/images/Remi.jpg';
+
+const team = [
+  { name: 'Mike', role: 'Sonographer', image: teamMike },
+  { name: 'Jackie', role: 'Sonographer', image: teamJackie },
+  { name: 'Priya', role: 'Sonographer', image: teamPriya },
+  { name: 'Remi', role: 'Sonographer', image: teamRemi },
+];
 ---
 
 <BaseLayout
@@ -61,7 +73,7 @@ import conciergeHome from '../assets/images/concierge-home.png';
 
         <h1 class="text-display-sm md:text-display font-serif text-white leading-tight">
           Hospital-Grade Screenings.<br class="hidden sm:block" />
-          <span class="text-gold-light">White-Glove Experience.</span>
+          <span class="text-gold-light">No Referrals, No Waiting.</span>
         </h1>
 
         <p class="mt-6 text-lg md:text-xl text-white/90 font-sans leading-relaxed max-w-2xl">
@@ -106,23 +118,42 @@ import conciergeHome from '../assets/images/concierge-home.png';
 
   <TrustBar />
 
-  <!-- ===== SOCIAL PROOF QUOTE + LOCATION/HOURS STRIP ===== -->
+  <!-- ===== SOCIAL PROOF + LOCATION/HOURS STRIP ===== -->
   <section class="bg-ivory border-b border-warmgray/40">
     <div class="container-site py-8 md:py-10">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
-        <!-- Single testimonial -->
+        <!-- Testimonials -->
         <div class="md:col-span-2 fade-in-up">
-          <div class="flex gap-0.5 mb-2">
-            {Array.from({ length: 5 }).map(() => (
-              <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Caleb T -->
+            <div>
+              <div class="flex gap-0.5 mb-2">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-sm md:text-base text-charcoal font-sans leading-relaxed italic">
+                "Quick service, very efficient, staff was welcoming, professional, and kind. Made our medical visit painless and reassuring."
+              </blockquote>
+              <p class="mt-2 text-sm font-sans font-semibold text-navy">— Caleb T.</p>
+            </div>
+            <!-- Kathy B -->
+            <div class="hidden sm:block">
+              <div class="flex gap-0.5 mb-2">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-sm md:text-base text-charcoal font-sans leading-relaxed italic">
+                "Mike and his team of ultrasound techs were knowledgeable, efficient and courteous. I highly recommend their services."
+              </blockquote>
+              <p class="mt-2 text-sm font-sans font-semibold text-navy">— Kathy B.</p>
+            </div>
           </div>
-          <blockquote class="text-base md:text-lg text-charcoal font-sans leading-relaxed italic">
-            "Quick service, very efficient, staff was welcoming, professional, and kind. Made our medical visit painless and reassuring."
-          </blockquote>
-          <p class="mt-2 text-sm font-sans font-semibold text-navy">— Caleb T., Google Review</p>
         </div>
         <!-- Hours / Location -->
         <div class="border-t md:border-t-0 md:border-l border-warmgray/60 pt-6 md:pt-0 md:pl-8 fade-in-up">
@@ -130,9 +161,33 @@ import conciergeHome from '../assets/images/concierge-home.png';
           <p class="text-sm font-sans font-semibold text-charcoal">Wednesday, Friday & Saturday</p>
           <p class="text-sm text-slate font-sans mt-1">{siteConfig.hours}</p>
           <p class="text-sm text-slate font-sans mt-3">
-            Private medical office in Summerlin — address provided upon booking confirmation.
+            3150 N Tenaya Wy, Suite 400<br />Las Vegas, NV 89128
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEET YOUR TEAM ===== -->
+  <section class="bg-white border-b border-warmgray/40">
+    <div class="container-site py-10 md:py-12">
+      <div class="text-center mb-8 fade-in-up">
+        <p class="overline text-gold mb-2">Your Screening Team</p>
+        <h2 class="text-2xl md:text-3xl font-serif text-charcoal">Real People. Real Expertise.</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto fade-in-up">
+        {team.map((member) => (
+          <div class="text-center">
+            <img
+              src={member.image.src}
+              alt={`${member.name}, ${member.role}`}
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover object-top mx-auto shadow-md border-2 border-warmgray/30"
+              loading="lazy"
+            />
+            <p class="mt-3 text-sm font-sans font-semibold text-charcoal">{member.name}</p>
+            <p class="text-xs font-sans text-slate">{member.role}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -159,7 +214,12 @@ import conciergeHome from '../assets/images/concierge-home.png';
             </div>
           </div>
 
-          <ul class="mt-8 space-y-3">
+          <div class="mt-8 bg-gold/5 border border-gold/20 rounded-card p-5">
+            <p class="text-sm font-sans font-semibold text-charcoal mb-1">Bringing a parent or loved one?</p>
+            <p class="text-sm text-slate font-sans leading-relaxed">Family members are welcome in the room. No needles, no fasting, no radiation — just gentle ultrasound imaging. We move at your pace.</p>
+          </div>
+
+          <ul class="mt-6 space-y-3">
             {[
               'No doctor referral required',
               'Results explained in plain language',
@@ -229,10 +289,16 @@ import conciergeHome from '../assets/images/concierge-home.png';
         ))}
       </div>
 
-      <p class="text-center mt-8 text-sm text-slate font-sans fade-in-up">
-        All screenings performed by highly trained sonographers with 5+ years experience.
-        <a href={link('/pricing')} class="text-navy font-medium hover:text-gold transition-colors ml-1">View full pricing details →</a>
-      </p>
+      <div class="max-w-2xl mx-auto mt-10 fade-in-up">
+        <div class="bg-white rounded-card p-6 border border-warmgray/40 text-center">
+          <p class="text-sm font-sans text-charcoal leading-relaxed">
+            Every screening includes a same-day summary explained in plain language by your sonographer. Want a formal report for your doctor? <strong>Add board-certified physician interpretation for $49.</strong> The Gold Standard package includes this at no extra cost.
+          </p>
+          <p class="text-sm text-slate font-sans mt-3">
+            Screenings are elective and cash-pay — HSA/FSA eligible. <a href={link('/pricing')} class="text-navy font-medium hover:text-gold transition-colors">View full pricing details →</a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
