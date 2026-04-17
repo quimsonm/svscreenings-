@@ -30,7 +30,7 @@ export const packages: Package[] = [
       'Same-day screening summary from sonographer',
       'Physician interpretation available as add-on',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0YY91RC4GBKX/services/NFKPOQ3TZNUTK3EXQMH7YDQ3',
+    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0GR90314NDDP/services/NFKPOQ3TZNUTK3EXQMH7YDQ3',
   },
   {
     slug: 'executive-heart',
@@ -50,7 +50,7 @@ export const packages: Package[] = [
       'Same-day screening summary from sonographer',
       'Physician interpretation available as add-on',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0YY91RC4GBKX/services/HCX6T2SKQJIWQJ5GI64CLPFC',
+    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0GR90314NDDP/services/HCX6T2SKQJIWQJ5GI64CLPFC',
   },
   {
     slug: 'gold-standard',
