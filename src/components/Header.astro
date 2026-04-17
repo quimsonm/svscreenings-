@@ -17,50 +17,68 @@ const navLinks = [
 
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
   <div class="container-site">
-    <div class="flex items-center justify-between h-20 transition-all duration-300" id="header-inner">
-      <!-- Logo -->
+    <!-- Desktop: single row -->
+    <div class="hidden lg:flex items-center justify-between h-20 transition-all duration-300" id="header-inner">
       <a href={link('/')} class="flex items-center gap-3 shrink-0">
         <img src={logo.src} alt="Signal View Screenings" class="w-10 h-10 rounded-full" />
         <div>
-          <span class="text-sm sm:text-base font-sans font-semibold text-charcoal tracking-wide">SIGNAL VIEW</span>
-          <span class="block text-[9px] sm:text-[10px] font-sans font-medium text-slate tracking-[0.12em] uppercase -mt-0.5">SCREENINGS</span>
+          <span class="text-base font-sans font-semibold text-charcoal tracking-wide">SIGNAL VIEW</span>
+          <span class="block text-[10px] font-sans font-medium text-slate tracking-[0.12em] uppercase -mt-0.5">SCREENINGS</span>
         </div>
       </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8">
+      <nav class="flex items-center gap-8">
         {navLinks.map((link) => (
           <a href={link.href} class="text-sm font-sans font-medium text-slate hover:text-navy transition-colors">
             {link.label}
           </a>
         ))}
       </nav>
-
-      <!-- Right side: CTA buttons + Mobile Menu -->
-      <div class="flex items-center gap-2 md:gap-3">
-        <a href={`tel:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_phone', {link_location: 'header'})" class="inline-flex items-center px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
+      <div class="flex items-center gap-3">
+        <a href={`tel:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_phone', {link_location: 'header'})" class="inline-flex items-center px-3 py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
           Call Us
         </a>
-        <a href={`sms:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_text', {link_location: 'header'})" class="inline-flex items-center px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
+        <a href={`sms:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_text', {link_location: 'header'})" class="inline-flex items-center px-3 py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
           Text Us
         </a>
-        <a href={link('/pricing')} onclick="window.svs_track && window.svs_track('cta_click', {link_text: 'Book Online', link_location: 'header'})" class="inline-flex items-center px-2.5 py-1.5 md:px-4 md:py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md">
+        <a href={link('/pricing')} onclick="window.svs_track && window.svs_track('cta_click', {link_text: 'Book Online', link_location: 'header'})" class="inline-flex items-center px-4 py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md">
           Book Online
         </a>
+      </div>
+    </div>
 
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="lg:hidden relative z-[60] flex items-center justify-center w-12 h-12 -mr-2 text-charcoal" aria-label="Open menu">
+    <!-- Mobile: logo row + buttons row -->
+    <div class="lg:hidden">
+      <div class="flex items-center justify-between h-14">
+        <a href={link('/')} class="flex items-center gap-2 shrink-0">
+          <img src={logo.src} alt="Signal View Screenings" class="w-8 h-8 rounded-full" />
+          <div>
+            <span class="text-sm font-sans font-semibold text-charcoal tracking-wide">SIGNAL VIEW</span>
+            <span class="block text-[9px] font-sans font-medium text-slate tracking-[0.12em] uppercase -mt-0.5">SCREENINGS</span>
+          </div>
+        </a>
+        <button id="mobile-menu-btn" class="relative z-[60] flex items-center justify-center w-10 h-10 -mr-1 text-charcoal" aria-label="Open menu">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+      </div>
+      <div class="flex items-center gap-2 pb-2">
+        <a href={`tel:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_phone', {link_location: 'header'})" class="flex-1 inline-flex items-center justify-center py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
+          Call Us
+        </a>
+        <a href={`sms:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_text', {link_location: 'header'})" class="flex-1 inline-flex items-center justify-center py-2 text-xs font-sans font-medium text-navy border border-navy/30 hover:border-navy rounded-md transition-colors">
+          Text Us
+        </a>
+        <a href={link('/pricing')} onclick="window.svs_track && window.svs_track('cta_click', {link_text: 'Book Online', link_location: 'header'})" class="flex-1 inline-flex items-center justify-center py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md">
+          Book Online
+        </a>
       </div>
     </div>
   </div>
 </header>
 
 <!-- Mobile Menu - OUTSIDE header to avoid stacking context issues -->
-<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 z-[9999] hidden" aria-hidden="true">
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-[88px] z-[9999] hidden" aria-hidden="true">
   <!-- Backdrop -->
   <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/20"></div>
   <!-- Menu panel -->
