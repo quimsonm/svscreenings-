@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+---
+
+<BaseLayout
+  title="Know Your Risk | Free Vascular Screening Assessment | Signal View Screenings"
+  description="Take our free 2-minute risk assessment to find out if you or a loved one should get a preventative ultrasound screening. No signup required to start."
+>
+  <PageHero
+    title="Know Your Risk"
+    subtitle="Answer 5 quick questions to find out if a preventative screening is right for you."
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Risk Assessment' }]}
+  />
+
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-2xl">
+
+      <!-- Quiz Container -->
+      <div id="quiz-container" class="bg-white rounded-card shadow-md border border-warmgray/30 p-6 md:p-10">
+
+        <!-- Progress Bar -->
+        <div class="mb-8">
+          <div class="flex justify-between text-xs font-sans text-slate mb-2">
+            <span id="progress-text">Question 1 of 5</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="w-full bg-warmgray/30 rounded-full h-2">
+            <div id="progress-bar" class="bg-gold h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Questions (shown one at a time) -->
+        <div id="quiz-questions">
+
+          <!-- Q1 -->
+          <div class="quiz-question active" data-question="1">
+            <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Are you over 55?</h2>
+            <p class="text-sm text-slate font-sans mb-6">Age is one of the strongest risk factors for vascular disease.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="1">Yes</button>
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="0">No</button>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question hidden" data-question="2">
+            <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Has a parent or sibling had a stroke, heart attack, or aneurysm?</h2>
+            <p class="text-sm text-slate font-sans mb-6">Family history is a major indicator of your own cardiovascular risk.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="1">Yes</button>
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="0">No</button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question hidden" data-question="3">
+            <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Do you have high blood pressure or high cholesterol?</h2>
+            <p class="text-sm text-slate font-sans mb-6">Both are leading contributors to plaque buildup in your arteries.</p>
+            <div class="grid grid-cols-3 gap-4">
+              <button class="quiz-answer py-4 px-4 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all text-sm" data-value="1">Yes</button>
+              <button class="quiz-answer py-4 px-4 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all text-sm" data-value="0">No</button>
+              <button class="quiz-answer py-4 px-4 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all text-sm" data-value="1">Not Sure</button>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question hidden" data-question="4">
+            <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Have you ever smoked?</h2>
+            <p class="text-sm text-slate font-sans mb-6">Smoking damages blood vessel walls and accelerates plaque formation, even years after quitting.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="1">Yes</button>
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="0">No</button>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="quiz-question hidden" data-question="5">
+            <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Have you had a vascular or cardiac screening in the last 5 years?</h2>
+            <p class="text-sm text-slate font-sans mb-6">Regular screening is the only way to detect most cardiovascular conditions before symptoms appear.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="0">Yes</button>
+              <button class="quiz-answer py-4 px-6 border-2 border-warmgray/40 rounded-lg font-sans font-medium text-charcoal hover:border-gold hover:bg-gold/5 transition-all" data-value="1">No</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Gate (shown after Q5) -->
+        <div id="email-gate" class="hidden">
+          <h2 class="text-xl md:text-2xl font-serif text-charcoal mb-2">Your results are ready.</h2>
+          <p class="text-sm text-slate font-sans mb-6">Enter your email to see your personalized risk assessment and screening recommendation.</p>
+
+          <form
+            id="quiz-email-form"
+            action="https://svscreenings.us16.list-manage.com/subscribe/post?u=ea39764124d44ff814096f046&id=47f9944edf&f_id=000718e1f0"
+            method="post"
+            target="_blank"
+            class="space-y-4"
+          >
+            <input
+              type="email"
+              name="EMAIL"
+              required
+              placeholder="Your email address"
+              class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+            />
+            <!-- Mailchimp honeypot -->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_ea39764124d44ff814096f046_47f9944edf" tabindex="-1" value="" />
+            </div>
+            <button
+              type="submit"
+              id="show-results-btn"
+              class="w-full py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            >
+              See My Results
+            </button>
+          </form>
+          <p class="text-xs text-slate font-sans mt-3 text-center">We respect your privacy. No spam, ever.</p>
+        </div>
+
+        <!-- Results (shown after email) -->
+        <div id="results-low" class="quiz-result hidden">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-serif text-charcoal">Lower Risk</h2>
+            <p class="text-slate font-sans mt-2">Based on your answers, your current risk factors are lower. But a baseline screening still gives you peace of mind — and a reference point for the future.</p>
+          </div>
+          <div class="bg-ivory rounded-card p-5 border border-warmgray/40 mb-6">
+            <p class="text-sm font-sans font-semibold text-charcoal">We recommend:</p>
+            <p class="text-lg font-serif text-navy mt-1">Essential Wellness — $199</p>
+            <p class="text-sm text-slate font-sans mt-1">Three critical vascular screenings: carotid artery, aorta, and leg arterial. ~30 minutes.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={link('/pricing')} class="flex-1 inline-flex items-center justify-center py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all">
+              Book Your Screening
+            </a>
+            <a href={`tel:${siteConfig.phoneTel}`} class="flex-1 inline-flex items-center justify-center py-3 border-2 border-navy/30 text-navy font-sans font-medium rounded-lg transition-all hover:border-navy">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+        </div>
+
+        <div id="results-moderate" class="quiz-result hidden">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-serif text-charcoal">Moderate Risk</h2>
+            <p class="text-slate font-sans mt-2">Your answers suggest multiple risk factors for cardiovascular disease. A comprehensive screening can detect issues before they become emergencies.</p>
+          </div>
+          <div class="bg-ivory rounded-card p-5 border border-gold/30 ring-1 ring-gold/20 mb-6">
+            <div class="flex items-center justify-between mb-1">
+              <p class="text-sm font-sans font-semibold text-charcoal">We recommend:</p>
+              <span class="text-xs font-sans font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full">Most Popular</span>
+            </div>
+            <p class="text-lg font-serif text-navy mt-1">Executive Heart — $349</p>
+            <p class="text-sm text-slate font-sans mt-1">Everything in Essential Wellness plus a full echocardiogram (heart ultrasound). ~45 minutes.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={link('/pricing')} class="flex-1 inline-flex items-center justify-center py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all">
+              Book Your Screening
+            </a>
+            <a href={`tel:${siteConfig.phoneTel}`} class="flex-1 inline-flex items-center justify-center py-3 border-2 border-navy/30 text-navy font-sans font-medium rounded-lg transition-all hover:border-navy">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+        </div>
+
+        <div id="results-high" class="quiz-result hidden">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-serif text-charcoal">Elevated Risk</h2>
+            <p class="text-slate font-sans mt-2">Your answers indicate several significant risk factors. We strongly recommend a comprehensive screening with physician interpretation — don't wait for symptoms.</p>
+          </div>
+          <div class="bg-ivory rounded-card p-5 border border-red-200 mb-6">
+            <p class="text-sm font-sans font-semibold text-charcoal">We recommend:</p>
+            <p class="text-lg font-serif text-navy mt-1">Gold Standard — $597</p>
+            <p class="text-sm text-slate font-sans mt-1">All ultrasound screenings included. We come to you. Physician-signed screening report. Complete peace of mind.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={link('/pricing#gold-standard-inquiry')} class="flex-1 inline-flex items-center justify-center py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all">
+              Request Your Appointment
+            </a>
+            <a href={`tel:${siteConfig.phoneTel}`} class="flex-1 inline-flex items-center justify-center py-3 border-2 border-navy/30 text-navy font-sans font-medium rounded-lg transition-all hover:border-navy">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="text-xs text-slate font-sans text-center mt-6 max-w-lg mx-auto">
+        This assessment is for educational purposes only and is not a medical diagnosis. It does not replace advice from a healthcare provider. If you are experiencing chest pain, sudden weakness, or difficulty speaking, call 911 immediately.
+      </p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var score = 0;
+    var current = 1;
+    var total = 5;
+    var answers = document.querySelectorAll('.quiz-answer');
+    var questions = document.querySelectorAll('.quiz-question');
+    var progressBar = document.getElementById('progress-bar');
+    var progressText = document.getElementById('progress-text');
+    var progressPercent = document.getElementById('progress-percent');
+    var emailGate = document.getElementById('email-gate');
+    var quizQuestions = document.getElementById('quiz-questions');
+
+    answers.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        score += parseInt(btn.getAttribute('data-value'));
+
+        // Highlight selected
+        var siblings = btn.parentElement.querySelectorAll('.quiz-answer');
+        siblings.forEach(function(s) { s.classList.remove('border-gold', 'bg-gold/10'); });
+        btn.classList.add('border-gold', 'bg-gold/10');
+
+        // Track quiz progress
+        if (window.svs_track) {
+          window.svs_track('quiz_progress', { question: current, score: score });
+        }
+
+        setTimeout(function() {
+          if (current < total) {
+            // Hide current, show next
+            questions.forEach(function(q) { q.classList.add('hidden'); q.classList.remove('active'); });
+            current++;
+            var next = document.querySelector('[data-question="' + current + '"]');
+            if (next) { next.classList.remove('hidden'); next.classList.add('active'); }
+
+            // Update progress
+            var pct = Math.round(((current - 1) / total) * 100);
+            progressBar.style.width = pct + '%';
+            progressText.textContent = 'Question ' + current + ' of ' + total;
+            progressPercent.textContent = pct + '%';
+          } else {
+            // Quiz complete — show email gate
+            progressBar.style.width = '100%';
+            progressText.textContent = 'Complete';
+            progressPercent.textContent = '100%';
+            quizQuestions.classList.add('hidden');
+            emailGate.classList.remove('hidden');
+
+            if (window.svs_track) {
+              window.svs_track('quiz_complete', { score: score });
+            }
+          }
+        }, 300);
+      });
+    });
+
+    // Email form submission — show results
+    var emailForm = document.getElementById('quiz-email-form');
+    var showResultsBtn = document.getElementById('show-results-btn');
+    emailForm.addEventListener('submit', function() {
+      // Show results based on score
+      emailGate.classList.add('hidden');
+      document.querySelector('.mb-8').classList.add('hidden'); // hide progress bar
+
+      if (score <= 1) {
+        document.getElementById('results-low').classList.remove('hidden');
+      } else if (score <= 3) {
+        document.getElementById('results-moderate').classList.remove('hidden');
+      } else {
+        document.getElementById('results-high').classList.remove('hidden');
+      }
+
+      if (window.svs_track) {
+        var level = score <= 1 ? 'low' : (score <= 3 ? 'moderate' : 'elevated');
+        window.svs_track('generate_lead', { form_name: 'risk_quiz', risk_level: level, score: score });
+      }
+    });
+  });
+</script>
