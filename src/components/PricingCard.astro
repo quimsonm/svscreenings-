@@ -110,7 +110,9 @@ const isHighlighted = pkg.highlighted;
       </a>
     ) : (
       <a
-        href={link(`/book/${pkg.slug}`)}
+        href={pkg.squareUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         onclick={`window.svs_track && window.svs_track('begin_checkout', { package_name: '${pkg.name}', value: ${pkg.price}, currency: 'USD' })`}
         class:list={[
           'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
