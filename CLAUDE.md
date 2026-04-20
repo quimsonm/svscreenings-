@@ -98,7 +98,7 @@ We are using the **frontend design skill** to develop a visually compelling, tru
 - Gold Standard package includes screening reports signed by a board-certified physician (keep general, don't name specific doctors)
 
 ## Contact
-- **Email:** signalviewultrasound@gmail.com (may change in future)
+- **Email:** info@svscreenings.com (may change in future)
 - **Phone:** 702.843.6612
 
 ## Service Area

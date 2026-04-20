@@ -79,7 +79,7 @@ import { siteConfig } from '../data/siteConfig';
       `Name: ${data.firstName} ${data.lastName}\nPhone: ${data.phone || 'Not provided'}\nEmail: ${data.email}\nSubject: ${data.subject}\n\nMessage:\n${data.message}`
     );
     (window as any).svs_track?.('generate_lead', { form_name: 'contact' });
-    window.location.href = `mailto:signalviewultrasound@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@svscreenings.com?subject=${subject}&body=${body}`;
 
     const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     if (btn) {

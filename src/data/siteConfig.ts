@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: 'Preventative Ultrasound Screenings in Las Vegas',
   phone: '702.843.6612',
   phoneTel: '+17028436612',
-  email: 'signalviewultrasound@gmail.com',
+  email: 'info@svscreenings.com',
   domain: 'https://svscreenings.com',
   screeningLocation: {
     address: '3150 N Tenaya Wy, Suite 400',

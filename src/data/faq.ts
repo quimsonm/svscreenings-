@@ -95,7 +95,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'What if I need to cancel or reschedule?',
-    answer: 'We understand plans change. Please give us at least 24 hours notice for cancellations or reschedules. Contact us at 702.843.6612 or email signalviewultrasound@gmail.com to make changes.',
+    answer: 'We understand plans change. Please give us at least 24 hours notice for cancellations or reschedules. Contact us at 702.843.6612 or email info@svscreenings.com to make changes.',
   },
 
   // Medical & Results
