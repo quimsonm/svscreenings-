@@ -85,7 +85,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'How do I book an appointment?',
-    answer: 'You can book directly through our website by selecting your preferred package, or call us at 702.843.6612. We\'ll confirm your appointment within 1 business day.',
+    answer: 'You can book directly through our website by selecting your preferred package, or call us at 702.843.6612. A $75 reservation deposit is required to secure your slot — the remaining balance is collected at your appointment.',
   },
   {
     category: 'Booking & Location',
