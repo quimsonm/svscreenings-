@@ -120,6 +120,31 @@ const team = [
 
   <TrustBar />
 
+  <!-- ===== MOTHER'S DAY BANNER — remove after May 11 ===== -->
+  <div class="bg-gold/8 border-b border-gold/20">
+    <div class="container-site py-3">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <svg class="w-5 h-5 text-gold shrink-0 hidden sm:block" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+          </svg>
+          <div>
+            <span class="text-sm font-sans font-semibold text-charcoal">Mother's Day is May 11 — Give the Gift of Health</span>
+            <span class="hidden sm:inline text-slate/40 mx-2">·</span>
+            <span class="block sm:inline text-xs text-slate font-sans">Gift cards from $199 · Delivered digitally · Valid 12 months</span>
+          </div>
+        </div>
+        <a
+          href={link('/gift')}
+          onclick="window.svs_track && window.svs_track('gift_banner_click', { link_location: 'homepage_banner' })"
+          class="shrink-0 inline-flex items-center px-4 py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+        >
+          Gift a Screening →
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== SOCIAL PROOF + LOCATION/HOURS STRIP ===== -->
   <section class="bg-ivory border-b border-warmgray/40">
     <div class="container-site py-8 md:py-10">

@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+
+const GIFT_CARD_URL = 'https://app.squareup.com/gift/ML4E56MGH4Y4B/order';
+
+const giftOptions = [
+  {
+    name: 'Contribute Toward a Screening',
+    amount: 100,
+    description: 'A meaningful contribution toward any package. Combine with another gift — two $100 cards cover an Essential Wellness screening.',
+    includes: [
+      'Applied toward any package',
+      'Recipient books at their convenience',
+      'Delivered instantly by text or email',
+    ],
+    badge: null,
+    highlighted: false,
+  },
+  {
+    name: 'Essential Wellness',
+    amount: 199,
+    description: 'Covers the complete Essential Wellness package — three vascular ultrasound screenings.',
+    includes: [
+      'Carotid Artery Screening',
+      'Aortic Aneurysm Screening',
+      'Leg Arterial Screening',
+      '~45 minute appointment',
+    ],
+    badge: null,
+    highlighted: false,
+  },
+  {
+    name: 'Executive Heart',
+    amount: 349,
+    description: 'Covers the full Executive Heart package — all Essential screenings plus a cardiac echocardiogram.',
+    includes: [
+      'Everything in Essential Wellness',
+      'Cardiac Echocardiogram',
+      '~60 minute appointment',
+      'Most comprehensive in-clinic option',
+    ],
+    badge: 'Most Popular Gift',
+    highlighted: true,
+  },
+  {
+    name: 'Gold Standard',
+    amount: 597,
+    description: 'The complete white-glove experience — every screening, physician-signed report, and we come to them.',
+    includes: [
+      'All ultrasound screenings',
+      'We travel to their home or office',
+      'Physician-signed screening report',
+      'Flexible scheduling at their convenience',
+    ],
+    badge: 'Ultimate Gift',
+    highlighted: false,
+  },
+];
+
+const steps = [
+  {
+    number: '1',
+    title: 'Choose a gift amount below',
+    description: 'Select the package that matches what you\'d like to give. Each amount covers the full cost of that screening.',
+  },
+  {
+    number: '2',
+    title: 'Complete purchase on Square',
+    description: 'Secure checkout takes about 60 seconds. Add a personal message — we\'ll include it on the gift certificate.',
+  },
+  {
+    number: '3',
+    title: 'They receive it instantly',
+    description: 'Square delivers by text or email directly to your recipient — or send it to yourself to give in person.',
+  },
+];
+---
+
+<BaseLayout
+  title="Gift a Health Screening | Signal View Screenings Las Vegas"
+  description="Give the gift of peace of mind. Signal View gift cards cover preventative ultrasound screenings in Las Vegas — no referral needed. Gift cards from $199, delivered instantly."
+>
+  <PageHero
+    title="Give the Gift of Health"
+    subtitle="The most meaningful gift you can give someone you love — peace of mind about their heart."
+    breadcrumbs={[{ label: 'Home', href: link('/') }, { label: 'Gift Cards' }]}
+  />
+
+  <!-- How It Works -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Simple Process</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">How Gift Cards Work</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-up">
+        {steps.map((step) => (
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-serif text-gold">{step.number}</span>
+            </div>
+            <h3 class="text-base font-sans font-semibold text-charcoal mb-2">{step.title}</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Card Options -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Gift Card Options</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Choose Your Gift Amount</h2>
+        <p class="mt-3 text-slate font-sans">Each amount covers the full cost of that screening package. Valid for 12 months. Delivered instantly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto fade-in-up">
+        {giftOptions.map((option) => (
+          <div class:list={[
+            'relative flex flex-col rounded-2xl border bg-white overflow-hidden transition-all duration-200',
+            option.highlighted
+              ? 'border-gold shadow-lg shadow-gold/10 ring-1 ring-gold/30'
+              : 'border-warmgray/40 hover:border-warmgray',
+          ]}>
+            {option.badge && (
+              <div class:list={[
+                'absolute top-0 left-0 right-0 py-1.5 text-center text-xs font-sans font-semibold tracking-wide',
+                option.highlighted ? 'bg-gold text-white' : 'bg-navy text-white',
+              ]}>
+                {option.badge}
+              </div>
+            )}
+            <div class:list={['flex flex-col flex-1 p-6', option.badge ? 'pt-10' : '']}>
+              <p class="text-sm font-sans font-medium text-slate mb-1">{option.name}</p>
+              <p class:list={[
+                'text-4xl font-serif mb-1',
+                option.highlighted ? 'text-gold' : 'text-charcoal',
+              ]}>
+                ${option.amount}
+              </p>
+              <p class="text-xs text-slate font-sans mb-4">gift card · valid 12 months</p>
+              <p class="text-sm text-charcoal font-sans leading-relaxed mb-5">{option.description}</p>
+              <ul class="space-y-2 flex-1 mb-6">
+                {option.includes.map((item) => (
+                  <li class="flex items-start gap-2 text-xs font-sans text-slate">
+                    <svg class="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={GIFT_CARD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick={`window.svs_track && window.svs_track('gift_card_click', { item_name: '${option.name}', value: ${option.amount} })`}
+                class:list={[
+                  'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow-md',
+                  option.highlighted
+                    ? 'bg-gold hover:bg-gold-hover text-white'
+                    : 'bg-navy hover:bg-navy/90 text-white',
+                ]}
+              >
+                Gift ${option.amount} →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-sm text-slate font-sans mt-8">
+        Secure checkout powered by Square · HSA/FSA eligible · Questions? Call or text <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-medium hover:text-gold transition-colors">{siteConfig.phone}</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Redemption Info -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-3xl">
+      <div class="bg-ivory rounded-2xl border border-warmgray/40 p-8 md:p-10 fade-in-up">
+        <div class="text-center mb-8">
+          <p class="overline text-gold mb-3">Redeeming Your Gift</p>
+          <h2 class="text-2xl md:text-3xl font-serif text-charcoal">How to Use a Gift Card</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-sm font-sans font-semibold text-charcoal mb-2">Call or text to schedule</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">
+              Once received, the gift card holder calls or texts <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-medium">{siteConfig.phone}</a> to book their appointment. We'll apply the gift card balance at scheduling.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-sm font-sans font-semibold text-charcoal mb-2">Valid for 12 months</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">
+              Gift cards are valid for 12 months from the date of purchase. Screenings are available Wednesday, Friday, and Saturday in Las Vegas.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-sm font-sans font-semibold text-charcoal mb-2">One-time use</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">
+              Each gift card covers one full screening visit. Balances are tracked by Square — unused balances remain on the card until redeemed or expired.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-sm font-sans font-semibold text-charcoal mb-2">Questions about your gift card</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">
+              Call or text <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-medium">{siteConfig.phone}</a> or email <a href={`mailto:${siteConfig.email}`} class="text-navy font-medium">{siteConfig.email}</a>. We're happy to help.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Questions About Gift Cards?"
+    subtext="Call or text us — we'll help you choose the right gift for your loved one."
+    ctaText="Call 702.843.6612"
+    ctaHref={`tel:${siteConfig.phoneTel}`}
+  />
+</BaseLayout>

@@ -146,6 +146,124 @@ import conciergeHome from '../assets/images/concierge-home.png';
     </div>
   </section>
 
+  <!-- Bundles -->
+  <section id="bundles" class="section-padding bg-ivory">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Coming With Someone?</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Save When You Book Together</h2>
+        <p class="mt-3 text-slate font-sans">Bring a loved one and get two full Executive Heart screenings for less than the cost of booking separately.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto fade-in-up">
+        <!-- Bring a Loved One -->
+        <div class="bg-white rounded-2xl border border-warmgray/40 p-7 flex flex-col">
+          <div class="inline-block self-start mb-4">
+            <span class="text-xs font-sans font-semibold text-navy bg-navy/8 px-3 py-1 rounded-full border border-navy/20">Bundle</span>
+          </div>
+          <h3 class="text-xl font-serif text-charcoal mb-1">Bring a Loved One</h3>
+          <p class="text-sm text-slate font-sans mb-4">Executive Heart × 2</p>
+          <p class="text-4xl font-serif text-charcoal mb-1">$599</p>
+          <p class="text-sm text-gold font-sans font-semibold mb-1">$299.50 per person — save $99 vs. booking separately</p>
+          <p class="text-sm text-slate font-sans mb-6 leading-relaxed">Two complete Executive Heart screenings — full cardiac workup including echocardiogram. Ideal for couples or an adult child booking with a parent.</p>
+          <ul class="space-y-2 mb-8 flex-1">
+            {['Two Executive Heart screenings', 'Carotid, Aorta, Leg Arterial + Echo for each', 'Same appointment or separate visits', '$299.50 per person — save $49.50 each'].map((item) => (
+              <li class="flex items-start gap-2 text-xs font-sans text-slate">
+                <svg class="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="#bundle-inquiry" class="block w-full text-center py-3 border-2 border-navy text-navy hover:bg-navy hover:text-white font-sans font-semibold text-sm rounded-lg transition-all duration-200" onclick="window.svs_track && window.svs_track('cta_click', { link_text: 'Inquire About This Option', link_location: 'bundle_loved_one' })">
+            Inquire About This Option
+          </a>
+        </div>
+
+        <!-- Annual Wellness Membership -->
+        <div class="bg-white rounded-2xl border border-gold shadow-md shadow-gold/10 ring-1 ring-gold/20 p-7 flex flex-col">
+          <div class="inline-block self-start mb-4">
+            <span class="text-xs font-sans font-semibold text-white bg-gold px-3 py-1 rounded-full">Best Value</span>
+          </div>
+          <h3 class="text-xl font-serif text-charcoal mb-1">Annual Wellness Membership</h3>
+          <p class="text-sm text-slate font-sans mb-4">Executive Heart · Once a Year</p>
+          <div class="flex items-baseline gap-1 mb-1">
+            <p class="text-4xl font-serif text-gold">$299</p>
+            <span class="text-lg text-slate font-sans">/yr</span>
+          </div>
+          <p class="text-sm text-gold font-sans font-semibold mb-1">Save $50 vs. standard rate · Priority scheduling included</p>
+          <p class="text-sm text-slate font-sans mb-6 leading-relaxed">One Executive Heart screening per year — lock in today's price with priority scheduling guaranteed. The easiest way to make this an annual habit.</p>
+          <ul class="space-y-2 mb-8 flex-1">
+            {['One Executive Heart screening per year', 'Lock in today\'s pricing', 'Priority scheduling — book before general availability', 'Annual renewal reminder'].map((item) => (
+              <li class="flex items-start gap-2 text-xs font-sans text-slate">
+                <svg class="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="#bundle-inquiry" class="block w-full text-center py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-sm rounded-lg transition-all duration-200 shadow-sm hover:shadow-md" onclick="window.svs_track && window.svs_track('cta_click', { link_text: 'Inquire About This Option', link_location: 'bundle_membership' })">
+            Inquire About This Option
+          </a>
+        </div>
+      </div>
+
+      <!-- Bundle Inquiry Form -->
+      <div id="bundle-inquiry" class="max-w-2xl mx-auto mt-16 fade-in-up">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-serif text-charcoal">Inquire About a Bundle</h3>
+          <p class="mt-2 text-sm text-slate font-sans">No payment collected here. Mike will personally follow up within 1 business day.</p>
+        </div>
+        <form id="bundle-form" class="bg-white rounded-2xl border border-warmgray/40 p-7 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="bi-name" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Full Name *</label>
+              <input type="text" id="bi-name" name="name" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="bi-phone" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Phone Number *</label>
+              <input type="tel" id="bi-phone" name="phone" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="(702) 555-0123" />
+            </div>
+          </div>
+          <div>
+            <label for="bi-email" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Email Address *</label>
+            <input type="email" id="bi-email" name="email" required
+              class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+              placeholder="you@example.com" />
+          </div>
+          <div>
+            <label for="bi-option" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Which option are you interested in? *</label>
+            <select id="bi-option" name="option" required
+              class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white">
+              <option value="">Select an option...</option>
+              <option value="Bring a Loved One — Executive Heart ($599)">Bring a Loved One — Executive Heart ($599)</option>
+              <option value="Annual Wellness Membership ($299/yr)">Annual Wellness Membership ($299/yr)</option>
+            </select>
+          </div>
+          <div>
+            <label for="bi-message" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Message (optional)</label>
+            <textarea id="bi-message" name="message" rows="2"
+              class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
+              placeholder="Any questions or special requests..."></textarea>
+          </div>
+          <div class="hidden" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <button type="submit" class="w-full py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+            Send Inquiry
+          </button>
+          <p class="text-center text-xs text-slate font-sans">No payment collected here. Mike will personally follow up within 1 business day.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Gold Standard Concierge Inquiry -->
   <section id="gold-standard-inquiry" class="section-padding bg-white">
     <div class="container-site max-w-5xl">
@@ -301,6 +419,37 @@ import conciergeHome from '../assets/images/concierge-home.png';
 
   <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
+      // Bundle inquiry form
+      var bundleForm = document.getElementById('bundle-form');
+      if (bundleForm) {
+        bundleForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var honeypot = bundleForm.querySelector('input[name="website"]');
+          if (honeypot && honeypot.value) return;
+          var data = new FormData(bundleForm);
+          var entries = {};
+          data.forEach(function(value, key) { entries[key] = value; });
+          var option = entries.option || '';
+          var subject = encodeURIComponent('Bundle Inquiry — ' + option);
+          var body = encodeURIComponent(
+            'Name: ' + entries.name +
+            '\nPhone: ' + entries.phone +
+            '\nEmail: ' + entries.email +
+            '\nOption: ' + option +
+            '\nMessage: ' + (entries.message || 'None')
+          );
+          window.svs_track && window.svs_track('generate_lead', { form_name: 'bundle_inquiry' });
+          window.location.href = 'mailto:info@svscreenings.com?subject=' + subject + '&body=' + body;
+          var btn = bundleForm.querySelector('button[type="submit"]');
+          if (btn) {
+            btn.textContent = 'Opening Email — Thank You!';
+            btn.classList.remove('bg-gold', 'hover:bg-gold-hover');
+            btn.classList.add('bg-green-600');
+            btn.disabled = true;
+          }
+        });
+      }
+
       // Auto-play video when arriving via anchor link
       var video = document.getElementById('gold-standard-video');
       if (video && (window.location.hash === '#gold-standard-inquiry' || window.location.hash === '#booking')) {
