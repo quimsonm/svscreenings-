@@ -11,50 +11,58 @@ const diagnosticServices = [
   {
     name: 'Echocardiogram',
     price: 300,
-    description: 'Comprehensive cardiac ultrasound evaluating heart muscle function, valve integrity, and blood flow.',
+    description: 'Evaluates heart muscle function, valve health, and chamber size. Detects conditions like heart failure and valve disease — often before symptoms appear. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'heart',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/A6EHGZOM37NHJ2QRUMTCGGKX',
   },
   {
     name: 'Carotid Ultrasound',
     price: 250,
-    description: 'Full diagnostic study of the carotid arteries to evaluate plaque buildup, stenosis, and stroke risk.',
+    description: 'Checks for plaque buildup in the carotid arteries — the main blood vessels supplying your brain. A leading cause of stroke, often with zero symptoms. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'artery',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/XOJSMJNJ6YDRVLWA6GDT35GJ',
   },
   {
-    name: 'Aorta Ultrasound',
+    name: 'Aortic Aneurysm Ultrasound',
     price: 250,
-    description: 'Diagnostic imaging of the abdominal aorta to evaluate for aneurysm, dilation, or other abnormalities.',
+    description: 'Checks for an abdominal aortic aneurysm (AAA) — a dangerous bulge in the body\'s main artery that can rupture without warning. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'aorta',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/JJWBVXGFGFIEKGZEC7A56C6E',
   },
   {
-    name: 'Lower Extremity Arterial',
+    name: 'Leg Arterial (PAD)',
     price: 250,
-    description: 'Complete arterial study of the legs to assess blood flow, blockages, and peripheral artery disease.',
+    description: 'Checks blood flow in the arteries of your legs to detect peripheral artery disease (PAD). Left untreated, PAD can lead to serious complications. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/VRAGGFL6MISH65LS2HCG6MSH',
   },
   {
-    name: 'Lower Extremity Venous',
+    name: 'Leg Venous (DVT)',
     price: 250,
-    description: 'Full venous study of the legs to evaluate for deep vein thrombosis (DVT), reflux, and venous insufficiency.',
+    description: 'Checks the veins in your legs for blood clots (DVT) and venous insufficiency. DVT can be life-threatening if a clot travels to the lungs. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/N5EW3KNEPLX4GJHBJ2S4LUDJ',
   },
   {
     name: 'Abdominal Complete',
     price: 250,
-    description: 'Comprehensive abdominal ultrasound covering the liver, gallbladder, pancreas, spleen, and kidneys.',
+    description: 'Comprehensive view of the liver, gallbladder, kidneys, spleen, pancreas, and aorta. Detects gallstones, cysts, fatty liver, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/MPRZWA64NFA7B44TUJD22SEP',
   },
   {
     name: 'Thyroid Ultrasound',
     price: 250,
-    description: 'Detailed imaging of the thyroid gland to evaluate nodules, cysts, and gland structure.',
+    description: 'Evaluates the size, shape, and structure of your thyroid gland. Detects nodules, cysts, enlargement, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/3JNGW2A626ZSKCUT2BHVS6SS',
   },
   {
     name: 'Renal Ultrasound',
     price: 250,
-    description: 'Diagnostic study of the kidneys and bladder to evaluate size, structure, stones, and blood flow.',
+    description: 'Checks the size, structure, and appearance of both kidneys and bladder. Detects kidney stones, cysts, masses, and signs of obstruction. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
+    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/FOBHBGXNFYM22VMNGXN4MLEK',
   },
 ];
 
@@ -122,11 +130,20 @@ const iconMap: Record<string, string> = {
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto fade-in-up">
         {diagnosticServices.map((service) => (
-          <div class="bg-white rounded-card p-5 shadow-md border border-warmgray/30 hover:shadow-lg transition-all duration-300">
+          <div class="bg-white rounded-card p-5 shadow-md border border-warmgray/30 hover:shadow-lg transition-all duration-300 flex flex-col">
             <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-3 text-gold" set:html={iconMap[service.icon]} />
             <h3 class="font-sans font-semibold text-charcoal text-sm mb-1">{service.name}</h3>
             <p class="text-2xl font-serif text-navy mb-2">${service.price}</p>
-            <p class="text-xs text-slate font-sans leading-relaxed">{service.description}</p>
+            <p class="text-xs text-slate font-sans leading-relaxed mb-4 flex-1">{service.description}</p>
+            <a
+              href={service.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick={`window.svs_track && window.svs_track('begin_checkout', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
+              class="block w-full text-center py-2.5 bg-navy hover:bg-navy/90 text-white text-xs font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            >
+              Book &amp; Pay — ${service.price}
+            </a>
           </div>
         ))}
       </div>
