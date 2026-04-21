@@ -102,7 +102,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Medical & Results',
     question: 'When will I get my results?',
-    answer: 'Essential Wellness and Executive Heart patients receive a same-day screening summary from their sonographer. Gold Standard patients receive a full report signed by a board-certified physician within 48 hours. All results are explained in clear, easy-to-understand language.',
+    answer: 'All patients receive a same-day sonographer findings summary — a plain-language overview of normal findings and any areas that warrant follow-up with your doctor. For a physician-interpreted report, ask about our full diagnostic ultrasound studies.',
   },
   {
     category: 'Medical & Results',

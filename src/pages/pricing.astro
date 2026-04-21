@@ -33,10 +33,7 @@ import conciergeHome from '../assets/images/concierge-home.png';
       <div class="max-w-2xl mx-auto mt-10 fade-in-up">
         <div class="bg-white rounded-card p-6 border border-warmgray/40 text-center">
           <p class="text-sm font-sans text-charcoal leading-relaxed">
-            Every screening includes a same-day summary explained in plain language by your sonographer. Want a formal report for your doctor? <strong>Add board-certified physician interpretation for $49.</strong> The Gold Standard package includes this at no extra cost.
-          </p>
-          <p class="text-sm text-slate font-sans mt-3">
-            Screenings are elective and cash-pay — HSA/FSA eligible.
+            Every screening includes a same-day sonographer findings summary explained in plain language — normal findings or areas to follow up with your doctor. Screenings are elective and cash-pay — HSA/FSA eligible.
           </p>
         </div>
       </div>
@@ -89,22 +86,6 @@ import conciergeHome from '../assets/images/concierge-home.png';
             <!-- Extra features -->
             <tr class="border-b border-warmgray/50">
               <td class="py-3.5 px-4 text-sm font-sans text-charcoal">Mobile Service (We Come to You)</td>
-              {packages.map((pkg) => (
-                <td class="py-3.5 px-4 text-center">
-                  {pkg.slug === 'gold-standard' ? (
-                    <svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg class="w-5 h-5 text-warmgray mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                    </svg>
-                  )}
-                </td>
-              ))}
-            </tr>
-            <tr class="border-b border-warmgray/50">
-              <td class="py-3.5 px-4 text-sm font-sans text-charcoal">Physician-Signed Report</td>
               {packages.map((pkg) => (
                 <td class="py-3.5 px-4 text-center">
                   {pkg.slug === 'gold-standard' ? (
