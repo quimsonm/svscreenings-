@@ -140,9 +140,9 @@
 ### Pricing & Packages (Current)
 | Package | Price | Duration | Results |
 |---------|-------|----------|---------|
-| Essential Wellness | $199 | ~30 min | Physician-interpreted report within 5–7 business days |
-| Executive Heart | $349 | ~45 min | Physician-interpreted report within 5–7 business days |
-| The Gold Standard | $597 | ~60 min | Physician-interpreted report within 5–7 business days |
+| Essential Wellness | $199 | ~30 min | Physician-interpreted report within 2 business days |
+| Executive Heart | $349 | ~45 min | Physician-interpreted report within 2 business days |
+| The Gold Standard | $597 | ~60 min | Physician-interpreted report within 2 business days |
 
 ### Cash-Pay Diagnostics (Current)
 | Service | Price |

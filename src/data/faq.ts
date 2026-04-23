@@ -102,7 +102,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Medical & Results',
     question: 'When will I get my results?',
-    answer: 'Every screening includes a physician-interpreted report delivered to you within 5–7 business days of your appointment.',
+    answer: 'Every screening includes a physician-interpreted report delivered to you within 2 business days of your appointment.',
   },
   {
     category: 'Medical & Results',
