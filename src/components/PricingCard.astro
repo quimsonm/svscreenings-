@@ -102,27 +102,51 @@ const isHighlighted = pkg.highlighted;
   {/* CTA */}
   <div class="px-6 pb-6">
     {isGold ? (
-      <a
-        href={link('/pricing#gold-standard-inquiry')}
-        class="block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md"
-      >
-        Request Your Appointment
-      </a>
+      <>
+        <a
+          href={link('/pricing#gold-standard-inquiry')}
+          class="block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md"
+        >
+          Request Your Appointment
+        </a>
+        <p class="text-center text-xs text-slate font-sans mt-3">
+          Gold Standard bookings are personalized —{' '}
+          <a
+            href="tel:+17028436612"
+            onclick="window.svs_track && window.svs_track('click_phone', { link_location: 'pricing_card_gold' })"
+            class="text-navy font-medium hover:text-gold transition-colors"
+          >
+            call or text us to schedule
+          </a>
+        </p>
+      </>
     ) : (
-      <a
-        href={pkg.squareUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick={`window.svs_track && window.svs_track('begin_checkout', { package_name: '${pkg.name}', value: ${pkg.price}, currency: 'USD' })`}
-        class:list={[
-          'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
-          isHighlighted
-            ? 'bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md'
-            : 'border-2 border-gold text-gold hover:bg-gold hover:text-white',
-        ]}
-      >
-        Book {pkg.name}
-      </a>
+      <>
+        <a
+          href={pkg.squareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick={`window.svs_track && window.svs_track('begin_checkout', { package_name: '${pkg.name}', value: ${pkg.price}, currency: 'USD' })`}
+          class:list={[
+            'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
+            isHighlighted
+              ? 'bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md'
+              : 'border-2 border-gold text-gold hover:bg-gold hover:text-white',
+          ]}
+        >
+          Book {pkg.name}
+        </a>
+        <p class="text-center text-xs text-slate font-sans mt-3">
+          Prefer to speak with someone first?{' '}
+          <a
+            href="tel:+17028436612"
+            onclick="window.svs_track && window.svs_track('click_phone', { link_location: 'pricing_card' })"
+            class="text-navy font-medium hover:text-gold transition-colors"
+          >
+            702.843.6612
+          </a>
+        </p>
+      </>
     )}
   </div>
 </div>
