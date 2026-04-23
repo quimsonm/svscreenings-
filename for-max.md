@@ -140,9 +140,9 @@
 ### Pricing & Packages (Current)
 | Package | Price | Duration | Results |
 |---------|-------|----------|---------|
-| Essential Wellness | $199 | ~30 min | Same-day sonographer summary (physician interp add-on available) |
-| Executive Heart | $349 | ~45 min | Same-day sonographer summary (physician interp add-on available) |
-| The Gold Standard | $597 | ~60 min | Physician-signed report within 48 hours |
+| Essential Wellness | $199 | ~30 min | Physician-interpreted report within 5–7 business days |
+| Executive Heart | $349 | ~45 min | Physician-interpreted report within 5–7 business days |
+| The Gold Standard | $597 | ~60 min | Physician-interpreted report within 5–7 business days |
 
 ### Cash-Pay Diagnostics (Current)
 | Service | Price |

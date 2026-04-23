@@ -102,7 +102,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Medical & Results',
     question: 'When will I get my results?',
-    answer: 'All patients receive a same-day sonographer findings summary — a plain-language overview of normal findings and any areas that warrant follow-up with your doctor. For a physician-interpreted report, ask about our full diagnostic ultrasound studies.',
+    answer: 'Every screening includes a physician-interpreted report delivered to you within 5–7 business days of your appointment.',
   },
   {
     category: 'Medical & Results',
@@ -112,7 +112,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Medical & Results',
     question: 'Can I share my results with my doctor?',
-    answer: 'Absolutely. We encourage it. Your screening report is designed to be shared with your healthcare provider and includes all the clinical data they need for follow-up care.',
+    answer: 'Absolutely. We encourage it. Your physician-interpreted report is designed to be shared directly with your healthcare provider and includes all the clinical information they need for follow-up care.',
   },
   {
     category: 'Medical & Results',

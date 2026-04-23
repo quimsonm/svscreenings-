@@ -89,9 +89,7 @@ This isn't some experimental scan. Echocardiograms are the gold standard in card
 
 This is the question people don't ask out loud but think about the whole drive over. So let me walk you through it.
 
-When your screening is done, we sit with you. Right there in the room. Your sonographer walks you through what we saw — in plain language, not medical jargon. You'll see your own images on the screen. You'll know what looks normal and what doesn't. No waiting days for a phone call. No wondering.
-
-For our Essential Wellness and Executive Heart packages, you walk out the same day with a screening summary from your sonographer — a clear overview of what we found. If you want the full physician-level review, we offer board-certified physician interpretation as an add-on. And with our Gold Standard package, physician interpretation is included — every image reviewed and signed by a doctor.
+When your screening is done, every package includes a physician-interpreted report delivered to you within 5–7 business days — a plain-language overview of what we found, what looks normal, and any areas worth following up with your doctor.
 
 If everything looks clear — and for a lot of people, it does — you walk out with peace of mind and a baseline on file. That baseline matters. Because if you come back in a year or two, we can compare. We can see if anything has changed. **That's how real prevention works — it's not a one-time snapshot, it's a relationship with your own health over time.**
 
@@ -115,7 +113,7 @@ Not because you're sick. Not because something's wrong. But because you'd rather
 
 That's what we do at Signal View Screening Services. We're not trying to replace your doctor. We're trying to give you — and your doctor — information that doesn't exist until someone looks. We're a team of highly trained and experienced sonographers with over a decade of clinical experience who set up shop in Las Vegas for one reason: to give people like you access to the same imaging that catches these conditions early — before they catch you.
 
-Our Essential Wellness package — $199 — covers your carotids, your aorta, and your leg arteries in one visit. You'll walk out the same day with a screening summary from your sonographer. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you'd rather not come to us, our Gold Standard package ($597) means we come to you, anywhere in the Greater Las Vegas area, on your schedule — with physician-signed reports included.
+Our Essential Wellness package — $199 — covers your carotids, your aorta, and your leg arteries in one visit. Every package includes a physician-interpreted report delivered within 5–7 business days. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you'd rather not come to us, our Gold Standard package ($597) means we come to you, anywhere in the Greater Las Vegas area, on your schedule.
 
 No referral needed. No insurance runaround. No six-week wait for an appointment.
 
