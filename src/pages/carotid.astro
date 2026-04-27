@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { Image } from 'astro:assets';
+import carotidImg from '../assets/images/carotid-screening.jpg';
 import { siteConfig } from '../data/siteConfig';
 import { link } from '../utils/links';
 
@@ -60,7 +62,21 @@ const whatYouGet = [
     <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gold/3 rounded-full translate-y-1/2 -translate-x-1/3"></div>
 
     <div class="container-site relative py-20 md:py-28">
-      <div class="max-w-3xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Hero image (mobile: above text, desktop: right side) -->
+      <div class="order-first lg:order-last fade-in-up">
+        <Image
+          src={carotidImg}
+          alt="Sonographer performing a carotid artery ultrasound screening on a patient"
+          class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+          widths={[480, 768, 1024]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          quality={85}
+        />
+      </div>
+
+      <div>
         <div class="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-6 fade-in-up">
           <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
           <span class="text-sm font-sans font-medium text-gold">Limited Time Offer</span>
@@ -128,6 +144,7 @@ const whatYouGet = [
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   </section>
