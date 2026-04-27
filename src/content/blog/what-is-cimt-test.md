@@ -69,28 +69,7 @@ We're not a pop-up screening event and we're not an assembly line. Signal View S
 
 We built this service because we believe preventive screenings shouldn't require a referral, a waiting list, or a $2,000 hospital bill. You deserve access to the same hospital-grade technology in a one-on-one setting where someone actually takes the time to explain what they're seeing.
 
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem;">
-  <div style="text-align: center;">
-    <img src="/images/blog/Mike.jpg" alt="Mike — Owner & Sonographer" style="border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: cover;" />
-    <p style="font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Mike</p>
-    <p style="font-size: 0.75rem; color: #4A5568;">Owner & Sonographer</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="/images/blog/Jackie.jpg" alt="Jackie — Sonographer" style="border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: cover;" />
-    <p style="font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Jackie</p>
-    <p style="font-size: 0.75rem; color: #4A5568;">Sonographer</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="/images/blog/Priya.jpg" alt="Priya — Sonographer" style="border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: cover;" />
-    <p style="font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Priya</p>
-    <p style="font-size: 0.75rem; color: #4A5568;">Sonographer</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="/images/blog/Remi.jpg" alt="Remi — Sonographer" style="border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: cover;" />
-    <p style="font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Remi</p>
-    <p style="font-size: 0.75rem; color: #4A5568;">Sonographer</p>
-  </div>
-</div>
+![The Signal View Screening Services team — Jackie, Priya, Remi, and Mike](/images/blog/Team.jpg)
 
 Your health. Your peace of mind.
 
