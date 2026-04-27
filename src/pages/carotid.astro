@@ -24,7 +24,7 @@ const whyItMatters = [
   {
     stat: '~50%',
     heading: 'of adults have carotid plaque',
-    description: 'Plaque buildup in your carotid arteries is more common than most people realize — especially after age 50.',
+    description: 'Plaque buildup in your carotid arteries is more common than most people realize — especially after age 50. A CIMT test can measure it before symptoms appear.',
   },
   {
     stat: '15 min',
@@ -45,15 +45,16 @@ const whoShouldGet = [
 const whatYouGet = [
   'One-on-one with an experienced sonographer — not an assembly line',
   'Real-time ultrasound of both left and right carotid arteries',
-  'Plaque buildup and intimal thickening assessment',
+  'CIMT measurement — carotid intima-media thickness assessment',
+  'Plaque buildup detection and arterial wall evaluation',
   'Results reviewed by a board-certified radiologist',
   'Follow-up within 1 business day',
 ];
 ---
 
 <BaseLayout
-  title="$99 Carotid Screening | Know Your Stroke Risk | Signal View Screenings Las Vegas"
-  description="A 15-minute carotid ultrasound that checks for plaque buildup in your neck arteries. $99 in Las Vegas. No referral needed. Book online or call 702.843.6612."
+  title="$99 Carotid / CIMT Screening Las Vegas | Carotid Intima-Media Thickness Test | Signal View Screenings"
+  description="$99 carotid ultrasound and CIMT (carotid intima-media thickness) screening in Las Vegas. Checks for plaque buildup and stroke risk in 15 minutes. No referral needed. Book online or call 702.843.6612."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden bg-navy">
@@ -86,10 +87,10 @@ const whatYouGet = [
           Know Your Stroke Risk
         </h1>
         <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-          <span class="text-gold font-semibold">$99</span> Carotid Artery Screening
+          <span class="text-gold font-semibold">$99</span> Carotid Artery / CIMT Screening
         </p>
         <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
-          A 15-minute ultrasound that checks for plaque buildup in your neck arteries — before it becomes an emergency.
+          A 15-minute carotid intima-media thickness (CIMT) ultrasound that checks for plaque buildup and arterial thickening — before it becomes an emergency.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in-up">
@@ -175,7 +176,7 @@ const whatYouGet = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
         <div class="fade-in-up">
           <p class="overline text-gold mb-3">What's Included</p>
-          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-6">Your $99 Carotid Screening</h2>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-6">Your $99 Carotid / CIMT Screening</h2>
           <ul class="space-y-4">
             {whatYouGet.map((item) => (
               <li class="flex items-start gap-3">
@@ -189,7 +190,7 @@ const whatYouGet = [
         </div>
 
         <div class="bg-white rounded-2xl border border-warmgray/30 p-8 text-center fade-in-up">
-          <p class="overline text-gold mb-2">Carotid Screening</p>
+          <p class="overline text-gold mb-2">Carotid / CIMT Screening</p>
           <p class="text-6xl font-serif text-charcoal mb-1">$99</p>
           <p class="text-sm text-slate font-sans mb-6">One-time screening · No subscription</p>
           <a
@@ -217,8 +218,47 @@ const whatYouGet = [
     </div>
   </section>
 
-  <!-- Who Should Get Screened -->
+  <!-- What Is CIMT -->
   <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade-in-up">
+        <div>
+          <p class="overline text-gold mb-3">The Test Everyone's Talking About</p>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-4">What Is a CIMT Test?</h2>
+          <p class="text-base font-sans text-slate leading-relaxed mb-4">
+            CIMT stands for <strong class="text-charcoal">Carotid Intima-Media Thickness</strong> — a non-invasive ultrasound measurement of the inner lining of your carotid arteries. It's one of the earliest detectable markers of cardiovascular disease.
+          </p>
+          <p class="text-base font-sans text-slate leading-relaxed">
+            Doctors, cardiologists, and longevity experts are increasingly recommending CIMT as a baseline screening — even for people with no symptoms. It measures what blood work alone can't see: the actual condition of your artery walls.
+          </p>
+        </div>
+        <div class="bg-ivory rounded-2xl border border-warmgray/20 p-6">
+          <p class="text-sm font-sans font-semibold text-charcoal mb-4">CIMT screening can detect:</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="text-sm font-sans text-charcoal">Arterial wall thickening before plaque forms</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="text-sm font-sans text-charcoal">Early-stage plaque buildup (atherosclerosis)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="text-sm font-sans text-charcoal">Elevated stroke and heart attack risk</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="text-sm font-sans text-charcoal">Changes over time when used as a baseline</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Get Screened -->
+  <section class="section-padding bg-ivory">
     <div class="container-site max-w-4xl">
       <div class="text-center mb-10 fade-in-up">
         <p class="overline text-gold mb-3">Is This For You?</p>
@@ -241,7 +281,7 @@ const whatYouGet = [
   </section>
 
   <!-- Upgrade Section (soft upsell) -->
-  <section class="section-padding bg-ivory">
+  <section class="section-padding bg-white">
     <div class="container-site max-w-4xl">
       <div class="text-center mb-10 fade-in-up">
         <p class="overline text-gold mb-3">While You're Here</p>
@@ -293,7 +333,7 @@ const whatYouGet = [
   </section>
 
   <!-- Social Proof -->
-  <section class="section-padding bg-white">
+  <section class="section-padding bg-ivory">
     <div class="container-site max-w-3xl text-center fade-in-up">
       <div class="flex items-center justify-center gap-1 mb-3">
         {[1,2,3,4,5].map(() => (
@@ -327,8 +367,9 @@ const whatYouGet = [
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MedicalTest",
-    "name": "Carotid Artery Ultrasound Screening",
-    "description": "A 15-minute carotid ultrasound screening that checks for plaque buildup and intimal thickening in the neck arteries to assess stroke risk.",
+    "name": "Carotid Artery / CIMT Ultrasound Screening",
+    "alternateName": "Carotid Intima-Media Thickness Test",
+    "description": "A 15-minute carotid ultrasound and CIMT screening that measures intima-media thickness and checks for plaque buildup in the neck arteries to assess stroke and cardiovascular risk.",
     "usesDevice": {
       "@type": "MedicalDevice",
       "name": "Ultrasound"
