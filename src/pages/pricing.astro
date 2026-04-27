@@ -42,6 +42,29 @@ import conciergeHome from '../assets/images/concierge-home.png';
     </div>
   </section>
 
+  <!-- $99 Carotid Promo — remove when promo ends -->
+  <section class="bg-navy-dark">
+    <div class="container-site py-8">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 fade-in-up">
+        <div class="text-center md:text-left">
+          <div class="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-3 py-1 mb-3">
+            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+            <span class="text-xs font-sans font-medium text-gold">Limited Time</span>
+          </div>
+          <h3 class="text-2xl font-serif text-white mb-2">$99 Carotid / CIMT Screening</h3>
+          <p class="text-sm text-white/60 font-sans max-w-lg">15-minute ultrasound that checks for plaque buildup and stroke risk. No referral needed. Results reviewed by a board-certified radiologist.</p>
+        </div>
+        <a
+          href={link('/carotid')}
+          onclick="window.svs_track && window.svs_track('cta_click', { link_text: 'Carotid Promo Pricing', link_location: 'pricing_page' })"
+          class="shrink-0 inline-flex items-center px-6 py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap"
+        >
+          Learn More & Book →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Package Cards -->
   <section class="section-padding bg-ivory">
     <div class="container-site">
