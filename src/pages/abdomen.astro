@@ -1,0 +1,463 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { Image } from 'astro:assets';
+import abdomenHero from '../assets/images/abdomen-hero.png';
+import abdomenCloseup from '../assets/images/abdomen-closeup.png';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+
+const SQUARE_ABDOMEN_URL = 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/MPRZWA64NFA7B44TUJD22SEP';
+
+const trustPoints = [
+  { icon: 'clock', text: '20–30 Minutes' },
+  { icon: 'shield', text: 'No Referral Needed' },
+  { icon: 'heart', text: 'No Needles or Radiation' },
+  { icon: 'check', text: 'Physician-Interpreted Results' },
+];
+
+const organs = [
+  {
+    name: 'Liver',
+    conditions: 'Fatty liver, masses, enlargement',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4 0-7 2-8 5s0 7 3 9c2 1.5 5 2 7 1s4-3 5-6-3-9-7-9z"/></svg>`,
+  },
+  {
+    name: 'Gallbladder',
+    conditions: 'Gallstones, inflammation, polyps',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4c-2 0-4 2-4 5s1 5 2 7 2 4 2 4 0-2 2-4 2-4 2-7-2-5-4-5z"/><circle cx="12" cy="9" r="1.5"/></svg>`,
+  },
+  {
+    name: 'Kidneys',
+    conditions: 'Stones, cysts, obstruction',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 4c-3 0-5 3-5 6s1 4 2 6 2 4 3 4 2-1 2-3-1-3 0-5 1-4 1-5-1-3-3-3zM16 4c3 0 5 3 5 6s-1 4-2 6-2 4-3 4-2-1-2-3 1-3 0-5-1-4-1-5 1-3 3-3z"/></svg>`,
+  },
+  {
+    name: 'Spleen',
+    conditions: 'Enlargement, abnormalities',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="6" ry="8"/><path stroke-linecap="round" d="M9 8c2 2 4 6 4 8"/></svg>`,
+  },
+  {
+    name: 'Pancreas',
+    conditions: 'Cysts, masses, inflammation',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12c0-2 2-3 4-3h8c2 0 4 1 4 3s-2 3-4 3H8c-2 0-4-1-4-3z"/><path stroke-linecap="round" d="M6 9V7M18 9V7"/></svg>`,
+  },
+  {
+    name: 'Aorta',
+    conditions: 'Aneurysm, dilation',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3v4M12 17v4M10 7c-2 2-3 4-3 7s1 3 3 3h4c2 0 3 0 3-3s-1-5-3-7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.5"/></svg>`,
+  },
+];
+
+const whyWait = [
+  {
+    stat: 'Weeks',
+    heading: 'of waiting through insurance',
+    description: 'Referrals, authorizations, scheduling backlogs. We offer same-week appointments — no insurance needed.',
+  },
+  {
+    stat: '$1,500+',
+    heading: 'typical hospital cost',
+    description: 'An abdominal ultrasound through insurance or the ER can cost $1,500–$3,000. Ours is $250, all-in.',
+  },
+  {
+    stat: '6 organs',
+    heading: 'checked in one scan',
+    description: 'Liver, gallbladder, kidneys, spleen, pancreas, and aorta — all evaluated in a single 20–30 minute visit.',
+  },
+];
+
+const whoShouldGet = [
+  'Unexplained abdominal or stomach pain',
+  'Right side or left side pain',
+  'Bloating, nausea, or digestive issues',
+  'Family history of gallstones, kidney stones, or liver disease',
+  'Abnormal blood work (elevated liver enzymes, etc.)',
+  'You just want answers',
+];
+---
+
+<BaseLayout
+  title="Abdominal Ultrasound Las Vegas | $250 Diagnostic Scan | Signal View Screenings"
+  description="$250 complete abdominal ultrasound in Las Vegas. Checks liver, gallbladder, kidneys, spleen, pancreas, and aorta. Physician-interpreted results in 2–3 days. No referral needed. In-clinic or in-home."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark/60 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gold/3 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+
+    <div class="container-site relative py-20 md:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Hero image -->
+        <div class="order-first lg:order-last fade-in-up">
+          <Image
+            src={abdomenHero}
+            alt="Patient receiving an abdominal ultrasound at Signal View Screenings in Las Vegas"
+            class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+            widths={[480, 768, 1024]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
+            Get Answers for Your Abdominal Pain
+          </h1>
+          <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
+            <span class="text-gold font-semibold">$250</span> · Complete Abdominal Ultrasound
+          </p>
+          <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
+            A comprehensive scan of your liver, gallbladder, kidneys, spleen, pancreas, and aorta — with physician-interpreted results in 2–3 business days. No referral or insurance needed.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in-up">
+            <a
+              href={SQUARE_ABDOMEN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Abdominal Complete', value: 250, currency: 'USD', link_location: 'abdomen_hero' })"
+              class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Book In-Clinic — $250
+            </a>
+            <a
+              href="#in-home-form"
+              class="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-white/30 hover:border-white/60 text-white font-sans font-medium rounded-lg transition-all duration-200"
+            >
+              Request In-Home Visit — $400
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
+            {trustPoints.map((point) => (
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                  {point.icon === 'clock' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+                    </svg>
+                  )}
+                  {point.icon === 'shield' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  )}
+                  {point.icon === 'heart' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                    </svg>
+                  )}
+                  {point.icon === 'check' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <span class="text-sm text-white/70 font-sans">{point.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We're Looking For -->
+  <section class="section-padding bg-white">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Comprehensive Scan</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Six Organs. One Ultrasound. Complete Answers.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div class="fade-in-up">
+          <Image
+            src={abdomenCloseup}
+            alt="Sonographer analyzing abdominal ultrasound images on monitor"
+            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+            widths={[480, 768]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in-up">
+          {organs.map((organ) => (
+            <div class="p-4 rounded-xl border border-warmgray/20 bg-ivory/50">
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-2 text-gold" set:html={organ.icon} />
+              <h3 class="font-sans font-semibold text-charcoal text-sm mb-1">{organ.name}</h3>
+              <p class="text-xs text-slate font-sans">{organ.conditions}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Wait? -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Skip the Runaround</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Why Wait Weeks When You Can Know This Week?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {whyWait.map((item) => (
+          <div class="text-center p-6 rounded-2xl border border-warmgray/30 bg-white fade-in-up">
+            <p class="text-5xl font-serif text-gold mb-2">{item.stat}</p>
+            <p class="text-lg font-sans font-semibold text-charcoal mb-2">{item.heading}</p>
+            <p class="text-sm text-slate font-sans leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Ways to Get Scanned -->
+  <section id="in-home-form" class="section-padding bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Book Your Scan</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Two Ways to Get Scanned</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in-up">
+        <!-- In-Clinic Card -->
+        <div class="rounded-2xl border border-warmgray/30 bg-white p-8 flex flex-col shadow-md">
+          <div class="inline-block bg-navy text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Clinic</div>
+          <h3 class="text-2xl font-serif text-charcoal mb-1">Book In-Clinic</h3>
+          <p class="text-4xl font-serif text-gold mb-4">$250</p>
+
+          <div class="space-y-3 mb-6 flex-1">
+            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
+              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <span>{siteConfig.screeningLocation.address}, {siteConfig.screeningLocation.area}</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
+              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+              <span>{siteConfig.hours}</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
+              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+              <span>$75 deposit at booking · remainder at visit</span>
+            </div>
+          </div>
+
+          <a
+            href={SQUARE_ABDOMEN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Abdominal Complete', value: 250, currency: 'USD', link_location: 'abdomen_clinic_card' })"
+            class="block w-full text-center py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            Book &amp; Pay Deposit →
+          </a>
+          <p class="text-center text-xs text-slate font-sans mt-3">HSA/FSA eligible · Secure checkout via Square</p>
+        </div>
+
+        <!-- In-Home Card -->
+        <div class="rounded-2xl border-2 border-gold shadow-lg shadow-gold/10 ring-1 ring-gold/30 bg-white p-8 flex flex-col">
+          <div class="inline-block bg-gold text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Home</div>
+          <h3 class="text-2xl font-serif text-charcoal mb-1">Request In-Home Visit</h3>
+          <p class="text-4xl font-serif text-gold mb-4">$400</p>
+
+          <form id="inhome-form" class="space-y-4 flex-1 flex flex-col">
+            <div>
+              <label for="ih-name" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Name *</label>
+              <input type="text" id="ih-name" name="name" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="ih-phone" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Phone *</label>
+              <input type="tel" id="ih-phone" name="phone" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="(702) 555-0123" />
+            </div>
+            <div>
+              <label for="ih-zip" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Zip Code *</label>
+              <input type="text" id="ih-zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}"
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="89128" />
+            </div>
+            <div>
+              <label for="ih-datetime" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Date &amp; Time Window *</label>
+              <input type="text" id="ih-datetime" name="datetime" required
+                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                placeholder="e.g. Saturday morning, any weekday after 2pm" />
+            </div>
+
+            <!-- Honeypot -->
+            <div class="hidden" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="!mt-auto pt-2">
+              <button type="submit" class="w-full py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+                Submit Request
+              </button>
+              <p class="text-center text-xs text-slate font-sans mt-3">We'll confirm availability within a few hours</p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <p class="text-center mt-8 text-sm text-slate font-sans fade-in-up">
+        Prefer to talk?
+        <a href={`tel:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_phone', { link_location: 'abdomen_booking' })" class="text-navy font-semibold hover:text-gold transition-colors">Call or text {siteConfig.phone}</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Fasting Prep Callout -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="flex items-start gap-4 bg-white rounded-2xl border border-gold/30 p-6 shadow-sm fade-in-up">
+        <div class="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-sans font-semibold text-charcoal text-sm mb-1">Prep Requirement</p>
+          <p class="text-sm text-slate font-sans">Please fast at least <strong class="text-charcoal">3–4 hours</strong> before your scan for the clearest images. Water is fine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Get This Scan -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Is This For You?</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Get Scanned If...</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto fade-in-up">
+        {whoShouldGet.map((item) => (
+          <div class="flex items-center gap-3 p-4 rounded-xl bg-ivory border border-warmgray/20">
+            <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="text-base font-sans text-charcoal">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl text-center fade-in-up">
+      <div class="flex items-center justify-center gap-1 mb-3">
+        {[1,2,3,4,5].map(() => (
+          <svg class="w-7 h-7 text-gold" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-lg font-sans text-charcoal mb-2">5-Star Rated on Google</p>
+      <p class="text-slate font-sans text-sm mb-6">Real reviews from real patients in Las Vegas</p>
+      <a
+        href={siteConfig.googleReviewsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors"
+      >
+        Read Our Reviews →
+      </a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CTABanner
+    heading="Stop Wondering. Get Scanned."
+    subtext="$250 in-clinic · $400 in-home · Physician-interpreted results in 2–3 business days"
+    ctaText="Book In-Clinic — $250"
+    ctaHref={SQUARE_ABDOMEN_URL}
+  />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalTest",
+    "name": "Complete Abdominal Ultrasound",
+    "alternateName": "Abdominal Diagnostic Ultrasound",
+    "description": "A comprehensive diagnostic abdominal ultrasound evaluating the liver, gallbladder, kidneys, spleen, pancreas, and aorta. Physician-interpreted results delivered within 2–3 business days.",
+    "usesDevice": {
+      "@type": "MedicalDevice",
+      "name": "Ultrasound"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "In-Clinic Abdominal Ultrasound",
+        "price": "250",
+        "priceCurrency": "USD",
+        "url": SQUARE_ABDOMEN_URL
+      },
+      {
+        "@type": "Offer",
+        "name": "In-Home Abdominal Ultrasound",
+        "price": "400",
+        "priceCurrency": "USD"
+      }
+    ],
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.legalName,
+      "telephone": siteConfig.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.screeningLocation.address,
+        "addressLocality": siteConfig.screeningLocation.city,
+        "addressRegion": siteConfig.screeningLocation.state
+      }
+    }
+  })} />
+</BaseLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('inhome-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var honeypot = form.querySelector('input[name="website"]');
+      if (honeypot && honeypot.value) return;
+
+      var data = new FormData(form);
+      var entries = {};
+      data.forEach(function(value, key) { entries[key] = value; });
+
+      var subject = encodeURIComponent('In-Home Abdominal Ultrasound Request');
+      var body = encodeURIComponent(
+        'Name: ' + entries.name +
+        '\nPhone: ' + entries.phone +
+        '\nZip Code: ' + entries.zip +
+        '\nPreferred Date/Time: ' + entries.datetime +
+        '\n\nService: Abdominal Complete — In-Home ($400)'
+      );
+      window.svs_track && window.svs_track('generate_lead', { form_name: 'abdomen_inhome', value: 400 });
+      window.location.href = 'mailto:info@svscreenings.com?subject=' + subject + '&body=' + body;
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.textContent = 'Request Sent — Thank You!';
+        btn.classList.remove('bg-gold', 'hover:bg-gold-hover');
+        btn.classList.add('bg-green-600');
+        btn.disabled = true;
+      }
+    });
+  });
+</script>
