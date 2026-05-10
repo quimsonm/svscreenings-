@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
 import EmergencyBanner from '../components/EmergencyBanner.astro';
+import { Image } from 'astro:assets';
+import echoHero from '../assets/images/echo-hero.png';
+import echoCloseup from '../assets/images/echo-closeup.jpg';
 import { siteConfig } from '../data/siteConfig';
 import { link } from '../utils/links';
 
@@ -92,11 +95,14 @@ const whoShouldGet = [
 
         <!-- Hero image placeholder -->
         <div class="order-first lg:order-last fade-in-up">
-          <!-- TODO: Replace with actual hero image -->
-          <!-- <Image src={echoHero} alt="Patient receiving an echocardiogram at Signal View Screenings" class="rounded-2xl shadow-2xl shadow-black/30 w-full" widths={[480, 768, 1024]} sizes="(max-width: 1024px) 100vw, 50vw" quality={85} /> -->
-          <div class="rounded-2xl bg-navy-dark/50 border border-white/10 w-full aspect-[4/3] flex items-center justify-center">
-            <p class="text-white/30 font-sans text-sm">Hero image placeholder</p>
-          </div>
+          <Image
+            src={echoHero}
+            alt="Patient receiving an echocardiogram at Signal View Screenings in Las Vegas"
+            class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+            widths={[480, 768, 1024]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
         </div>
 
         <div>
@@ -174,11 +180,14 @@ const whoShouldGet = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
         <!-- Closeup image placeholder -->
         <div class="fade-in-up">
-          <!-- TODO: Replace with actual closeup image -->
-          <!-- <Image src={echoCloseup} alt="Sonographer analyzing echocardiogram images on monitor" class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg" widths={[480, 768]} sizes="(max-width: 1024px) 100vw, 50vw" quality={85} /> -->
-          <div class="rounded-2xl bg-ivory border border-warmgray/30 w-full aspect-[4/3] flex items-center justify-center">
-            <p class="text-slate/50 font-sans text-sm">Closeup image placeholder</p>
-          </div>
+          <Image
+            src={echoCloseup}
+            alt="Sonographer analyzing echocardiogram images on monitor"
+            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg"
+            widths={[480, 768]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in-up">
