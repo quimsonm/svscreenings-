@@ -26,8 +26,8 @@ const team = [
 ---
 
 <BaseLayout
-  title="Signal View Screenings | Premium Ultrasound Screenings in Las Vegas"
-  description="Hospital-grade ultrasound screenings in Las Vegas. Detect heart disease, stroke risk, and vascular conditions early. No referral needed. Packages from $199. Book your appointment today."
+  title="Ultrasound Screenings & Diagnostics Las Vegas | Signal View"
+  description="Hospital-grade ultrasound screenings and diagnostic ultrasound in Las Vegas. No referral or insurance needed. Packages from $199. Book online today."
 >
   <!-- Schema.org structured data -->
   <script slot="schema" type="application/ld+json" set:html={JSON.stringify({
@@ -120,6 +120,44 @@ const team = [
 
   <TrustBar />
 
+  <!-- ===== TWO-PATH ROUTING ===== -->
+  <section class="bg-white border-b border-warmgray/40">
+    <div class="container-site py-8 md:py-10">
+      <div class="text-center mb-6 fade-in-up">
+        <p class="overline text-gold mb-2">How Can We Help?</p>
+        <h2 class="text-2xl md:text-3xl font-serif text-charcoal">Ultrasound Screenings & Diagnostics in Las Vegas</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto fade-in-up">
+        <!-- Diagnostics path -->
+        <div class="bg-ivory rounded-card p-6 border border-warmgray/40 hover:shadow-md transition-all duration-300">
+          <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-sans font-semibold text-charcoal mb-2">Have symptoms? Let's take a closer look.</h3>
+          <p class="text-sm text-slate font-sans leading-relaxed mb-4">Physician-interpreted diagnostic ultrasound in Las Vegas — $250–$300, results in 2–3 days. No referral or insurance needed.</p>
+          <a href={link('/diagnostics')} onclick="window.svs_track && window.svs_track('cta_click', {link_text: 'View Diagnostic Studies', link_location: 'two_path_routing'})" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+            View Diagnostic Studies →
+          </a>
+        </div>
+        <!-- Screenings path -->
+        <div class="bg-ivory rounded-card p-6 border border-warmgray/40 hover:shadow-md transition-all duration-300">
+          <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-sans font-semibold text-charcoal mb-2">Want to stay ahead of problems?</h3>
+          <p class="text-sm text-slate font-sans leading-relaxed mb-4">Preventative screening packages from $199 — help detect early signs of stroke risk, heart conditions, and vascular disease.</p>
+          <a href={link('/pricing')} onclick="window.svs_track && window.svs_track('cta_click', {link_text: 'See Screening Packages', link_location: 'two_path_routing'})" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+            See Screening Packages →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== $99 CAROTID PROMO BANNER — remove when promo ends ===== -->
   <div class="bg-navy-dark border-b border-gold/20">
     <div class="container-site py-3">
@@ -140,31 +178,6 @@ const team = [
           class="shrink-0 inline-flex items-center px-4 py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
         >
           Book $99 Screening →
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== MOTHER'S DAY BANNER — remove after May 11 ===== -->
-  <div class="bg-gold/8 border-b border-gold/20">
-    <div class="container-site py-3">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="flex items-center gap-3 text-center sm:text-left">
-          <svg class="w-5 h-5 text-gold shrink-0 hidden sm:block" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
-          </svg>
-          <div>
-            <span class="text-sm font-sans font-semibold text-charcoal">❤️ Mother's Day is May 11 — Give the Gift of Health</span>
-            <span class="hidden sm:inline text-slate/40 mx-2">·</span>
-            <span class="block sm:inline text-xs text-slate font-sans">Gift cards from $199 · Delivered digitally · Never expire</span>
-          </div>
-        </div>
-        <a
-          href={link('/gift')}
-          onclick="window.svs_track && window.svs_track('gift_banner_click', { link_location: 'homepage_banner' })"
-          class="shrink-0 inline-flex items-center px-4 py-2 bg-gold hover:bg-gold-hover text-white text-xs font-sans font-semibold rounded-md transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
-        >
-          Gift a Screening →
         </a>
       </div>
     </div>
@@ -263,12 +276,12 @@ const team = [
 
           <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="bg-ivory rounded-card p-5 border border-warmgray/40">
-              <p class="text-3xl font-serif text-navy">80%</p>
-              <p class="text-sm text-slate font-sans mt-1">of strokes are preventable with early detection</p>
+              <p class="text-3xl font-serif text-navy">Up to 80%</p>
+              <p class="text-sm text-slate font-sans mt-1">of strokes are preventable when risk factors are identified and managed early</p>
             </div>
             <div class="bg-ivory rounded-card p-5 border border-warmgray/40">
               <p class="text-3xl font-serif text-navy">90%</p>
-              <p class="text-sm text-slate font-sans mt-1">of aortic aneurysm ruptures are fatal — screening catches them early</p>
+              <p class="text-sm text-slate font-sans mt-1">of aortic aneurysm ruptures are fatal — screening can identify them before they become emergencies</p>
             </div>
           </div>
 
@@ -335,7 +348,33 @@ const team = [
     </div>
   </section>
 
-  <!-- ===== PRICING (moved up) ===== -->
+  <!-- ===== WHAT HAPPENS AFTER YOUR SCREENING ===== -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-8 fade-in-up">
+        <p class="overline text-gold mb-2">You're Never Left Wondering</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What Happens After Your Screening?</h2>
+      </div>
+      <div class="space-y-4 fade-in-up">
+        {[
+          'Your results are reviewed by a board-certified physician and delivered within 2 business days',
+          'We explain your findings in plain language — no confusing medical jargon',
+          'If anything needs follow-up, we help connect you with the right specialist and can send results directly to your doctor',
+        ].map((item) => (
+          <div class="flex items-start gap-3 bg-white rounded-card p-5 border border-warmgray/40">
+            <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <p class="text-base font-sans text-charcoal">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <!-- ===== PRICING ===== -->
   <section class="section-padding bg-ivory">
     <div class="container-site">
       <div class="text-center max-w-2xl mx-auto mb-14 fade-in-up">
@@ -364,7 +403,6 @@ const team = [
   </section>
 
   <TestimonialCarousel />
-  <HowItWorks />
   <CTABanner />
 
 </BaseLayout>
