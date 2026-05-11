@@ -145,25 +145,15 @@ const iconMap: Record<string, string> = {
               </svg>
               <span>In-home available · <span class="font-medium text-charcoal">+$150</span></span>
             </div>
-            {service.landingPage ? (
-              <a
-                href={link(service.landingPage)}
-                onclick={`window.svs_track && window.svs_track('cta_click', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
-                class="block w-full text-center py-2.5 bg-navy hover:bg-navy/90 text-white text-xs font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
-              >
-                Learn More — ${service.price}
-              </a>
-            ) : (
-              <a
-                href={service.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onclick={`window.svs_track && window.svs_track('begin_checkout', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
-                class="block w-full text-center py-2.5 bg-navy hover:bg-navy/90 text-white text-xs font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
-              >
-                Book &amp; Pay — ${service.price}
-              </a>
-            )}
+            <a
+              href={service.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick={`window.svs_track && window.svs_track('begin_checkout', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
+              class="block w-full text-center py-2.5 bg-navy hover:bg-navy/90 text-white text-xs font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            >
+              Book &amp; Pay — ${service.price}
+            </a>
           </div>
         ))}
       </div>
