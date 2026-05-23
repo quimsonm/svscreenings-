@@ -76,7 +76,7 @@ const navLinks = [
 </header>
 
 <!-- Mobile Menu - OUTSIDE header to avoid stacking context issues -->
-<div id="mobile-menu" class="lg:hidden fixed inset-0 top-[88px] z-[9999] hidden" aria-hidden="true">
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-[116px] z-[9999] hidden" aria-hidden="true">
   <!-- Backdrop -->
   <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/20"></div>
   <!-- Menu panel -->
@@ -110,8 +110,8 @@ const navLinks = [
   </div>
 </div>
 
-<!-- Spacer for fixed header -->
-<div class="h-20"></div>
+<!-- Spacer for fixed header (mobile header is taller due to stacked logo + button rows) -->
+<div class="h-[116px] lg:h-20"></div>
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
