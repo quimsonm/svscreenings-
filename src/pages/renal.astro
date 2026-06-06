@@ -269,7 +269,11 @@ const whoShouldGet = [
           <div class="space-y-3 mb-6 flex-1">
             <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
               <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              <span>{siteConfig.screeningLocation.address}, {siteConfig.screeningLocation.area}</span>
+              <div>
+                <div>{siteConfig.screeningLocation.address}</div>
+                <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
+                <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-navy font-medium hover:text-gold transition-colors">Get Directions →</a>
+              </div>
             </div>
             <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
               <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>

@@ -1,0 +1,57 @@
+<svg width="1050" height="600" viewBox="0 0 1050 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="navyGradBack" x1="0" y1="0" x2="1050" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#004D78"/>
+      <stop offset="100%" stop-color="#003352"/>
+    </linearGradient>
+    <clipPath id="roundedCardBack">
+      <rect width="1050" height="600" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundedCardBack)">
+    <!-- Background -->
+    <rect width="1050" height="600" fill="url(#navyGradBack)"/>
+
+    <!-- Subtle signal waves background decoration -->
+    <circle cx="525" cy="180" r="100" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.08"/>
+    <circle cx="525" cy="180" r="160" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.06"/>
+    <circle cx="525" cy="180" r="220" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.04"/>
+
+    <!-- Gold accent line top -->
+    <rect x="485" y="38" width="80" height="4" rx="2" fill="#C8963E"/>
+
+    <!-- Logo mark centered -->
+    <g transform="translate(489, 62)">
+      <rect width="72" height="72" rx="16" fill="#C8963E" opacity="0.15"/>
+      <rect x="1" y="1" width="70" height="70" rx="15" stroke="#C8963E" stroke-width="1.5" fill="none"/>
+      <g transform="translate(9, 5) scale(1.12)">
+        <path d="M24 8C16 8 10 14 10 22C10 30 16 40 24 44C32 40 38 30 38 22C38 14 32 8 24 8Z" stroke="#C8963E" stroke-width="2.5" fill="none"/>
+        <path d="M16 24C18 20 20 18 24 18" stroke="#C8963E" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M14 24C17 17 20 14 24 14" stroke="#C8963E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M18 24C20 22 22 21 24 21" stroke="#C8963E" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+        <circle cx="24" cy="24" r="2.5" fill="#C8963E"/>
+      </g>
+    </g>
+
+    <!-- Company name centered -->
+    <text x="525" y="172" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" letter-spacing="2" text-anchor="middle">SIGNAL VIEW</text>
+    <text x="525" y="200" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#C8963E" letter-spacing="5" text-anchor="middle">SCREENING SERVICES</text>
+
+    <!-- Gold divider -->
+    <rect x="445" y="226" width="160" height="2" rx="1" fill="#C8963E" opacity="0.5"/>
+
+    <!-- Real QR Code (Google Reviews) -->
+    <g transform="translate(387, 248)">
+      <rect x="0" y="0" width="276" height="276" rx="14" fill="#FFFFFF"/>
+      <rect x="4" y="4" width="268" height="268" rx="10" fill="#FAF8F5"/>
+      <image x="18" y="18" width="240" height="240" href="data:image/png;base64,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" />
+    </g>
+
+    <!-- "Scan to review" text -->
+    <text x="525" y="548" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#C8963E" letter-spacing="4" text-anchor="middle" font-weight="500">SCAN TO LEAVE A REVIEW</text>
+
+    <!-- Diagnostics CTA -->
+    <text x="525" y="578" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#E5E0DA" letter-spacing="1.5" text-anchor="middle" opacity="0.5">For full diagnostic ultrasound studies visit svscreenings.com/diagnostics</text>
+  </g>
+</svg>

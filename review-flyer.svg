@@ -1,0 +1,50 @@
+<svg width="816" height="1056" viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background (letter size 8.5x11 at 96dpi) -->
+  <rect width="816" height="1056" fill="#FFFFFF"/>
+
+  <!-- Logo mark centered -->
+  <g transform="translate(372, 60)">
+    <rect width="72" height="72" rx="16" fill="#000000" opacity="0.08"/>
+    <rect x="1" y="1" width="70" height="70" rx="15" stroke="#000000" stroke-width="1.5" fill="none"/>
+    <g transform="translate(9, 5) scale(1.12)">
+      <path d="M24 8C16 8 10 14 10 22C10 30 16 40 24 44C32 40 38 30 38 22C38 14 32 8 24 8Z" stroke="#000000" stroke-width="2.5" fill="none"/>
+      <path d="M16 24C18 20 20 18 24 18" stroke="#000000" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M14 24C17 17 20 14 24 14" stroke="#000000" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      <path d="M18 24C20 22 22 21 24 21" stroke="#000000" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="24" cy="24" r="2.5" fill="#000000"/>
+    </g>
+  </g>
+
+  <!-- Company name -->
+  <text x="408" y="172" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#000000" letter-spacing="3" text-anchor="middle">SIGNAL VIEW</text>
+  <text x="408" y="200" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#000000" letter-spacing="6" text-anchor="middle" opacity="0.6">SCREENING SERVICES</text>
+
+  <!-- Divider -->
+  <rect x="338" y="224" width="140" height="1.5" rx="0.75" fill="#000000" opacity="0.2"/>
+
+  <!-- Headline -->
+  <text x="408" y="290" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" fill="#000000" text-anchor="middle">How Did We Do?</text>
+
+  <!-- Subtext -->
+  <text x="408" y="340" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#000000" text-anchor="middle" opacity="0.7">Your feedback helps us serve you better.</text>
+  <text x="408" y="370" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#000000" text-anchor="middle" opacity="0.7">We'd love to hear about your experience.</text>
+
+  <!-- QR Code -->
+  <g transform="translate(208, 420)">
+    <rect x="-10" y="-10" width="420" height="420" rx="16" fill="#000000" opacity="0.04"/>
+    <rect x="0" y="0" width="400" height="400" rx="12" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+    <image x="20" y="20" width="360" height="360" href="data:image/png;base64,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" />
+  </g>
+
+  <!-- Instruction -->
+  <text x="408" y="888" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#000000" text-anchor="middle">Scan the QR code to leave a Google review</text>
+
+  <!-- Star rating visual -->
+  <g transform="translate(283, 916)">
+    <text font-family="Arial, sans-serif" font-size="40" fill="#000000" opacity="0.8">&#9733; &#9733; &#9733; &#9733; &#9733;</text>
+  </g>
+
+  <!-- Thank you -->
+  <text x="408" y="990" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#000000" text-anchor="middle" opacity="0.5">Thank you for choosing Signal View Screening Services</text>
+  <text x="408" y="1018" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle" opacity="0.4">YOUR HEALTH. YOUR PEACE OF MIND.</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg width="1050" height="600" viewBox="0 0 1050 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="navyGrad" x1="0" y1="0" x2="1050" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#003352"/>
+      <stop offset="100%" stop-color="#004D78"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C8963E"/>
+      <stop offset="100%" stop-color="#F5E6C8"/>
+    </linearGradient>
+    <clipPath id="roundedCard">
+      <rect width="1050" height="600" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundedCard)">
+    <!-- Background -->
+    <rect width="1050" height="600" fill="url(#navyGrad)"/>
+
+    <!-- Subtle signal wave pattern in background -->
+    <circle cx="920" cy="460" r="160" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.15"/>
+    <circle cx="920" cy="460" r="220" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.10"/>
+    <circle cx="920" cy="460" r="280" stroke="#0A6FA0" stroke-width="0.5" fill="none" opacity="0.07"/>
+
+    <!-- Gold accent line top -->
+    <rect x="60" y="42" width="90" height="4" rx="2" fill="#C8963E"/>
+
+    <!-- Logo mark -->
+    <g transform="translate(60, 68)">
+      <rect width="72" height="72" rx="16" fill="#C8963E" opacity="0.15"/>
+      <rect x="1" y="1" width="70" height="70" rx="15" stroke="#C8963E" stroke-width="1.5" fill="none"/>
+      <g transform="translate(9, 5) scale(1.12)">
+        <path d="M24 8C16 8 10 14 10 22C10 30 16 40 24 44C32 40 38 30 38 22C38 14 32 8 24 8Z" stroke="#C8963E" stroke-width="2.5" fill="none"/>
+        <path d="M16 24C18 20 20 18 24 18" stroke="#C8963E" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M14 24C17 17 20 14 24 14" stroke="#C8963E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M18 24C20 22 22 21 24 21" stroke="#C8963E" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+        <circle cx="24" cy="24" r="2.5" fill="#C8963E"/>
+      </g>
+    </g>
+
+    <!-- Company name -->
+    <text x="150" y="100" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" letter-spacing="2">SIGNAL VIEW</text>
+    <text x="150" y="132" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#C8963E" letter-spacing="5">SCREENING SERVICES</text>
+
+    <!-- Gold divider -->
+    <rect x="60" y="170" width="160" height="2.5" rx="1.25" fill="url(#goldLine)"/>
+
+    <!-- Name -->
+    <text x="60" y="228" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="600" fill="#FFFFFF" letter-spacing="0.5">Mike Quimson</text>
+
+    <!-- Title -->
+    <text x="62" y="264" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#C8963E" letter-spacing="3">OWNER</text>
+
+    <!-- Contact details -->
+    <g transform="translate(60, 320)">
+      <!-- Phone icon -->
+      <g opacity="0.8">
+        <path d="M4 3C4 2.45 4.45 2 5 2H9L11 6L8.5 7.5C9.57 9.67 11.33 11.43 13.5 12.5L15 10L19 12V16C19 16.55 18.55 17 18 17C9.72 17 3 10.28 3 2C3 1.45 3.45 1 4 1" stroke="#C8963E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+      <text x="32" y="16" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#E5E0DA" letter-spacing="1">702.843.6612</text>
+    </g>
+
+    <g transform="translate(60, 366)">
+      <!-- Email icon -->
+      <g opacity="0.8">
+        <rect x="1" y="3" width="20" height="15" rx="2" stroke="#C8963E" stroke-width="1.8" fill="none"/>
+        <path d="M1 5L11 13L21 5" stroke="#C8963E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+      <text x="32" y="16" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#E5E0DA" letter-spacing="1">info@svscreenings.com</text>
+    </g>
+
+    <g transform="translate(60, 412)">
+      <!-- Globe icon -->
+      <g opacity="0.8">
+        <circle cx="11" cy="11" r="10" stroke="#C8963E" stroke-width="1.8" fill="none"/>
+        <path d="M1 11H21M11 1C13.5 4 14.5 7 14.5 11C14.5 15 13.5 18 11 21M11 1C8.5 4 7.5 7 7.5 11C7.5 15 8.5 18 11 21" stroke="#C8963E" stroke-width="1.5" fill="none"/>
+      </g>
+      <text x="32" y="17" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#E5E0DA" letter-spacing="1">svscreenings.com</text>
+    </g>
+
+    <g transform="translate(60, 458)">
+      <!-- Location icon -->
+      <g opacity="0.8">
+        <path d="M11 1C6.58 1 3 4.58 3 9C3 14.25 11 22 11 22C11 22 19 14.25 19 9C19 4.58 15.42 1 11 1Z" stroke="#C8963E" stroke-width="1.8" fill="none"/>
+        <circle cx="11" cy="9" r="3" stroke="#C8963E" stroke-width="1.8" fill="none"/>
+      </g>
+      <text x="32" y="17" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#E5E0DA" letter-spacing="1">Las Vegas, NV</text>
+    </g>
+
+    <!-- Tagline bottom -->
+    <text x="60" y="548" font-family="'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#C8963E" letter-spacing="3.5" opacity="0.7">YOUR HEALTH. YOUR PEACE OF MIND.</text>
+
+    <!-- Gold accent line bottom right -->
+    <rect x="900" y="548" width="90" height="4" rx="2" fill="#C8963E"/>
+  </g>
+</svg>

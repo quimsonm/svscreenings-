@@ -67,7 +67,11 @@ import logo from '../assets/images/logo.png';
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>Serving Greater Las Vegas<br/>In-clinic &amp; mobile screenings</span>
+            <div>
+              <div>{siteConfig.screeningLocation.address}</div>
+              <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
+              <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors text-xs">Get Directions →</a>
+            </div>
           </li>
           <li>
             <a href={`tel:${siteConfig.phoneTel}`} class="flex items-center gap-2.5 hover:text-gold transition-colors">

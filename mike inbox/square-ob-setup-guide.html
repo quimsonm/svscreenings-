@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square Setup Guide — OB Ultrasound + Dual-Tech Saturdays</title>
+<style>
+  :root {
+    --navy: #004D78;
+    --navy-dark: #003355;
+    --gold: #C9A856;
+    --gold-light: #E5CB87;
+    --ivory: #FAF7F2;
+    --charcoal: #2A2A2A;
+    --slate: #5C5C5C;
+    --warmgray: #D9D2C5;
+    --success: #2D7A3E;
+    --warning: #C46A1F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--charcoal);
+    line-height: 1.6;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    background: var(--ivory);
+  }
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    color: white;
+  }
+  header p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 0.95rem;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: var(--navy);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+    font-size: 1.4rem;
+  }
+  h3 {
+    color: var(--charcoal);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+  .step {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .step-number {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .step h3 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .step-body {
+    margin-top: 0.75rem;
+  }
+  ul, ol {
+    padding-left: 1.4rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--warmgray);
+    font-size: 0.92rem;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(217, 210, 197, 0.15); }
+  .callout {
+    background: var(--ivory);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+  .callout.warning {
+    border-color: var(--warning);
+    background: #FFF8F0;
+  }
+  .callout.success {
+    border-color: var(--success);
+    background: #F0F8F2;
+  }
+  .callout-title {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .callout.warning .callout-title { color: var(--warning); }
+  .callout.success .callout-title { color: var(--success); }
+  code {
+    background: var(--warmgray);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.85em;
+  }
+  .check { color: var(--success); font-weight: bold; margin-right: 0.5rem; }
+  .uncheck { color: var(--slate); margin-right: 0.5rem; }
+  hr {
+    border: none;
+    border-top: 1px solid var(--warmgray);
+    margin: 2rem 0;
+  }
+  .summary-box {
+    background: var(--navy);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .summary-box h3 {
+    color: var(--gold-light);
+    margin-top: 0;
+  }
+  .summary-box p { margin: 0.5rem 0; }
+  .price-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  @media print {
+    body { background: white; padding: 1rem; }
+    .step, table, .callout { box-shadow: none; border: 1px solid #ddd; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Operations Reference</div>
+  <h1>Square Setup: OB Ultrasound + Dual-Tech Saturdays</h1>
+  <p>Step-by-step guide to add OB services to Square Appointments and configure dual-tech scheduling so Mike and the OB sonographer can run parallel Saturday blocks.</p>
+</header>
+
+<h2>Before You Start</h2>
+<div class="callout">
+  <div class="callout-title">Three things to verify first</div>
+  <ul>
+    <li><strong>Square Appointments Plus subscription</strong> ($29/month minimum) — free tier doesn't support multiple staff calendars. Upgrade first if needed.</li>
+    <li><strong>Two exam rooms available at Frontline on Saturdays</strong> — otherwise dual-tech can't run in parallel.</li>
+    <li><strong>Probes confirmed</strong> — curvilinear (3-5 MHz) for transabdominal OB, transvaginal probe (5-9 MHz) for early pregnancy. If missing, order before launch.</li>
+  </ul>
+</div>
+
+<h2>Step-by-Step Setup</h2>
+
+<div class="step">
+  <span class="step-number">1</span><h3>Verify / Upgrade Subscription</h3>
+  <div class="step-body">
+    Go to <strong>Square Dashboard → Account & Settings → Pricing & Subscriptions</strong>. Confirm you're on <strong>Square Appointments Plus</strong> (or higher). If not, upgrade — Plus is $29/month and unlocks multiple staff calendars.
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">2</span><h3>Add the OB Tech as a Team Member</h3>
+  <div class="step-body">
+    <p><strong>Square Dashboard → Team → Team Members → + Add Team Member</strong></p>
+    <ul>
+      <li>Enter her full name, email, phone</li>
+      <li>Role: "Sonographer"</li>
+      <li>Permissions: enable <strong>Appointments</strong> access only — leave financial/admin permissions <em>off</em></li>
+      <li>Send her login credentials so she can manage her calendar</li>
+    </ul>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">3</span><h3>Set Her Working Hours</h3>
+  <div class="step-body">
+    <p><strong>Square Dashboard → Appointments → Staff → [Her Name] → Hours</strong></p>
+    <ul>
+      <li><strong>Saturday: 9:00 AM – 1:00 PM</strong></li>
+      <li>All other days: <strong>Unavailable</strong></li>
+    </ul>
+    <p>This means OB services can only be booked on Saturdays — Square auto-restricts customer-facing availability to her hours.</p>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">4</span><h3>Create the Four OB Services</h3>
+  <div class="step-body">
+    <p><strong>Square Dashboard → Items & Services → Services → + Add Service</strong></p>
+    <p>Create each of the four services below as a separate Square service. For each one:</p>
+    <ol>
+      <li>Set the name, duration, price, and deposit</li>
+      <li>Under <strong>"Staff who can perform this service"</strong> — <em>only check the OB tech</em>. Uncheck yourself.</li>
+      <li>Add a clear description so patients know what they're booking</li>
+    </ol>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service Name</th>
+          <th>Duration</th>
+          <th>Price</th>
+          <th>Deposit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Limited Pregnancy Ultrasound</strong></td>
+          <td>30 min</td>
+          <td><span class="price-tag">$200</span></td>
+          <td>$75</td>
+        </tr>
+        <tr>
+          <td><strong>First Trimester / Dating Ultrasound</strong></td>
+          <td>45 min</td>
+          <td><span class="price-tag">$250</span></td>
+          <td>$75</td>
+        </tr>
+        <tr>
+          <td><strong>Follow-up Pregnancy Ultrasound</strong></td>
+          <td>45 min</td>
+          <td><span class="price-tag">$250</span></td>
+          <td>$75</td>
+        </tr>
+        <tr>
+          <td><strong>Anatomy Scan (Pregnancy)</strong></td>
+          <td>60 min</td>
+          <td><span class="price-tag">$350</span></td>
+          <td>$75</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">5</span><h3>Suggested Customer-Facing Descriptions</h3>
+  <div class="step-body">
+    <p><strong>Limited Pregnancy Ultrasound:</strong> "Focused ultrasound to check fetal heartbeat, position, or fluid level. Approximately 30 minutes. Physician-interpreted report in 2–3 business days."</p>
+    <p><strong>First Trimester / Dating Ultrasound:</strong> "Early pregnancy ultrasound to confirm pregnancy, dating, viability, and number of babies. Performed under 14 weeks gestation. Approximately 45 minutes. Physician-interpreted report in 2–3 business days."</p>
+    <p><strong>Follow-up Pregnancy Ultrasound:</strong> "Re-evaluation of a previously identified finding or interval growth check. Approximately 45 minutes. Physician-interpreted report in 2–3 business days."</p>
+    <p><strong>Anatomy Scan (Pregnancy):</strong> "Comprehensive fetal anatomy survey, typically performed at 18–22 weeks. Evaluates fetal structures, growth, placenta, and amniotic fluid. Approximately 60 minutes. Physician-interpreted report in 2–3 business days."</p>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">6</span><h3>Keep Your Existing Services Tagged to You</h3>
+  <div class="step-body">
+    <p>Go through your existing services (Abdomen, Echo, Thyroid, Renal, Carotid, etc.) and verify they're <strong>assigned to you only</strong>. This keeps them separate from her OB calendar so both can run in parallel on Saturdays without conflict.</p>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">7</span><h3>Add Buffer Time to Each Service</h3>
+  <div class="step-body">
+    <p>For each OB service, add <strong>5–10 minutes of buffer</strong> in the service settings:</p>
+    <ul>
+      <li>Limited: 5 min buffer</li>
+      <li>Dating: 10 min buffer</li>
+      <li>Follow-up: 10 min buffer</li>
+      <li>Anatomy: 10 min buffer</li>
+    </ul>
+    <p>This prevents running late, allows for room turnover, patient prep, and image saving between appointments.</p>
+  </div>
+</div>
+
+<div class="step">
+  <span class="step-number">8</span><h3>Test the Customer-Facing Booking Experience</h3>
+  <div class="step-body">
+    <p>Open your booking page in an incognito browser window and verify:</p>
+    <ul>
+      <li><span class="check">✓</span>Selecting "Anatomy Scan" shows ONLY Saturday 9 AM–1 PM slots</li>
+      <li><span class="check">✓</span>Selecting "Abdomen Ultrasound" shows your normal Wed/Fri/Sat schedule</li>
+      <li><span class="check">✓</span>On Saturday, both you and the OB tech can be booked at the same time slot without conflict</li>
+      <li><span class="check">✓</span>Deposit of $75 is charged at booking</li>
+      <li><span class="check">✓</span>Service descriptions display correctly</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Recommended Saturday Schedule Template</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>You (Room 1)</th>
+      <th>OB Tech (Room 2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>9:00 AM</td><td>Abdomen / Echo</td><td>Dating Ultrasound</td></tr>
+    <tr><td>9:30 AM</td><td>Carotid / Thyroid</td><td>(continued)</td></tr>
+    <tr><td>10:00 AM</td><td>Available</td><td>Anatomy Scan</td></tr>
+    <tr><td>10:30 AM</td><td>Abdomen</td><td>(continued)</td></tr>
+    <tr><td>11:00 AM</td><td>Echo</td><td>Limited or Dating</td></tr>
+    <tr><td>11:30 AM</td><td>Carotid</td><td>Limited or Follow-up</td></tr>
+    <tr><td>12:00 PM</td><td>Abdomen</td><td>Dating</td></tr>
+    <tr><td>12:30 PM</td><td>Available</td><td>(continued)</td></tr>
+  </tbody>
+</table>
+
+<p>Theoretical Saturday revenue at full booking: <strong>$2,500 – $3,200</strong> across both schedules.</p>
+
+<h2>Phased Launch Recommendation</h2>
+
+<div class="callout success">
+  <div class="callout-title">Don't launch all four services at once</div>
+  <ol>
+    <li><strong>Weeks 1–2:</strong> Limited + Dating only (simplest exams, lowest liability)</li>
+    <li><strong>Weeks 3–4:</strong> Add Follow-up</li>
+    <li><strong>Month 2+:</strong> Add Anatomy Scan (after tech comfort + radiologist alignment + probe confirmation)</li>
+  </ol>
+</div>
+
+<h2>Operational Checklist Before Saturday Launch</h2>
+
+<ul style="list-style: none; padding-left: 0;">
+  <li><span class="uncheck">☐</span> Square Appointments Plus subscription confirmed</li>
+  <li><span class="uncheck">☐</span> OB tech added as team member with Saturday-only hours</li>
+  <li><span class="uncheck">☐</span> All 4 (or 2 for phased launch) OB services created with correct staff assignment</li>
+  <li><span class="uncheck">☐</span> Existing services still assigned to you only</li>
+  <li><span class="uncheck">☐</span> Buffer times added to each service</li>
+  <li><span class="uncheck">☐</span> Customer-facing booking flow tested in incognito</li>
+  <li><span class="uncheck">☐</span> Two exam rooms confirmed available at Frontline on Saturdays</li>
+  <li><span class="uncheck">☐</span> Curvilinear + transvaginal probes confirmed (or ordered)</li>
+  <li><span class="uncheck">☐</span> Malpractice insurance OB coverage confirmed with broker</li>
+  <li><span class="uncheck">☐</span> Reading radiologist comfortable with OB anatomy reports</li>
+  <li><span class="uncheck">☐</span> OB-specific report template established</li>
+  <li><span class="uncheck">☐</span> Patient intake updated for OB (last menstrual period, gestational age, etc.)</li>
+  <li><span class="uncheck">☐</span> Image delivery method decided (printouts, USB, secure email)</li>
+  <li><span class="uncheck">☐</span> Spanish-speaking capability planned (Vegas market consideration)</li>
+</ul>
+
+<div class="summary-box">
+  <h3>TL;DR Setup Sequence</h3>
+  <p><strong>1.</strong> Upgrade Square if needed → <strong>2.</strong> Add OB tech → <strong>3.</strong> Set her Saturday hours → <strong>4.</strong> Create 4 OB services tagged to her only → <strong>5.</strong> Add buffers → <strong>6.</strong> Test booking flow.</p>
+  <p>Time required: about 60–90 minutes tonight.</p>
+</div>
+
+<hr>
+<p style="text-align: center; color: var(--slate); font-size: 0.85rem; margin-top: 2rem;">
+  Reference document — Signal View Screenings · OB Ultrasound Setup · June 2026
+</p>
+
+</body>
+</html>
