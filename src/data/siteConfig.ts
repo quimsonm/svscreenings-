@@ -12,6 +12,8 @@ export const siteConfig = {
     city: 'Las Vegas',
     state: 'NV',
     zip: '89128',
+    floor: '4th Floor',
+    landmark: 'Next to Mountain View Hospital',
     fullAddress: '3150 N Tenaya Wy, Suite 400, Las Vegas, NV 89128',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=3150+N+Tenaya+Wy+Suite+400+Las+Vegas+NV+89128',
   },

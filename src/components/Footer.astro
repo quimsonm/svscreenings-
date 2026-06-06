@@ -70,6 +70,7 @@ import logo from '../assets/images/logo.png';
             <div>
               <div>{siteConfig.screeningLocation.address}</div>
               <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
+              <div class="text-xs text-white/50">{siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}</div>
               <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors text-xs">Get Directions →</a>
             </div>
           </li>

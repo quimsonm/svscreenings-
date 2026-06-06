@@ -253,6 +253,7 @@ const whoShouldGet = [
               <div>
                 <div>{siteConfig.screeningLocation.address}</div>
                 <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
+                <div class="text-slate text-xs mt-0.5">{siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}</div>
                 <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-navy font-medium hover:text-gold transition-colors">Get Directions →</a>
               </div>
             </div>

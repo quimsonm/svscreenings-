@@ -96,6 +96,22 @@ import conciergeHome from '../assets/images/concierge-home.png';
         ))}
       </div>
 
+      <!-- Location strip -->
+      <div class="max-w-3xl mx-auto mt-10 fade-in-up">
+        <div class="bg-white rounded-2xl border border-warmgray/40 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </div>
+          <div class="text-center sm:text-left flex-1">
+            <p class="overline text-gold mb-1">In-Clinic Appointments</p>
+            <p class="text-base font-sans font-semibold text-charcoal">{siteConfig.screeningLocation.address}</p>
+            <p class="text-sm text-slate font-sans">{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</p>
+            <p class="text-sm text-slate font-sans">{siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark} · {siteConfig.hours}</p>
+            <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-sm text-navy font-medium hover:text-gold transition-colors">Get Directions →</a>
+          </div>
+        </div>
+      </div>
+
       <div class="max-w-2xl mx-auto mt-8 fade-in-up space-y-3">
         <p class="text-center text-sm font-sans text-slate">
           <svg class="w-4 h-4 text-gold inline-block mr-1 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
