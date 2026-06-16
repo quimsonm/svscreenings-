@@ -53,8 +53,8 @@ const whatYouGet = [
 ---
 
 <BaseLayout
-  title="$99 Carotid / CIMT Screening Las Vegas | Carotid Intima-Media Thickness Test | Signal View Screenings"
-  description="$99 carotid ultrasound and CIMT (carotid intima-media thickness) screening in Las Vegas. Checks for plaque buildup and stroke risk in 15 minutes. No referral needed. Book online or call 702.843.6612."
+  title="Carotid Ultrasound Las Vegas | $300 Diagnostic Scan | Signal View Screenings"
+  description="$300 diagnostic carotid ultrasound and CIMT (carotid intima-media thickness) test in Las Vegas. Checks for plaque buildup and stroke risk in 15 minutes. Physician-interpreted results. No referral needed."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden bg-navy">
@@ -78,16 +78,11 @@ const whatYouGet = [
       </div>
 
       <div>
-        <div class="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-6 fade-in-up">
-          <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-          <span class="text-sm font-sans font-medium text-gold">Limited Time Offer</span>
-        </div>
-
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
           Know Your Stroke Risk
         </h1>
         <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-          <span class="text-gold font-semibold">$99</span> Carotid Artery / CIMT Screening
+          <span class="text-gold font-semibold">$300</span> · Carotid Artery / CIMT Ultrasound
         </p>
         <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
           A 15-minute carotid intima-media thickness (CIMT) ultrasound that checks for plaque buildup and arterial thickening — before it becomes an emergency.
@@ -98,10 +93,10 @@ const whatYouGet = [
             href={SQUARE_CAROTID_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onclick="window.svs_track && window.svs_track('begin_checkout', { package_name: 'Carotid Promo', value: 99, currency: 'USD' })"
+            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Carotid Ultrasound', value: 300, currency: 'USD' })"
             class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
           >
-            Book Your $99 Screening →
+            Book Your Carotid Ultrasound — $300
           </a>
           <a
             href={`tel:${siteConfig.phoneTel}`}
@@ -188,7 +183,7 @@ const whatYouGet = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
         <div class="fade-in-up">
           <p class="overline text-gold mb-3">What's Included</p>
-          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-6">Your $99 Carotid / CIMT Screening</h2>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-6">Your Carotid / CIMT Ultrasound</h2>
           <ul class="space-y-4">
             {whatYouGet.map((item) => (
               <li class="flex items-start gap-3">
@@ -202,14 +197,14 @@ const whatYouGet = [
         </div>
 
         <div class="bg-white rounded-2xl border border-warmgray/30 p-8 text-center fade-in-up">
-          <p class="overline text-gold mb-2">Carotid / CIMT Screening</p>
-          <p class="text-6xl font-serif text-charcoal mb-1">$99</p>
-          <p class="text-sm text-slate font-sans mb-6">One-time screening · No subscription</p>
+          <p class="overline text-gold mb-2">Carotid / CIMT Ultrasound</p>
+          <p class="text-6xl font-serif text-charcoal mb-1">$300</p>
+          <p class="text-sm text-slate font-sans mb-6">15-minute diagnostic scan · Physician-interpreted</p>
           <a
             href={SQUARE_CAROTID_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onclick="window.svs_track && window.svs_track('begin_checkout', { package_name: 'Carotid Promo', value: 99, currency: 'USD' })"
+            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Carotid Ultrasound', value: 300, currency: 'USD' })"
             class="block w-full py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl mb-4"
           >
             Book Now →
@@ -382,9 +377,9 @@ const whatYouGet = [
 
   <!-- Final CTA -->
   <CTABanner
-    heading="$99 Carotid Screening — Book Yours Today"
-    subtext="15 minutes. No referral. Just peace of mind about your stroke risk."
-    ctaText="Book Your $99 Screening"
+    heading="Know Your Stroke Risk in 15 Minutes."
+    subtext="$300 · Carotid ultrasound + CIMT measurement · Physician-interpreted report in 1 business day · No referral needed."
+    ctaText="Book Your Carotid Ultrasound — $300"
     ctaHref={SQUARE_CAROTID_URL}
   />
 
@@ -401,7 +396,7 @@ const whatYouGet = [
     },
     "offers": {
       "@type": "Offer",
-      "price": "99",
+      "price": "300",
       "priceCurrency": "USD",
       "url": SQUARE_CAROTID_URL
     },

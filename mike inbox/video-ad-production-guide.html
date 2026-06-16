@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Ad Production Guide — Signal View Screenings</title>
+<style>
+  :root {
+    --navy: #004D78;
+    --navy-dark: #003355;
+    --gold: #C9A856;
+    --gold-light: #E5CB87;
+    --ivory: #FAF7F2;
+    --charcoal: #2A2A2A;
+    --slate: #5C5C5C;
+    --warmgray: #D9D2C5;
+    --success: #2D7A3E;
+    --warning: #C46A1F;
+    --highlight: #FFF8F0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--charcoal);
+    line-height: 1.6;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    background: var(--ivory);
+  }
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  header h1 { margin: 0 0 0.5rem; font-size: 1.8rem; color: white; }
+  header p { margin: 0; opacity: 0.85; font-size: 0.95rem; }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: var(--navy);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+    font-size: 1.4rem;
+  }
+  h3 {
+    color: var(--charcoal);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+  h4 {
+    color: var(--navy-dark);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .video-block {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .video-block h2 {
+    margin-top: 0;
+    padding-top: 0;
+    border-bottom: none;
+    color: var(--navy);
+  }
+  .timing-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--warmgray);
+  }
+  .timing-row:last-child { border-bottom: none; }
+  .timing-label {
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.85rem;
+  }
+  .dialogue {
+    background: var(--ivory);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--navy);
+    font-style: italic;
+    color: var(--charcoal);
+    margin: 0.5rem 0;
+    font-size: 1.02rem;
+  }
+  .dialogue::before { content: '"'; }
+  .dialogue::after { content: '"'; }
+  .visual-note {
+    background: #F0F5FA;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--gold);
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+    color: var(--slate);
+  }
+  .caption-text {
+    background: #1A1A1A;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin-bottom: 0.4rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--warmgray);
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(217, 210, 197, 0.15); }
+  .callout {
+    background: var(--ivory);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+  .callout.warning { border-color: var(--warning); background: var(--highlight); }
+  .callout.success { border-color: var(--success); background: #F0F8F2; }
+  .callout-title { font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .callout.warning .callout-title { color: var(--warning); }
+  .callout.success .callout-title { color: var(--success); }
+  .step {
+    background: white;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--warmgray);
+  }
+  .step-number {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+  code {
+    background: var(--warmgray);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.85em;
+  }
+  hr { border: none; border-top: 1px solid var(--warmgray); margin: 2rem 0; }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+  .checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--slate); }
+  .nav-tabs {
+    background: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .nav-tabs a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-tabs a:hover { background: var(--ivory); }
+  @media print {
+    body { background: white; padding: 1rem; }
+    .video-block, table, .callout { box-shadow: none; border: 1px solid #ddd; }
+    hr { page-break-after: always; border: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Production Reference</div>
+  <h1>Video Ad Production Guide</h1>
+  <p>Step-by-step scripts, visuals, captions, and export specs for Video 1 (high-intent diagnostic) and Video 2 (medium-intent cardiovascular screening). Optimized for AI avatar production with Google Flow + CapCut editing on iPad.</p>
+</header>
+
+<div class="nav-tabs">
+  <a href="#strategy">Strategy</a> ·
+  <a href="#video1">Video 1 — Diagnostic</a> ·
+  <a href="#video2">Video 2 — Screening</a> ·
+  <a href="#captions">Captions</a> ·
+  <a href="#editing">Editing</a> ·
+  <a href="#exports">Exports</a> ·
+  <a href="#publishing">Publishing</a>
+</div>
+
+<h2 id="strategy">Overall Strategy</h2>
+
+<table>
+  <tr>
+    <th>Video</th>
+    <th>Intent</th>
+    <th>Platforms</th>
+    <th>Length</th>
+    <th>Primary Goal</th>
+  </tr>
+  <tr>
+    <td><strong>Video 1</strong></td>
+    <td>HIGH (symptom-driven)</td>
+    <td>Google YouTube + Meta retargeting</td>
+    <td>30 sec</td>
+    <td>Drive bookings for diagnostic ultrasound</td>
+  </tr>
+  <tr>
+    <td><strong>Video 2</strong></td>
+    <td>MEDIUM (preventative)</td>
+    <td>Meta Reels / in-feed primary</td>
+    <td>45 sec</td>
+    <td>Generate leads for $349 Executive Heart Screening</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <div class="callout-title">Critical Production Rules</div>
+  <ul>
+    <li><strong>First 3 seconds matter most</strong> — viewer decides to keep watching or scroll past</li>
+    <li><strong>Sound-off optimization</strong> — assume 85% of Meta viewers watch muted; visuals + hard captions must carry the message</li>
+    <li><strong>Brand visible by 5 seconds</strong> — logo or business name on screen early</li>
+    <li><strong>End card with CTA</strong> — final 2-3 seconds shows URL + phone, holds for clarity</li>
+    <li><strong>Hard captions burned in</strong> — every spoken word visible as text</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ===================== VIDEO 1 ===================== -->
+<div class="video-block" id="video1">
+  <h2>Video 1 — High-Intent Diagnostic Ad</h2>
+  <p><strong>Format:</strong> 30 seconds · 9:16 vertical (primary), 1:1 square (secondary)<br>
+  <strong>Use:</strong> Google YouTube pre-roll (Las Vegas geo) + Meta retargeting for site visitors who searched for diagnostic ultrasound<br>
+  <strong>Goal:</strong> Convert symptomatic patients searching for fast, affordable ultrasound</p>
+
+  <h3>Script with Timing</h3>
+
+  <div class="timing-row">
+    <div class="timing-label">0–4 sec<br>HOOK</div>
+    <div>
+      <div class="visual-note">VISUAL: AI avatar talking direct to camera, warm but urgent expression. Background: simple, professional. No text yet — just face + presence to capture attention.</div>
+      <div class="dialogue">Stomach pain that won't go away? You don't have to wait three weeks for an ultrasound.</div>
+      <div class="caption-text">"Stomach pain? Don't wait 3 weeks for an ultrasound."</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">4–10 sec<br>CONTRAST</div>
+    <div>
+      <div class="visual-note">VISUAL: Cut to text overlay comparison graphic. Three columns appearing one by one: "ER: $3,000" → "Insurance: 3 weeks" → "Signal View: $250, this week"</div>
+      <div class="dialogue">An ER ultrasound costs $3,000. Insurance takes three weeks. We do the same scan for $250 — same week.</div>
+      <div class="caption-text">"ER: $3,000. Insurance: 3 weeks. Us: $250, same week."</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">10–18 sec<br>PROOF</div>
+    <div>
+      <div class="visual-note">VISUAL: Quick cuts of B-roll — ultrasound machine, sonographer working, screen showing scan, then exterior of building. Logo watermark visible in corner throughout.</div>
+      <div class="dialogue">ARDMS-certified sonographers. Board-certified physician interpretation. Written report in two to three business days.</div>
+      <div class="caption-text">"ARDMS-certified · Physician-read · Report in 2-3 days"</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">18–24 sec<br>LOCATION</div>
+    <div>
+      <div class="visual-note">VISUAL: Map pin animation OR exterior building photo with address overlay. "3150 N Tenaya Wy, Suite 400 · 4th Floor · Next to Mountain View Hospital" text overlay.</div>
+      <div class="dialogue">We're in Summerlin, next to Mountain View Hospital. No referral needed. No insurance hassle.</div>
+      <div class="caption-text">"Summerlin · Next to Mountain View Hospital"</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">24–30 sec<br>CTA</div>
+    <div>
+      <div class="visual-note">VISUAL: Bold end card. Logo prominent. Large text: "svscreenings.com" and "702.843.6612". Hold for full 6 seconds so viewers can act.</div>
+      <div class="dialogue">Book this week at svscreenings.com — or call 702-843-6612. Saturday spots go fast.</div>
+      <div class="caption-text">"Book at svscreenings.com · 702.843.6612"</div>
+    </div>
+  </div>
+
+  <h3>Visual Storyboard Summary</h3>
+  <ol>
+    <li><strong>Frame 1 (0-4s):</strong> AI avatar, head and shoulders, direct eye contact</li>
+    <li><strong>Frame 2 (4-10s):</strong> Three-column text comparison animated in</li>
+    <li><strong>Frame 3 (10-18s):</strong> B-roll montage (3-4 quick cuts) of clinic/equipment</li>
+    <li><strong>Frame 4 (18-24s):</strong> Map pin / building exterior + address text</li>
+    <li><strong>Frame 5 (24-30s):</strong> End card — logo, URL, phone number</li>
+  </ol>
+
+  <h3>Total Word Count: ~75 words (28-30 sec of speech)</h3>
+</div>
+
+<hr>
+
+<!-- ===================== VIDEO 2 ===================== -->
+<div class="video-block" id="video2">
+  <h2>Video 2 — Medium-Intent Cardiovascular Screening Ad</h2>
+  <p><strong>Format:</strong> 45 seconds · 9:16 vertical (primary), 1:1 square (secondary)<br>
+  <strong>Use:</strong> Meta Reels and in-feed primary, plus YouTube pre-roll for cold cardiovascular-interest audiences<br>
+  <strong>Goal:</strong> Generate leads (clicks or form fills) for $349 Executive Heart Screening</p>
+
+  <h3>Script with Timing</h3>
+
+  <div class="timing-row">
+    <div class="timing-label">0–5 sec<br>HOOK</div>
+    <div>
+      <div class="visual-note">VISUAL: AI avatar, warm and personal tone. Slower delivery than Video 1. Background slightly softer/warmer.</div>
+      <div class="dialogue">Your dad had a heart attack at 60. You just turned 55. When was your last cardiovascular check?</div>
+      <div class="caption-text">"Your dad had a heart attack at 60. You're 55. When was your last check?"</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">5–14 sec<br>SILENT RISK</div>
+    <div>
+      <div class="visual-note">VISUAL: Gentle B-roll — carotid ultrasound on monitor, color doppler showing flow, sonographer's hands working. Atmospheric, calm music.</div>
+      <div class="dialogue">Most cardiovascular conditions develop silently over years. By the time symptoms appear, the damage is often done.</div>
+      <div class="caption-text">"Cardiovascular conditions develop silently. Symptoms = damage done."</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">14–20 sec<br>SOLUTION</div>
+    <div>
+      <div class="visual-note">VISUAL: Cut back to avatar OR to a wide clinic shot with sonographer + patient. Reassuring tone.</div>
+      <div class="dialogue">A forty-five-minute screening can change that. It's called the Executive Heart Screening.</div>
+      <div class="caption-text">"A 45-minute screening can change that."</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">20–32 sec<br>WHAT'S INCLUDED</div>
+    <div>
+      <div class="visual-note">VISUAL: Four icons or images appearing one at a time as each study is named. Text label appears alongside each. Animated check marks for emphasis.</div>
+      <div class="dialogue">$349 includes a carotid ultrasound for stroke risk, abdominal aorta for aneurysm, leg arteries for circulation, and a screening echocardiogram. Most providers skip the echo. We don't.</div>
+      <div class="caption-text">"$349: Carotid · Aorta · Leg Arteries · Echo. Most providers skip the echo. We don't."</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">32–38 sec<br>TRUST</div>
+    <div>
+      <div class="visual-note">VISUAL: B-roll of clinic interior, equipment, possibly a still of the physician report or a sonographer at work. Logo watermark visible.</div>
+      <div class="dialogue">ARDMS-certified sonographers. Physician-interpreted reports in two to three business days. In Summerlin, next to Mountain View Hospital.</div>
+      <div class="caption-text">"ARDMS-certified · Physician-read · Summerlin location"</div>
+    </div>
+  </div>
+
+  <div class="timing-row">
+    <div class="timing-label">38–45 sec<br>CTA</div>
+    <div>
+      <div class="visual-note">VISUAL: End card with URL prominently displayed: "svscreenings.com/screenings" + phone number. Hold for 6-7 seconds.</div>
+      <div class="dialogue">Learn more or book at svscreenings.com/screenings. Or text 702-843-6612 — we'll answer any questions, no pressure.</div>
+      <div class="caption-text">"svscreenings.com/screenings · Text 702.843.6612"</div>
+    </div>
+  </div>
+
+  <h3>Visual Storyboard Summary</h3>
+  <ol>
+    <li><strong>Frame 1 (0-5s):</strong> AI avatar — personal, warm hook</li>
+    <li><strong>Frame 2 (5-14s):</strong> Atmospheric B-roll of cardiac/vascular scans</li>
+    <li><strong>Frame 3 (14-20s):</strong> Avatar return OR clinic wide shot</li>
+    <li><strong>Frame 4 (20-32s):</strong> Animated icons of the 4 studies — main value frame</li>
+    <li><strong>Frame 5 (32-38s):</strong> Trust signals B-roll</li>
+    <li><strong>Frame 6 (38-45s):</strong> End card — URL + phone, hold 6-7 seconds</li>
+  </ol>
+
+  <h3>Total Word Count: ~115 words (40-42 sec of speech + 3-5 sec end card)</h3>
+</div>
+
+<hr>
+
+<!-- ===================== CAPTIONS ===================== -->
+<h2 id="captions">Caption Strategy (Critical for Meta)</h2>
+
+<div class="callout">
+  <div class="callout-title">Why Hard Captions Matter</div>
+  <ul>
+    <li><strong>85% of Meta videos watched muted</strong> — without captions, your ad delivers no message</li>
+    <li><strong>YouTube auto-captions are inconsistent</strong> — burning them in guarantees they appear correctly</li>
+    <li><strong>Captions improve retention by 30-50%</strong> across all platforms</li>
+  </ul>
+</div>
+
+<h3>CapCut Caption Workflow</h3>
+
+<div class="step">
+  <span class="step-number">1</span><strong>Import video</strong> — drop your AI avatar clips + B-roll into a CapCut project
+</div>
+<div class="step">
+  <span class="step-number">2</span><strong>Tap Captions → Auto Captions</strong> — CapCut transcribes your audio automatically
+</div>
+<div class="step">
+  <span class="step-number">3</span><strong>Edit transcribed text</strong> — fix any words CapCut misheard, shorten lines if needed (medical terms like "ARDMS" or "echocardiogram" often need correction)
+</div>
+<div class="step">
+  <span class="step-number">4</span><strong>Style the captions</strong> — pick a high-contrast style. Recommended: white text + black background box, or yellow text with thick black outline. Make them readable on any background.
+</div>
+<div class="step">
+  <span class="step-number">5</span><strong>Position lower-middle of frame</strong> — never bottom edge (gets cut off by UI), never top (covers face)
+</div>
+<div class="step">
+  <span class="step-number">6</span><strong>Animate sparingly</strong> — "pop in" entrance is fine. Avoid bouncing/spinning — looks amateur and distracts.
+</div>
+<div class="step">
+  <span class="step-number">7</span><strong>Export with captions burned in</strong> — this makes them part of the video file (not a separate track that can be turned off)
+</div>
+
+<h3>Caption Style Recommendation</h3>
+
+<div class="caption-text">EXAMPLE: White Bold Text · Black Outline · Bottom-Center</div>
+
+<ul>
+  <li><strong>Font:</strong> Sans-serif, bold (CapCut's "Bold" or "Pop")</li>
+  <li><strong>Size:</strong> Large enough to read on phone — typically 60-80% of safe area</li>
+  <li><strong>Color:</strong> White with thick black outline OR white-on-black background box</li>
+  <li><strong>Lines:</strong> Max 2 lines at a time, 5-7 words per line</li>
+  <li><strong>Highlight:</strong> Consider highlighting key words in gold (matches your brand) — "$250" or "same week" or "this Saturday"</li>
+</ul>
+
+<hr>
+
+<!-- ===================== EDITING ===================== -->
+<h2 id="editing">Editing in CapCut — Step by Step</h2>
+
+<div class="step">
+  <span class="step-number">1</span><strong>Set project to 9:16 vertical (1080×1920)</strong> — primary aspect ratio
+</div>
+<div class="step">
+  <span class="step-number">2</span><strong>Import AI avatar clips</strong> from your Google Flow exports
+</div>
+<div class="step">
+  <span class="step-number">3</span><strong>Layer in B-roll cuts</strong> on top using picture-in-picture or full-frame cutaways
+</div>
+<div class="step">
+  <span class="step-number">4</span><strong>Add background music</strong> — choose royalty-free, low-energy for Video 2 (medical/calm), slightly upbeat for Video 1 (urgency). Volume: 15-20% so it doesn't compete with dialogue.
+</div>
+<div class="step">
+  <span class="step-number">5</span><strong>Auto-caption + edit + style</strong> per the caption workflow above
+</div>
+<div class="step">
+  <span class="step-number">6</span><strong>Add brand watermark</strong> — small logo in upper-right corner, 60% opacity, visible throughout
+</div>
+<div class="step">
+  <span class="step-number">7</span><strong>Build end card</strong> — solid color background or muted B-roll, large text with URL and phone, animated logo entrance. Hold for 5-7 seconds at the end.
+</div>
+<div class="step">
+  <span class="step-number">8</span><strong>Review at 1x speed with sound on AND off</strong> — confirm message works both ways
+</div>
+<div class="step">
+  <span class="step-number">9</span><strong>Export at 1080p, 60fps</strong> — H.264 codec, MP4 format. Save in CapCut, then export to camera roll.
+</div>
+<div class="step">
+  <span class="step-number">10</span><strong>Create the 1:1 square version</strong> — duplicate project, change canvas to 1080×1080, reposition elements, re-export
+</div>
+
+<hr>
+
+<!-- ===================== EXPORTS ===================== -->
+<h2 id="exports">Export Specifications</h2>
+
+<table>
+  <tr>
+    <th>Use Case</th>
+    <th>Aspect Ratio</th>
+    <th>Resolution</th>
+    <th>Length</th>
+    <th>Format</th>
+  </tr>
+  <tr>
+    <td>Meta Reels / Stories / TikTok</td>
+    <td>9:16 vertical</td>
+    <td>1080×1920</td>
+    <td>15-30s</td>
+    <td>MP4, H.264</td>
+  </tr>
+  <tr>
+    <td>Meta in-feed video</td>
+    <td>1:1 square (or 4:5)</td>
+    <td>1080×1080</td>
+    <td>15-45s</td>
+    <td>MP4, H.264</td>
+  </tr>
+  <tr>
+    <td>YouTube pre-roll skippable</td>
+    <td>16:9 horizontal</td>
+    <td>1920×1080</td>
+    <td>15-30s</td>
+    <td>MP4, H.264</td>
+  </tr>
+  <tr>
+    <td>YouTube Shorts</td>
+    <td>9:16 vertical</td>
+    <td>1080×1920</td>
+    <td>Up to 60s</td>
+    <td>MP4, H.264</td>
+  </tr>
+  <tr>
+    <td>YouTube bumper (6s)</td>
+    <td>16:9 horizontal</td>
+    <td>1920×1080</td>
+    <td>6 seconds exact</td>
+    <td>MP4, H.264</td>
+  </tr>
+</table>
+
+<div class="callout success">
+  <div class="callout-title">Naming Convention for Your Files</div>
+  <ul>
+    <li><code>SVS_V1_Diagnostic_30s_9x16.mp4</code> — Video 1, vertical, 30 seconds</li>
+    <li><code>SVS_V1_Diagnostic_30s_1x1.mp4</code> — Video 1, square</li>
+    <li><code>SVS_V1_Diagnostic_15s_9x16.mp4</code> — Video 1, vertical, shorter cut</li>
+    <li><code>SVS_V2_Screening_45s_9x16.mp4</code> — Video 2, vertical, 45 seconds</li>
+    <li><code>SVS_V2_Screening_30s_9x16.mp4</code> — Video 2, vertical, shorter cut</li>
+  </ul>
+  <p style="margin-top: 0.75rem;">Keep all source files. The longer versions can be trimmed for shorter formats; the reverse isn't possible.</p>
+</div>
+
+<hr>
+
+<!-- ===================== PUBLISHING ===================== -->
+<h2 id="publishing">Where to Publish</h2>
+
+<h3>Video 1 — Diagnostic (High-Intent)</h3>
+
+<table>
+  <tr>
+    <th>Platform</th>
+    <th>Placement</th>
+    <th>Targeting</th>
+  </tr>
+  <tr>
+    <td>Google Ads</td>
+    <td>YouTube pre-roll (skippable)</td>
+    <td>Las Vegas 25mi · age 35-70 · interests: health, medical imaging</td>
+  </tr>
+  <tr>
+    <td>Google Ads</td>
+    <td>YouTube Shorts</td>
+    <td>Same targeting · 9:16 version</td>
+  </tr>
+  <tr>
+    <td>Meta Ads</td>
+    <td>Retargeting site visitors</td>
+    <td>Custom audience: visited /abdomen or /echo in last 30 days</td>
+  </tr>
+  <tr>
+    <td>Meta Ads</td>
+    <td>Reels + in-feed</td>
+    <td>Las Vegas · age 35-70 · interests: cardiology, abdominal pain</td>
+  </tr>
+</table>
+
+<h3>Video 2 — Cardiovascular Screening (Medium-Intent)</h3>
+
+<table>
+  <tr>
+    <th>Platform</th>
+    <th>Placement</th>
+    <th>Targeting</th>
+  </tr>
+  <tr>
+    <td>Meta Ads</td>
+    <td>Reels primary</td>
+    <td>Las Vegas · age 45-70 · interests: cardiovascular health, longevity, family history of heart disease</td>
+  </tr>
+  <tr>
+    <td>Meta Ads</td>
+    <td>In-feed video</td>
+    <td>Same targeting plus lookalike audience of existing customers</td>
+  </tr>
+  <tr>
+    <td>Google Ads</td>
+    <td>YouTube pre-roll on health/news channels</td>
+    <td>Las Vegas geo · age 50-70 · in-market for health services</td>
+  </tr>
+  <tr>
+    <td>Meta Ads</td>
+    <td>Retargeting</td>
+    <td>Custom audience: visited /screenings or /pricing in last 30 days</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Production Checklist Before You Hit Record</h2>
+
+<h3>AI Avatar Generation (Google Flow)</h3>
+<ul class="checklist">
+  <li>Generate clip for Video 1 hook (4 sec) — urgent but warm</li>
+  <li>Generate clip for Video 1 location segment (6 sec) — confident, neutral</li>
+  <li>Generate clip for Video 2 hook (5 sec) — warm, personal</li>
+  <li>Generate clip for Video 2 solution segment (6 sec) — reassuring</li>
+  <li>Generate clip for Video 2 trust segment (6 sec) — credible, professional</li>
+  <li>Export all clips at highest quality, 9:16 vertical</li>
+</ul>
+
+<h3>B-Roll Needed</h3>
+<ul class="checklist">
+  <li>Ultrasound machine close-up (5 sec)</li>
+  <li>Sonographer hands working the probe (5 sec)</li>
+  <li>Monitor showing ultrasound imaging (5 sec)</li>
+  <li>Carotid color doppler on screen (5 sec)</li>
+  <li>Clinic interior wide shot (5 sec)</li>
+  <li>Building exterior shot (3 sec)</li>
+  <li>Physician report on screen / printed (3 sec)</li>
+</ul>
+
+<h3>Graphics / Overlays</h3>
+<ul class="checklist">
+  <li>Three-column comparison: ER $3,000 / Insurance 3 weeks / Us $250</li>
+  <li>Four-icon row: Carotid · Aorta · Leg Arteries · Echo</li>
+  <li>Map pin / location overlay with full address</li>
+  <li>End card template (matches landing page brand)</li>
+  <li>Logo watermark file</li>
+</ul>
+
+<h3>Compliance Check Before Export</h3>
+<ul class="checklist">
+  <li>No promissory language ("we'll catch your problem" — never)</li>
+  <li>No directives ("you should book today" — soft language only)</li>
+  <li>No diagnostic claims (imaging only — never "diagnosis")</li>
+  <li>Address visible and accurate</li>
+  <li>Phone number readable for 5+ seconds in end card</li>
+  <li>No before/after body imagery (Meta policy)</li>
+  <li>No needles, blood, distressed patients in frame</li>
+</ul>
+
+<hr>
+
+<h2>Post-Launch Iteration Plan</h2>
+
+<div class="step">
+  <span class="step-number">1</span><strong>Run 7 days</strong> at $15-25/day per video, monitor CTR and conversion
+</div>
+<div class="step">
+  <span class="step-number">2</span><strong>If CTR &lt; 1%</strong>, the hook isn't working — re-record opening 5 seconds with new hook
+</div>
+<div class="step">
+  <span class="step-number">3</span><strong>If CTR &gt; 1% but conversion &lt; 1%</strong>, the offer or landing page is the issue — not the video
+</div>
+<div class="step">
+  <span class="step-number">4</span><strong>Make 3 variants per winner</strong> — change one element each: hook, music, end card style
+</div>
+<div class="step">
+  <span class="step-number">5</span><strong>Refresh creative every 14-21 days</strong> — Meta ad fatigue is real, performance drops sharply after 3 weeks
+</div>
+
+<hr>
+
+<p style="text-align: center; color: var(--slate); font-size: 0.85rem; margin-top: 2rem;">
+  Signal View Screenings · Video Ad Production Guide · Version 1.0
+</p>
+
+</body>
+</html>

@@ -18,21 +18,21 @@ const diagnosticServices = [
   },
   {
     name: 'Carotid Ultrasound',
-    price: 250,
+    price: 300,
     description: 'Checks for plaque buildup in the carotid arteries — the main blood vessels supplying your brain. A leading cause of stroke, often with zero symptoms. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'artery',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/XOJSMJNJ6YDRVLWA6GDT35GJ',
   },
   {
     name: 'Aortic Aneurysm Ultrasound',
-    price: 250,
+    price: 300,
     description: 'Checks for an abdominal aortic aneurysm (AAA) — a dangerous bulge in the body\'s main artery that can rupture without warning. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'aorta',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/JJWBVXGFGFIEKGZEC7A56C6E',
   },
   {
     name: 'Leg Arterial (PAD)',
-    price: 250,
+    price: 300,
     description: 'Checks blood flow in the arteries of your legs to detect peripheral artery disease (PAD). Left untreated, PAD can lead to serious complications. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/VRAGGFL6MISH65LS2HCG6MSH',
@@ -40,14 +40,14 @@ const diagnosticServices = [
   },
   {
     name: 'Leg Venous (DVT)',
-    price: 250,
+    price: 300,
     description: 'Checks the veins in your legs for blood clots (DVT) and venous insufficiency. DVT can be life-threatening if a clot travels to the lungs. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/N5EW3KNEPLX4GJHBJ2S4LUDJ',
   },
   {
     name: 'Abdominal Complete',
-    price: 250,
+    price: 300,
     description: 'Comprehensive view of the liver, gallbladder, kidneys, spleen, pancreas, and aorta. Detects gallstones, cysts, fatty liver, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/MPRZWA64NFA7B44TUJD22SEP',
@@ -55,7 +55,7 @@ const diagnosticServices = [
   },
   {
     name: 'Thyroid Ultrasound',
-    price: 250,
+    price: 300,
     description: 'Evaluates the size, shape, and structure of your thyroid gland. Detects nodules, cysts, enlargement, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/3JNGW2A626ZSKCUT2BHVS6SS',
@@ -63,7 +63,7 @@ const diagnosticServices = [
   },
   {
     name: 'Renal Ultrasound',
-    price: 250,
+    price: 300,
     description: 'Checks the size, structure, and appearance of both kidneys and bladder. Detects kidney stones, cysts, masses, and signs of obstruction. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/FOBHBGXNFYM22VMNGXN4MLEK',
@@ -81,7 +81,7 @@ const iconMap: Record<string, string> = {
 
 <BaseLayout
   title="Cash-Pay Diagnostic Ultrasound | No Insurance Needed | Signal View Las Vegas"
-  description="Affordable cash-pay diagnostic ultrasound in Las Vegas. Echo $300, vascular and general studies from $250. All include physician interpretation. No insurance or referral required."
+  description="Affordable cash-pay diagnostic ultrasound in Las Vegas. All studies $300 — echo, vascular, abdominal, thyroid, renal, and more. Physician-interpreted. No insurance or referral required."
 >
   <PageHero
     title="Cash-Pay Diagnostic Ultrasound"
@@ -190,7 +190,7 @@ const iconMap: Record<string, string> = {
         <div class="bg-white rounded-card p-5 border-2 border-gold shadow-md">
           <div class="flex items-baseline justify-between">
             <span class="text-sm text-gold-hover font-sans font-semibold">Signal View cash-pay diagnostic</span>
-            <span class="text-lg font-serif text-gold">$250 – $300</span>
+            <span class="text-lg font-serif text-gold">$300</span>
           </div>
         </div>
         <p class="text-center text-sm text-slate font-sans italic">
@@ -238,13 +238,13 @@ const iconMap: Record<string, string> = {
             class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white">
             <option value="">Select a study...</option>
             <option value="Echocardiogram ($300)">Echocardiogram — $300</option>
-            <option value="Carotid Ultrasound ($250)">Carotid Ultrasound — $250</option>
-            <option value="Aorta Ultrasound ($250)">Aorta Ultrasound — $250</option>
-            <option value="Lower Extremity Arterial ($250)">Lower Extremity Arterial — $250</option>
-            <option value="Lower Extremity Venous ($250)">Lower Extremity Venous — $250</option>
-            <option value="Abdominal Complete ($250)">Abdominal Complete — $250</option>
-            <option value="Thyroid Ultrasound ($250)">Thyroid Ultrasound — $250</option>
-            <option value="Renal Ultrasound ($250)">Renal Ultrasound — $250</option>
+            <option value="Carotid Ultrasound ($300)">Carotid Ultrasound — $300</option>
+            <option value="Aorta Ultrasound ($300)">Aorta Ultrasound — $300</option>
+            <option value="Lower Extremity Arterial ($300)">Lower Extremity Arterial — $300</option>
+            <option value="Lower Extremity Venous ($300)">Lower Extremity Venous — $300</option>
+            <option value="Abdominal Complete ($300)">Abdominal Complete — $300</option>
+            <option value="Thyroid Ultrasound ($300)">Thyroid Ultrasound — $300</option>
+            <option value="Renal Ultrasound ($300)">Renal Ultrasound — $300</option>
             <option value="Multiple studies">Multiple studies — describe below</option>
           </select>
         </div>

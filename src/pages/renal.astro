@@ -59,7 +59,7 @@ const whyItMatters = [
   {
     stat: '$1,000+',
     heading: 'typical hospital cost',
-    description: 'A renal ultrasound through insurance or the ER can cost $1,000–$2,000 with deductibles. Ours is $250, all-in.',
+    description: 'A renal ultrasound through insurance or the ER can cost $1,000–$2,000 with deductibles. Ours is $300, all-in.',
   },
   {
     stat: 'Silent',
@@ -79,8 +79,8 @@ const whoShouldGet = [
 ---
 
 <BaseLayout
-  title="Renal Ultrasound Las Vegas | $250 Kidney Scan | 2–3 Day Results"
-  description="Diagnostic renal (kidney) ultrasound in Las Vegas — $250, no referral needed. Images kidney stones, cysts, masses, and obstruction. Physician-interpreted in 2–3 days."
+  title="Renal Ultrasound Las Vegas | $300 Kidney Scan | 2–3 Day Results"
+  description="Diagnostic renal (kidney) ultrasound in Las Vegas — $300, no referral needed. Images kidney stones, cysts, masses, and obstruction. Physician-interpreted in 2–3 days."
 >
   <EmergencyBanner />
 
@@ -110,7 +110,7 @@ const whoShouldGet = [
             Flank Pain? Blood in Urine? Get Imaging This Week.
           </h1>
           <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-            <span class="text-gold font-semibold">$250</span> · Diagnostic Renal Ultrasound in Las Vegas
+            <span class="text-gold font-semibold">$300</span> · Diagnostic Renal Ultrasound in Las Vegas
           </p>
           <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
             A focused ultrasound of your kidneys and bladder — imaging stones, cysts, masses, and signs of obstruction. Interpreted by a board-certified physician. Reports delivered in 2–3 business days. No referral or insurance needed.
@@ -121,16 +121,16 @@ const whoShouldGet = [
               href={SQUARE_RENAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Renal Ultrasound', value: 250, currency: 'USD', link_location: 'renal_hero' })"
+              onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Renal Ultrasound', value: 300, currency: 'USD', link_location: 'renal_hero' })"
               class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Book In-Clinic — $250
+              Book In-Clinic — $300
             </a>
             <a
               href="#in-home-form"
               class="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-white/30 hover:border-white/60 text-white font-sans font-medium rounded-lg transition-all duration-200"
             >
-              Request In-Home Visit — $400
+              Request In-Home Visit — $450
             </a>
           </div>
 
@@ -276,7 +276,7 @@ const whoShouldGet = [
         <div class="rounded-2xl border border-warmgray/30 bg-white p-8 flex flex-col shadow-md">
           <div class="inline-block bg-navy text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Clinic</div>
           <h3 class="text-2xl font-serif text-charcoal mb-1">Book In-Clinic</h3>
-          <p class="text-4xl font-serif text-gold mb-4">$250</p>
+          <p class="text-4xl font-serif text-gold mb-4">$300</p>
 
           <div class="space-y-3 mb-6 flex-1">
             <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
@@ -302,7 +302,7 @@ const whoShouldGet = [
             href={SQUARE_RENAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Renal Ultrasound', value: 250, currency: 'USD', link_location: 'renal_clinic_card' })"
+            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Renal Ultrasound', value: 300, currency: 'USD', link_location: 'renal_clinic_card' })"
             class="block w-full text-center py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Book &amp; Pay Deposit →
@@ -314,7 +314,7 @@ const whoShouldGet = [
         <div class="rounded-2xl border-2 border-gold shadow-lg shadow-gold/10 ring-1 ring-gold/30 bg-white p-8 flex flex-col">
           <div class="inline-block bg-gold text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Home</div>
           <h3 class="text-2xl font-serif text-charcoal mb-1">Request In-Home Visit</h3>
-          <p class="text-4xl font-serif text-gold mb-4">$400</p>
+          <p class="text-4xl font-serif text-gold mb-4">$450</p>
 
           <form id="inhome-form" class="space-y-4 flex-1 flex flex-col">
             <div>
@@ -430,8 +430,8 @@ const whoShouldGet = [
   <!-- Final CTA -->
   <CTABanner
     heading="Get Imaging This Week — Then Take the Next Step With Your Doctor."
-    subtext="$250 in-clinic · $400 in-home · Board-certified physician interpretation in 2–3 business days · Serving Las Vegas, Henderson, Summerlin & North Las Vegas"
-    ctaText="Book In-Clinic — $250"
+    subtext="$300 in-clinic · $450 in-home · Board-certified physician interpretation in 2–3 business days · Serving Las Vegas, Henderson, Summerlin & North Las Vegas"
+    ctaText="Book In-Clinic — $300"
     ctaHref={SQUARE_RENAL_URL}
   />
 
@@ -450,14 +450,14 @@ const whoShouldGet = [
       {
         "@type": "Offer",
         "name": "In-Clinic Renal Ultrasound",
-        "price": "250",
+        "price": "300",
         "priceCurrency": "USD",
         "url": SQUARE_RENAL_URL
       },
       {
         "@type": "Offer",
         "name": "In-Home Renal Ultrasound",
-        "price": "400",
+        "price": "450",
         "priceCurrency": "USD"
       }
     ],
@@ -495,9 +495,9 @@ const whoShouldGet = [
         '\nPhone: ' + entries.phone +
         '\nZip Code: ' + entries.zip +
         '\nPreferred Date/Time: ' + entries.datetime +
-        '\n\nService: Renal Ultrasound — In-Home ($400)'
+        '\n\nService: Renal Ultrasound — In-Home ($450)'
       );
-      window.svs_track && window.svs_track('generate_lead', { form_name: 'renal_inhome', value: 400 });
+      window.svs_track && window.svs_track('generate_lead', { form_name: 'renal_inhome', value: 450 });
       window.location.href = 'mailto:info@svscreenings.com?subject=' + subject + '&body=' + body;
 
       var btn = form.querySelector('button[type="submit"]');
