@@ -1,0 +1,43 @@
+---
+// Temporary test page — remove before shipping
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntakeQ Widget Test</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    h1 { font-size: 1.25rem; color: #333; margin-bottom: 24px; }
+  </style>
+  <script>(function (c) {
+    window.intakeq = "6a34384c4c7aa072929fbe5f";
+    window.intakeqServiceId = "f5383369-eac5-4cdb-aef5-1907cd466681";
+    var i = c.createElement("script");
+    i.type = "text/javascript";
+    i.async = true;
+    i.src = "https://intakeq.com/js/widget.min.js?1";
+    document.head.appendChild(i);
+  })(document);</script>
+</head>
+<body>
+  <div class="container">
+    <h1>IntakeQ Widget — Test</h1>
+    <div id="intakeq" style="max-width:720px; width: 100%;"></div>
+  </div>
+</body>
+</html>
