@@ -80,7 +80,7 @@ const whoShouldGet = [
 
 <BaseLayout
   title="Echocardiogram Las Vegas | $300 Heart Ultrasound | Signal View Screenings"
-  description="$300 echocardiogram in Las Vegas. Evaluates heart muscle, valves, chambers, and blood flow. Physician-interpreted results in 2–3 days. No referral needed. In-clinic or in-home."
+  description="$300 echocardiogram in Las Vegas. Evaluates heart muscle, valves, chambers, and blood flow. Physician-interpreted results in 2–3 days. No referral needed."
 >
   <EmergencyBanner />
 
@@ -116,22 +116,9 @@ const whoShouldGet = [
             A complete ultrasound of your heart — evaluating muscle function, valve health, chamber size, and blood flow — with physician-interpreted results in 2–3 business days. No referral or insurance needed.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in-up">
-            <a
-              href={SQUARE_ECHO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Echocardiogram', value: 300, currency: 'USD', link_location: 'echo_hero' })"
-              class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              Book In-Clinic — $300
-            </a>
-            <a
-              href="#in-home-form"
-              class="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-white/30 hover:border-white/60 text-white font-sans font-medium rounded-lg transition-all duration-200"
-            >
-              Request In-Home Visit — $450
-            </a>
+          <!-- IntakeQ booking widget -->
+          <div class="mb-8 fade-in-up" id="book">
+            <div id="intakeq" style="width: 100%;"></div>
           </div>
 
           <!-- Trust strip -->
@@ -235,107 +222,6 @@ const whoShouldGet = [
     </div>
   </section>
 
-  <!-- Two Ways to Get Scanned -->
-  <section id="in-home-form" class="section-padding bg-white">
-    <div class="container-site max-w-5xl">
-      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
-        <p class="overline text-gold mb-3">Book Your Echo</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Two Ways to Get Your Echocardiogram</h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in-up">
-        <!-- In-Clinic Card -->
-        <div class="rounded-2xl border border-warmgray/30 bg-white p-8 flex flex-col shadow-md">
-          <div class="inline-block bg-navy text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Clinic</div>
-          <h3 class="text-2xl font-serif text-charcoal mb-1">Book In-Clinic</h3>
-          <p class="text-4xl font-serif text-gold mb-4">$300</p>
-
-          <div class="space-y-3 mb-6 flex-1">
-            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
-              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              <div>
-                <div>{siteConfig.screeningLocation.address}</div>
-                <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
-                <div class="text-slate text-xs mt-0.5">{siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}</div>
-                <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-navy font-medium hover:text-gold transition-colors">Get Directions →</a>
-              </div>
-            </div>
-            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
-              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
-              <span>{siteConfig.hours}</span>
-            </div>
-            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
-              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-              <span>$75 deposit at booking · remainder at visit</span>
-            </div>
-          </div>
-
-          <a
-            href={SQUARE_ECHO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onclick="window.svs_track && window.svs_track('begin_checkout', { item_name: 'Echocardiogram', value: 300, currency: 'USD', link_location: 'echo_clinic_card' })"
-            class="block w-full text-center py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            Book &amp; Pay Deposit →
-          </a>
-          <p class="text-center text-xs text-slate font-sans mt-3">HSA/FSA eligible · Secure checkout via Square</p>
-        </div>
-
-        <!-- In-Home Card -->
-        <div class="rounded-2xl border-2 border-gold shadow-lg shadow-gold/10 ring-1 ring-gold/30 bg-white p-8 flex flex-col">
-          <div class="inline-block bg-gold text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 self-start">In-Home</div>
-          <h3 class="text-2xl font-serif text-charcoal mb-1">Request In-Home Visit</h3>
-          <p class="text-4xl font-serif text-gold mb-4">$450</p>
-
-          <form id="inhome-form" class="space-y-4 flex-1 flex flex-col">
-            <div>
-              <label for="ih-name" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Name *</label>
-              <input type="text" id="ih-name" name="name" required
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="Your full name" />
-            </div>
-            <div>
-              <label for="ih-phone" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Phone *</label>
-              <input type="tel" id="ih-phone" name="phone" required
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="(702) 555-0123" />
-            </div>
-            <div>
-              <label for="ih-zip" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Zip Code *</label>
-              <input type="text" id="ih-zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}"
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="89128" />
-            </div>
-            <div>
-              <label for="ih-datetime" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Date &amp; Time Window *</label>
-              <input type="text" id="ih-datetime" name="datetime" required
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="e.g. Saturday morning, any weekday after 2pm" />
-            </div>
-
-            <!-- Honeypot -->
-            <div class="hidden" aria-hidden="true">
-              <input type="text" name="website" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="!mt-auto pt-2">
-              <button type="submit" class="w-full py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
-                Submit Request
-              </button>
-              <p class="text-center text-xs text-slate font-sans mt-3">We'll confirm availability within a few hours</p>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <p class="text-center mt-8 text-sm text-slate font-sans fade-in-up">
-        Prefer to talk?
-        <a href={`tel:${siteConfig.phoneTel}`} onclick="window.svs_track && window.svs_track('click_phone', { link_location: 'echo_booking' })" class="text-navy font-semibold hover:text-gold transition-colors">Call or text {siteConfig.phone}</a>
-      </p>
-    </div>
-  </section>
-
   <!-- Who Should Get This Scan -->
   <section class="section-padding bg-ivory">
     <div class="container-site max-w-4xl">
@@ -385,9 +271,9 @@ const whoShouldGet = [
   <!-- Final CTA -->
   <CTABanner
     heading="Your Heart Deserves Answers. Get Your Echo."
-    subtext="$300 in-clinic · $450 in-home · Physician-interpreted results in 2–3 business days"
-    ctaText="Book In-Clinic — $300"
-    ctaHref={SQUARE_ECHO_URL}
+    subtext="$300 · Physician-interpreted results in 2–3 business days · No referral needed"
+    ctaText="Book Your Echo — $300"
+    ctaHref="#book"
   />
 
   <!-- Schema.org structured data -->
@@ -401,21 +287,12 @@ const whoShouldGet = [
       "@type": "MedicalDevice",
       "name": "Ultrasound"
     },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "In-Clinic Echocardiogram",
-        "price": "300",
-        "priceCurrency": "USD",
-        "url": SQUARE_ECHO_URL
-      },
-      {
-        "@type": "Offer",
-        "name": "In-Home Echocardiogram",
-        "price": "450",
-        "priceCurrency": "USD"
-      }
-    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "Diagnostic Echocardiogram",
+      "price": "300",
+      "priceCurrency": "USD"
+    },
     "provider": {
       "@type": "MedicalBusiness",
       "name": siteConfig.legalName,
@@ -431,37 +308,13 @@ const whoShouldGet = [
 </BaseLayout>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('inhome-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var honeypot = form.querySelector('input[name="website"]');
-      if (honeypot && honeypot.value) return;
-
-      var data = new FormData(form);
-      var entries = {};
-      data.forEach(function(value, key) { entries[key] = value; });
-
-      var subject = encodeURIComponent('In-Home Echocardiogram Request');
-      var body = encodeURIComponent(
-        'Name: ' + entries.name +
-        '\nPhone: ' + entries.phone +
-        '\nZip Code: ' + entries.zip +
-        '\nPreferred Date/Time: ' + entries.datetime +
-        '\n\nService: Echocardiogram — In-Home ($450)'
-      );
-      window.svs_track && window.svs_track('generate_lead', { form_name: 'echo_inhome', value: 450 });
-      window.location.href = 'mailto:info@svscreenings.com?subject=' + subject + '&body=' + body;
-
-      var btn = form.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.textContent = 'Request Sent — Thank You!';
-        btn.classList.remove('bg-gold', 'hover:bg-gold-hover');
-        btn.classList.add('bg-green-600');
-        btn.disabled = true;
-      }
-    });
-  });
+  (function (c) {
+    window.intakeq = "6a34384c4c7aa072929fbe5f";
+    window.intakeqServiceId = "6aee7757-25bc-45b9-8f66-97334ff5472a";
+    var i = c.createElement("script");
+    i.type = "text/javascript";
+    i.async = true;
+    i.src = "https://intakeq.com/js/widget.min.js?1";
+    document.head.appendChild(i);
+  })(document);
 </script>
