@@ -152,3 +152,15 @@
   font-style: italic;
   color: #4A5568;
 }
+
+
+/* IntakeQ widget centering */
+#intakeq {
+  display: flex;
+  justify-content: center;
+}
+
+#intakeq iframe {
+  display: block;
+  margin: 0 auto;
+}
