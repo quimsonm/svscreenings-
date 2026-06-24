@@ -13,7 +13,6 @@ const diagnosticServices = [
     price: 300,
     description: 'Evaluates heart muscle function, valve health, and chamber size. Detects conditions like heart failure and valve disease — often before symptoms appear. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'heart',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/A6EHGZOM37NHJ2QRUMTCGGKX',
     landingPage: '/echo',
   },
   {
@@ -21,21 +20,20 @@ const diagnosticServices = [
     price: 300,
     description: 'Checks for plaque buildup in the carotid arteries — the main blood vessels supplying your brain. A leading cause of stroke, often with zero symptoms. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'artery',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/XOJSMJNJ6YDRVLWA6GDT35GJ',
+    landingPage: '/carotid',
   },
   {
     name: 'Aortic Aneurysm Ultrasound',
     price: 300,
     description: 'Checks for an abdominal aortic aneurysm (AAA) — a dangerous bulge in the body\'s main artery that can rupture without warning. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'aorta',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/JJWBVXGFGFIEKGZEC7A56C6E',
+    landingPage: '/aorta',
   },
   {
     name: 'Leg Arterial (PAD)',
     price: 300,
     description: 'Checks blood flow in the arteries of your legs to detect peripheral artery disease (PAD). Left untreated, PAD can lead to serious complications. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/VRAGGFL6MISH65LS2HCG6MSH',
     landingPage: '/pad',
   },
   {
@@ -43,14 +41,13 @@ const diagnosticServices = [
     price: 300,
     description: 'Checks the veins in your legs for blood clots (DVT) and venous insufficiency. DVT can be life-threatening if a clot travels to the lungs. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/N5EW3KNEPLX4GJHBJ2S4LUDJ',
+    landingPage: '/dvt',
   },
   {
     name: 'Abdominal Complete',
     price: 300,
     description: 'Comprehensive view of the liver, gallbladder, kidneys, spleen, pancreas, and aorta. Detects gallstones, cysts, fatty liver, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/MPRZWA64NFA7B44TUJD22SEP',
     landingPage: '/abdomen',
   },
   {
@@ -58,7 +55,6 @@ const diagnosticServices = [
     price: 300,
     description: 'Evaluates the size, shape, and structure of your thyroid gland. Detects nodules, cysts, enlargement, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/3JNGW2A626ZSKCUT2BHVS6SS',
     landingPage: '/thyroid',
   },
   {
@@ -66,7 +62,14 @@ const diagnosticServices = [
     price: 300,
     description: 'Checks the size, structure, and appearance of both kidneys and bladder. Detects kidney stones, cysts, masses, and signs of obstruction. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
-    bookingUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0GR90314NDDP/services/FOBHBGXNFYM22VMNGXN4MLEK',
+    landingPage: '/renal',
+  },
+  {
+    name: 'Prostate Ultrasound',
+    price: 300,
+    description: 'Evaluates the size and structure of the prostate gland. Useful for detecting enlargement (BPH), asymmetry, and other changes. Physician-interpreted report delivered within 2–3 business days.',
+    icon: 'general',
+    landingPage: '/prostate',
   },
 ];
 
@@ -139,20 +142,12 @@ const iconMap: Record<string, string> = {
             <h3 class="font-sans font-semibold text-charcoal text-sm mb-1">{service.name}</h3>
             <p class="text-2xl font-serif text-navy mb-2">${service.price}</p>
             <p class="text-xs text-slate font-sans leading-relaxed mb-3 flex-1">{service.description}</p>
-            <div class="flex items-center gap-1.5 text-xs text-slate font-sans mb-3">
-              <svg class="w-3.5 h-3.5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              <span>In-home available · <span class="font-medium text-charcoal">+$150</span></span>
-            </div>
             <a
-              href={service.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onclick={`window.svs_track && window.svs_track('begin_checkout', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
+              href={service.landingPage}
+              onclick={`window.svs_track && window.svs_track('select_item', { item_name: '${service.name}', link_location: 'diagnostics_card' })`}
               class="block w-full text-center py-2.5 bg-navy hover:bg-navy/90 text-white text-xs font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
             >
-              Book &amp; Pay — ${service.price}
+              Book Now →
             </a>
           </div>
         ))}

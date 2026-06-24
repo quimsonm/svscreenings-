@@ -3,80 +3,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
 import EmergencyBanner from '../components/EmergencyBanner.astro';
 import { Image } from 'astro:assets';
-import renalHero from '../assets/images/service-results.png';
+import essentialHero from '../assets/images/carotid-screening.jpg';
 import { siteConfig } from '../data/siteConfig';
 
 const trustPoints = [
-  { icon: 'clock', text: '20–30 Minutes' },
+  { icon: 'clock', text: '45–60 Minutes' },
   { icon: 'shield', text: 'No Referral Needed' },
-  { icon: 'heart', text: 'No Radiation' },
+  { icon: 'heart', text: 'No Needles or Radiation' },
   { icon: 'check', text: 'Physician-Interpreted Results' },
 ];
 
-const whatWeCheck = [
+const included = [
   {
-    name: 'Kidney Stones',
-    conditions: 'Calculi detection in kidneys and ureter',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>`,
+    name: 'Carotid Artery Ultrasound',
+    conditions: 'Plaque buildup, stenosis, stroke risk',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M8 8c2 2 4 2 6 0M8 16c2-2 4-2 6 0" stroke-linecap="round"/></svg>`,
   },
   {
-    name: 'Cortical Cysts',
-    conditions: 'Simple and complex kidney cysts',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path stroke-linecap="round" d="M9 12c1-2 4-2 6 0"/></svg>`,
+    name: 'Aortic Aneurysm Screening',
+    conditions: 'AAA detection and aortic diameter',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3v4M12 17v4M10 7c-2 2-3 4-3 7s1 3 3 3h4c2 0 3 0 3-3s-1-5-3-7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.5"/></svg>`,
   },
   {
-    name: 'Hydronephrosis',
-    conditions: 'Swelling from urinary obstruction',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>`,
-  },
-  {
-    name: 'Kidney Size & Structure',
-    conditions: 'Size, shape, and cortical thickness',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 4c-3 0-5 3-5 6s1 4 2 6 2 4 3 4 2-1 2-3-1-3 0-5 1-4 1-5-1-3-3-3zM16 4c3 0 5 3 5 6s-1 4-2 6-2 4-3 4-2-1-2-3 1-3 0-5-1-4-1-5 1-3 3-3z"/></svg>`,
-  },
-  {
-    name: 'Bladder Assessment',
-    conditions: 'Wall thickness, volume, and lesions',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="14" rx="7" ry="6"/><path stroke-linecap="round" d="M12 8V5"/></svg>`,
-  },
-  {
-    name: 'Masses or Lesions',
-    conditions: 'Solid or complex lesions warranting follow-up',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    name: 'Leg Arterial (PAD) Screening',
+    conditions: 'Peripheral artery disease, blood flow',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M11 3c0 2-1 5-1 8s1 5 1 8M13 3c0 2 1 5 1 8s-1 5-1 8" stroke-linecap="round"/><path d="M9 9h6M9 15h6" stroke-linecap="round" opacity="0.5"/></svg>`,
   },
 ];
 
 const whyWait = [
   {
-    stat: '1 in 10',
-    heading: 'Americans develop kidney stones',
-    description: 'Kidney stones are extremely common and often go undetected until they cause severe pain. Early imaging can catch them before that happens.',
+    stat: '$2,500+',
+    heading: 'if done separately at a hospital',
+    description: 'Three individual vascular scans through insurance or a hospital could run $2,500 or more. Our package bundles all three for $199.',
   },
   {
-    stat: '$1,200+',
-    heading: 'typical hospital imaging cost',
-    description: 'A renal ultrasound through a hospital or specialist can cost $1,200 or more. Ours is $300, same-week appointments available.',
+    stat: '3 scans',
+    heading: 'in one single appointment',
+    description: 'Carotid, aorta, and leg arteries — the most common sites of silent vascular disease — all covered in one visit.',
   },
   {
-    stat: 'No fasting',
-    heading: 'no radiation required',
-    description: 'Unlike CT scans, ultrasound uses no radiation and no contrast dye — just a simple, safe scan with immediate results.',
+    stat: 'Same week',
+    heading: 'appointments available',
+    description: 'No referrals, no insurance delays, no weeks of waiting. Book online and come in this week.',
   },
 ];
 
 const whoShouldGet = [
-  'Flank pain, back pain, or side pain',
-  'History of kidney stones',
-  'Blood in urine (hematuria)',
-  'High blood pressure or diabetes',
-  'Recurrent urinary tract infections',
-  'Abnormal kidney function labs (creatinine, BUN)',
+  'Men and women aged 55 or older',
+  'Smokers or former smokers',
+  'Family history of stroke or heart disease',
+  'High blood pressure or high cholesterol',
+  'Diabetes',
+  'Annual cardiovascular health check',
 ];
 ---
 
 <BaseLayout
-  title="Renal Ultrasound Las Vegas | $300 Kidney & Bladder Scan | Signal View"
-  description="$300 renal ultrasound in Las Vegas. Checks kidneys and bladder for stones, cysts, masses, and obstruction. Physician-interpreted results in 2–3 days. No referral needed."
+  title="Essential Wellness Screening | $199 Vascular Package Las Vegas | Signal View"
+  description="$199 Essential Wellness package in Las Vegas. Includes carotid, aorta, and leg arterial ultrasound in one appointment. Physician-interpreted results in 2–3 days."
 >
   <EmergencyBanner />
 
@@ -91,8 +76,8 @@ const whoShouldGet = [
 
         <div class="order-first lg:order-last fade-in-up">
           <Image
-            src={renalHero}
-            alt="Sonographer reviewing renal ultrasound results at Signal View Screenings in Las Vegas"
+            src={essentialHero}
+            alt="Sonographer performing a vascular ultrasound screening at Signal View Screenings in Las Vegas"
             class="rounded-2xl shadow-2xl shadow-black/30 w-full"
             widths={[480, 768, 1024]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -102,13 +87,13 @@ const whoShouldGet = [
 
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
-            Back Pain. Kidney Concerns. Get Clarity This Week.
+            Three Vascular Screenings. One Appointment. $199.
           </h1>
           <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-            <span class="text-gold font-semibold">$300</span> · Renal & Bladder Ultrasound
+            <span class="text-gold font-semibold">$199</span> · Essential Wellness Screening Package
           </p>
           <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
-            A renal ultrasound evaluates both kidneys and the bladder for stones, cysts, masses, and signs of obstruction — without radiation or fasting. Physician-interpreted results in 2–3 business days. No referral needed.
+            The Essential Wellness package covers the three most common sites of silent vascular disease — carotid arteries, aorta, and leg blood flow — all in a single visit. Physician-interpreted results in 2–3 business days. No referral needed.
           </p>
 
           <!-- IntakeQ booking widget -->
@@ -163,20 +148,20 @@ const whoShouldGet = [
     </div>
   </section>
 
-  <!-- What We Check -->
+  <!-- What's Included -->
   <section class="section-padding bg-white">
     <div class="container-site">
       <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
-        <p class="overline text-gold mb-3">What the Scan Evaluates</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What a Renal Ultrasound Images</h2>
-        <p class="mt-4 text-base text-slate font-sans">A comprehensive renal ultrasound evaluates both kidneys and the bladder for stones, cysts, structural changes, obstruction, and masses — interpreted by a board-certified physician.</p>
+        <p class="overline text-gold mb-3">Package Includes</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Three Screenings. One Visit. Full Vascular Picture.</h2>
+        <p class="mt-4 text-base text-slate font-sans">Each scan targets a different area of your vascular system. Together they cover the most common causes of silent cardiovascular disease — all for less than a single hospital scan.</p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto fade-in-up">
-        {whatWeCheck.map((item) => (
-          <div class="p-4 rounded-xl border border-warmgray/20 bg-ivory/50">
-            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-2 text-gold" set:html={item.icon} />
-            <h3 class="font-sans font-semibold text-charcoal text-sm mb-1">{item.name}</h3>
-            <p class="text-xs text-slate font-sans">{item.conditions}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto fade-in-up">
+        {included.map((item) => (
+          <div class="p-6 rounded-2xl border border-warmgray/20 bg-ivory/50 text-center">
+            <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold mx-auto" set:html={item.icon} />
+            <h3 class="font-sans font-semibold text-charcoal text-base mb-2">{item.name}</h3>
+            <p class="text-sm text-slate font-sans">{item.conditions}</p>
           </div>
         ))}
       </div>
@@ -202,12 +187,12 @@ const whoShouldGet = [
     </div>
   </section>
 
-  <!-- Who Should Get This Scan -->
+  <!-- Who Should Get This Package -->
   <section class="section-padding bg-white">
     <div class="container-site max-w-4xl">
       <div class="text-center mb-10 fade-in-up">
         <p class="overline text-gold mb-3">Is This For You?</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Get Scanned If...</h2>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Get This Package If...</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto fade-in-up">
         {whoShouldGet.map((item) => (
@@ -244,23 +229,22 @@ const whoShouldGet = [
 
   <!-- Final CTA -->
   <CTABanner
-    heading="Stop Wondering About Your Kidneys. Get Scanned."
-    subtext="$300 · Physician-interpreted results in 2–3 business days · No referral needed"
-    ctaText="Book Your Renal Scan — $300"
+    heading="Your Heart Health Can't Wait. Get the Full Picture."
+    subtext="$199 · Three vascular screenings in one visit · Physician-interpreted results in 2–3 business days"
+    ctaText="Book Essential Wellness — $199"
     ctaHref="#book"
   />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MedicalTest",
-    "name": "Renal Ultrasound",
-    "alternateName": "Kidney and Bladder Ultrasound",
-    "description": "A diagnostic renal ultrasound evaluating both kidneys and the bladder for stones, cysts, masses, and obstruction. Physician-interpreted results in 2–3 business days.",
+    "name": "Essential Wellness Vascular Screening Package",
+    "description": "A bundled vascular screening package including carotid artery, aortic aneurysm, and leg arterial (PAD) ultrasounds. Physician-interpreted results in 2–3 business days.",
     "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
     "offers": {
       "@type": "Offer",
-      "name": "Renal Ultrasound",
-      "price": "300",
+      "name": "Essential Wellness Package",
+      "price": "199",
       "priceCurrency": "USD"
     },
     "provider": {
@@ -280,7 +264,7 @@ const whoShouldGet = [
 <script is:inline>
   (function (c) {
     window.intakeq = "6a34384c4c7aa072929fbe5f";
-    window.intakeqServiceId = "39805e51-10a8-43b0-8f5c-6432cdbb866c";
+    window.intakeqServiceId = "f5383369-eac5-4cdb-aef5-1907cd466681";
     var i = c.createElement("script");
     i.type = "text/javascript";
     i.async = true;

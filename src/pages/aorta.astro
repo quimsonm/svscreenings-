@@ -3,80 +3,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
 import EmergencyBanner from '../components/EmergencyBanner.astro';
 import { Image } from 'astro:assets';
-import renalHero from '../assets/images/service-results.png';
+import aortaHero from '../assets/images/service-aorta.png';
 import { siteConfig } from '../data/siteConfig';
 
 const trustPoints = [
-  { icon: 'clock', text: '20–30 Minutes' },
+  { icon: 'clock', text: '15–20 Minutes' },
   { icon: 'shield', text: 'No Referral Needed' },
-  { icon: 'heart', text: 'No Radiation' },
+  { icon: 'heart', text: 'No Needles or Radiation' },
   { icon: 'check', text: 'Physician-Interpreted Results' },
 ];
 
 const whatWeCheck = [
   {
-    name: 'Kidney Stones',
-    conditions: 'Calculi detection in kidneys and ureter',
+    name: 'Aortic Diameter',
+    conditions: 'Measurement to detect abnormal widening',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M4 12l4-4m-4 4l4 4"/></svg>`,
+  },
+  {
+    name: 'Aneurysm Detection',
+    conditions: 'Bulging or dilation ≥ 3 cm',
     icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>`,
   },
   {
-    name: 'Cortical Cysts',
-    conditions: 'Simple and complex kidney cysts',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path stroke-linecap="round" d="M9 12c1-2 4-2 6 0"/></svg>`,
+    name: 'Aortic Wall',
+    conditions: 'Wall thickness and structural integrity',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"/><path stroke-linecap="round" d="M4 12h16"/></svg>`,
   },
   {
-    name: 'Hydronephrosis',
-    conditions: 'Swelling from urinary obstruction',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>`,
+    name: 'Dilation Extent',
+    conditions: 'Length and location of any dilation',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4M12 17v4M10 7c-2 2-3 4-3 7s1 3 3 3h4c2 0 3 0 3-3s-1-5-3-7"/><circle cx="12" cy="12" r="1.5"/></svg>`,
   },
   {
-    name: 'Kidney Size & Structure',
-    conditions: 'Size, shape, and cortical thickness',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 4c-3 0-5 3-5 6s1 4 2 6 2 4 3 4 2-1 2-3-1-3 0-5 1-4 1-5-1-3-3-3zM16 4c3 0 5 3 5 6s-1 4-2 6-2 4-3 4-2-1-2-3 1-3 0-5-1-4-1-5 1-3 3-3z"/></svg>`,
+    name: 'Iliac Arteries',
+    conditions: 'Extension into the pelvic arteries',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M8 12l4 4 4-4"/></svg>`,
   },
   {
-    name: 'Bladder Assessment',
-    conditions: 'Wall thickness, volume, and lesions',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="14" rx="7" ry="6"/><path stroke-linecap="round" d="M12 8V5"/></svg>`,
-  },
-  {
-    name: 'Masses or Lesions',
-    conditions: 'Solid or complex lesions warranting follow-up',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    name: 'Monitoring Baseline',
+    conditions: 'Establishes a baseline for future comparison',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
   },
 ];
 
 const whyWait = [
   {
-    stat: '1 in 10',
-    heading: 'Americans develop kidney stones',
-    description: 'Kidney stones are extremely common and often go undetected until they cause severe pain. Early imaging can catch them before that happens.',
+    stat: '200K',
+    heading: 'Americans diagnosed with AAA yearly',
+    description: 'Abdominal aortic aneurysms are more common than most people realize — and most have no symptoms until they rupture.',
   },
   {
-    stat: '$1,200+',
+    stat: '80%',
+    heading: 'of AAA cases are asymptomatic',
+    description: 'Most aneurysms cause no pain or warning signs. The only way to know is to look — and ultrasound is the gold standard.',
+  },
+  {
+    stat: '$2,000+',
     heading: 'typical hospital imaging cost',
-    description: 'A renal ultrasound through a hospital or specialist can cost $1,200 or more. Ours is $300, same-week appointments available.',
-  },
-  {
-    stat: 'No fasting',
-    heading: 'no radiation required',
-    description: 'Unlike CT scans, ultrasound uses no radiation and no contrast dye — just a simple, safe scan with immediate results.',
+    description: 'An abdominal aortic ultrasound through a hospital or specialist can cost $2,000 or more. Ours is $300, all-in.',
   },
 ];
 
 const whoShouldGet = [
-  'Flank pain, back pain, or side pain',
-  'History of kidney stones',
-  'Blood in urine (hematuria)',
-  'High blood pressure or diabetes',
-  'Recurrent urinary tract infections',
-  'Abnormal kidney function labs (creatinine, BUN)',
+  'Men aged 65 or older — especially if you\'ve ever smoked',
+  'Smokers or former smokers of any age',
+  'Family history of aortic aneurysm',
+  'High blood pressure or high cholesterol',
+  'Known atherosclerosis or vascular disease',
+  'Your doctor recommended an AAA screening',
 ];
 ---
 
 <BaseLayout
-  title="Renal Ultrasound Las Vegas | $300 Kidney & Bladder Scan | Signal View"
-  description="$300 renal ultrasound in Las Vegas. Checks kidneys and bladder for stones, cysts, masses, and obstruction. Physician-interpreted results in 2–3 days. No referral needed."
+  title="Aortic Aneurysm Ultrasound Las Vegas | $300 AAA Screening | Signal View"
+  description="$300 aortic aneurysm ultrasound in Las Vegas. Detects AAA before it becomes life-threatening. Physician-interpreted results in 2–3 days. No referral needed."
 >
   <EmergencyBanner />
 
@@ -91,8 +91,8 @@ const whoShouldGet = [
 
         <div class="order-first lg:order-last fade-in-up">
           <Image
-            src={renalHero}
-            alt="Sonographer reviewing renal ultrasound results at Signal View Screenings in Las Vegas"
+            src={aortaHero}
+            alt="Sonographer performing an abdominal aortic aneurysm ultrasound at Signal View Screenings in Las Vegas"
             class="rounded-2xl shadow-2xl shadow-black/30 w-full"
             widths={[480, 768, 1024]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -102,13 +102,13 @@ const whoShouldGet = [
 
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
-            Back Pain. Kidney Concerns. Get Clarity This Week.
+            Silent Until It Ruptures. Get Your Aorta Checked Today.
           </h1>
           <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-            <span class="text-gold font-semibold">$300</span> · Renal & Bladder Ultrasound
+            <span class="text-gold font-semibold">$300</span> · Aortic Aneurysm Ultrasound
           </p>
           <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
-            A renal ultrasound evaluates both kidneys and the bladder for stones, cysts, masses, and signs of obstruction — without radiation or fasting. Physician-interpreted results in 2–3 business days. No referral needed.
+            An abdominal aortic aneurysm (AAA) develops with no symptoms — until it ruptures. A quick ultrasound detects dangerous bulging in the aorta before it becomes a life-threatening emergency. Physician-interpreted results in 2–3 business days. No referral needed.
           </p>
 
           <!-- IntakeQ booking widget -->
@@ -168,8 +168,8 @@ const whoShouldGet = [
     <div class="container-site">
       <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
         <p class="overline text-gold mb-3">What the Scan Evaluates</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What a Renal Ultrasound Images</h2>
-        <p class="mt-4 text-base text-slate font-sans">A comprehensive renal ultrasound evaluates both kidneys and the bladder for stones, cysts, structural changes, obstruction, and masses — interpreted by a board-certified physician.</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What an Aortic Ultrasound Looks For</h2>
+        <p class="mt-4 text-base text-slate font-sans">A focused ultrasound of the abdominal aorta measures diameter, detects aneurysm, and evaluates the vessel wall — interpreted by a board-certified physician.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto fade-in-up">
         {whatWeCheck.map((item) => (
@@ -188,7 +188,7 @@ const whoShouldGet = [
     <div class="container-site">
       <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
         <p class="overline text-gold mb-3">Skip the Runaround</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Why Wait Weeks When You Can Know This Week?</h2>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Don't Wait to Know What's in Your Aorta</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {whyWait.map((item) => (
@@ -244,22 +244,22 @@ const whoShouldGet = [
 
   <!-- Final CTA -->
   <CTABanner
-    heading="Stop Wondering About Your Kidneys. Get Scanned."
+    heading="Know Your Aorta. Know Your Risk."
     subtext="$300 · Physician-interpreted results in 2–3 business days · No referral needed"
-    ctaText="Book Your Renal Scan — $300"
+    ctaText="Book Your AAA Screening — $300"
     ctaHref="#book"
   />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MedicalTest",
-    "name": "Renal Ultrasound",
-    "alternateName": "Kidney and Bladder Ultrasound",
-    "description": "A diagnostic renal ultrasound evaluating both kidneys and the bladder for stones, cysts, masses, and obstruction. Physician-interpreted results in 2–3 business days.",
+    "name": "Abdominal Aortic Aneurysm Ultrasound",
+    "alternateName": "AAA Screening",
+    "description": "A diagnostic ultrasound of the abdominal aorta to detect aneurysm, dilation, and wall abnormalities. Physician-interpreted results in 2–3 business days.",
     "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
     "offers": {
       "@type": "Offer",
-      "name": "Renal Ultrasound",
+      "name": "Aortic Aneurysm Ultrasound",
       "price": "300",
       "priceCurrency": "USD"
     },
@@ -280,7 +280,7 @@ const whoShouldGet = [
 <script is:inline>
   (function (c) {
     window.intakeq = "6a34384c4c7aa072929fbe5f";
-    window.intakeqServiceId = "39805e51-10a8-43b0-8f5c-6432cdbb866c";
+    window.intakeqServiceId = "f46572ea-c695-49b3-acd0-0b4b1791cbe9";
     var i = c.createElement("script");
     i.type = "text/javascript";
     i.async = true;
