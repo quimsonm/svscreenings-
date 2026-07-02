@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import { Image } from 'astro:assets';
+import obHero from '../assets/images/carotid-screening.jpg';
+import { siteConfig } from '../data/siteConfig';
+
+const OB_PRICE = 300;
+
+const BOOKING_FIRST_TRIMESTER = '#book-placeholder';
+const BOOKING_SECOND_THIRD = '#book-placeholder';
+const BOOKING_BPP = '#book-placeholder';
+const BOOKING_ANATOMY = '#book-placeholder';
+
+const services = [
+  {
+    name: '1st Trimester Ultrasound',
+    weeks: '6–13 Weeks',
+    price: OB_PRICE,
+    bookingUrl: BOOKING_FIRST_TRIMESTER,
+    description: 'Confirm viability, detect heartbeat, establish gestational age, and rule out ectopic pregnancy. A critical early window for peace of mind.',
+    includes: ['Fetal heartbeat confirmation', 'Gestational age dating', 'Viability check', 'Number of embryos'],
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linecap="round"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    name: '2nd / 3rd Trimester Ultrasound',
+    weeks: '14+ Weeks',
+    price: OB_PRICE,
+    bookingUrl: BOOKING_SECOND_THIRD,
+    description: 'Monitor fetal growth, position, and amniotic fluid levels. See your baby in greater detail as the pregnancy progresses.',
+    includes: ['Fetal growth & measurements', 'Placenta location', 'Amniotic fluid assessment', 'Fetal position'],
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/></svg>`,
+  },
+  {
+    name: 'Biophysical Profile (BPP)',
+    weeks: '28+ Weeks',
+    price: OB_PRICE,
+    bookingUrl: BOOKING_BPP,
+    description: 'A detailed assessment of fetal well-being that evaluates movement, tone, breathing practice, and amniotic fluid — scored for your provider.',
+    includes: ['Fetal movement scoring', 'Fetal breathing movements', 'Fetal muscle tone', 'Amniotic fluid index'],
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M12 3v18" stroke-linecap="round"/><circle cx="12" cy="12" r="4"/></svg>`,
+  },
+  {
+    name: 'Anatomy Scan',
+    weeks: '18–22 Weeks',
+    price: OB_PRICE,
+    bookingUrl: BOOKING_ANATOMY,
+    description: 'A comprehensive head-to-toe evaluation of fetal anatomy. Checks all major organ systems and structural development at the ideal imaging window.',
+    includes: ['Brain & spine', 'Heart & major vessels', 'Abdominal organs', 'Limbs & facial features'],
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5"/></svg>`,
+  },
+];
+
+const whatToExpect = [
+  {
+    heading: 'How Long It Takes',
+    body: 'Most OB ultrasounds take 20–45 minutes depending on the scan type. Anatomy scans may take a bit longer to ensure full visualization.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>`,
+  },
+  {
+    heading: 'What to Bring',
+    body: 'For first trimester scans, a full bladder helps visibility. Second trimester and beyond, an empty bladder is usually fine. Bring any prior imaging if you have it.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    heading: 'Do I Need a Referral?',
+    body: 'No referral needed to book. However, if your OB requested a specific scan, bring that order so our sonographer knows exactly what to document.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+];
+
+const whoShouldBook = [
+  'You want an earlier appointment than your OB can offer',
+  'You need a second look at something flagged at a prior scan',
+  'Your OB referred you for a BPP or growth check',
+  'You want to see your baby before your next scheduled appointment',
+  'You need an anatomy scan and can\'t wait weeks',
+  'You simply want peace of mind during your pregnancy',
+];
+---
+
+<BaseLayout
+  title="OB Ultrasound Las Vegas | Pregnancy Ultrasound Every Saturday | Signal View"
+  description="OB ultrasound in Las Vegas every Saturday. 1st trimester, 2nd/3rd trimester, anatomy scans, and biophysical profiles. No referral needed. Book your pregnancy ultrasound today."
+>
+  <EmergencyBanner />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark/60 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gold/3 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+
+    <div class="container-site relative py-20 md:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div class="order-first lg:order-last fade-in-up">
+          <Image
+            src={obHero}
+            alt="Sonographer performing an OB pregnancy ultrasound at Signal View Screenings in Las Vegas"
+            class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+            widths={[480, 768, 1024]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+
+        <div>
+          <div class="inline-flex items-center gap-2 bg-gold/15 text-gold text-sm font-sans font-medium px-3 py-1.5 rounded-full mb-4 fade-in-up">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Available Every Saturday
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
+            OB Ultrasound in Las Vegas — Every Saturday.
+          </h1>
+          <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
+            <span class="text-gold font-semibold">${OB_PRICE}</span> · Pregnancy Ultrasound
+          </p>
+          <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
+            1st trimester viability, anatomy scans, biophysical profiles, and more — performed by experienced sonographers every Saturday. No referral required. See your baby this weekend.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 mb-8 fade-in-up">
+            <a href="#services" class="btn-primary text-center">
+              See All Ultrasound Types →
+            </a>
+            <a href={"tel:" + siteConfig.phone.replace(/\D/g, '')} class="btn-secondary text-center">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
+            {[
+              { icon: 'calendar', text: 'Saturdays Only' },
+              { icon: 'shield', text: 'No Referral Needed' },
+              { icon: 'heart', text: 'No Radiation' },
+              { icon: 'check', text: 'Experienced Sonographers' },
+            ].map((point) => (
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                  {point.icon === 'calendar' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                  {point.icon === 'shield' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  )}
+                  {point.icon === 'heart' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                    </svg>
+                  )}
+                  {point.icon === 'check' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <span class="text-sm text-white/70 font-sans">{point.text}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Location -->
+          <div class="mt-6 flex items-start gap-2.5 text-sm text-white/70 font-sans fade-in-up">
+            <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <p class="leading-relaxed">
+              {siteConfig.screeningLocation.address} · {siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}
+              <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors whitespace-nowrap ml-1">— Get Directions →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Saturday Callout -->
+  <section class="bg-navy-dark border-y border-gold/20">
+    <div class="container-site py-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left fade-in-up">
+        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-white font-sans font-semibold text-lg">OB Ultrasounds Are Saturday Only</p>
+          <p class="text-white/60 font-sans text-sm mt-1">We dedicate Saturday mornings exclusively to pregnancy imaging — quieter, more relaxed, and focused entirely on you and your baby. Book a Saturday spot now before they fill up.</p>
+        </div>
+        <a href="#services" class="shrink-0 btn-primary whitespace-nowrap">
+          Book a Saturday →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section-padding bg-white">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Pregnancy Ultrasound Services</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Every Scan You Need — Every Saturday</h2>
+        <p class="mt-4 text-base text-slate font-sans">Choose the scan that matches your stage of pregnancy. Each is performed by experienced sonographers who specialize in OB imaging.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {services.map((service) => (
+          <div class="rounded-2xl border border-warmgray/20 bg-ivory/50 overflow-hidden fade-in-up">
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center shrink-0 text-gold" set:html={service.icon} />
+                <div class="text-right">
+                  <p class="text-2xl font-serif text-gold">${service.price}</p>
+                  <p class="text-xs text-slate font-sans">{service.weeks}</p>
+                </div>
+              </div>
+              <h3 class="font-sans font-semibold text-charcoal text-lg mb-2">{service.name}</h3>
+              <p class="text-sm text-slate font-sans mb-4 leading-relaxed">{service.description}</p>
+              <ul class="space-y-1.5 mb-5">
+                {service.includes.map((item) => (
+                  <li class="flex items-center gap-2 text-sm text-charcoal font-sans">
+                    <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href={service.bookingUrl} class="block w-full text-center py-2.5 bg-navy text-white text-sm font-sans font-medium rounded-lg hover:bg-navy-dark transition-colors">
+                Book {service.name} — ${service.price} →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Before Your Appointment</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What to Expect</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {whatToExpect.map((item) => (
+          <div class="p-6 rounded-2xl border border-warmgray/20 bg-white text-center fade-in-up">
+            <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold mx-auto" set:html={item.icon} />
+            <h3 class="font-sans font-semibold text-charcoal text-base mb-2">{item.heading}</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Book -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Is This For You?</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Book If...</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto fade-in-up">
+        {whoShouldBook.map((item) => (
+          <div class="flex items-center gap-3 p-4 rounded-xl bg-ivory border border-warmgray/20">
+            <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="text-base font-sans text-charcoal">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl text-center fade-in-up">
+      <div class="flex items-center justify-center gap-1 mb-3">
+        {[1,2,3,4,5].map(() => (
+          <svg class="w-7 h-7 text-gold" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-lg font-sans text-charcoal mb-2">5-Star Rated on Google</p>
+      <p class="text-slate font-sans text-sm mb-6">Real reviews from real patients in Las Vegas</p>
+      <a href={siteConfig.googleReviewsUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+        Read Our Reviews →
+      </a>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Saturday Spots Fill Fast. Book Yours Today."
+    subtext={`$${OB_PRICE} · OB ultrasound every Saturday · Experienced sonographers · No referral needed`}
+    ctaText="Book Your OB Ultrasound"
+    ctaHref="#services"
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalTest",
+    "name": "OB Pregnancy Ultrasound",
+    "description": "Obstetric ultrasound services in Las Vegas including 1st trimester, 2nd/3rd trimester, anatomy scan, and biophysical profile. Available every Saturday.",
+    "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
+    "offers": {
+      "@type": "Offer",
+      "name": "OB Ultrasound",
+      "price": OB_PRICE,
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.legalName,
+      "telephone": siteConfig.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.screeningLocation.address,
+        "addressLocality": siteConfig.screeningLocation.city,
+        "addressRegion": siteConfig.screeningLocation.state
+      }
+    }
+  })} />
+</BaseLayout>

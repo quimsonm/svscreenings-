@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/images/carotid-screening.jpg';
+import { siteConfig } from '../data/siteConfig';
+
+const PRICE = 125;
+const GENDER_REVEAL_BOOKING_URL = '#book-placeholder';
+
+const included = [
+  {
+    name: '15–20 Minute Ultrasound Scan',
+    description: 'A dedicated session focused entirely on your baby — unhurried and personal.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>`,
+  },
+  {
+    name: 'Gender Determination & Confirmation',
+    description: 'Our experienced sonographer will confirm the sex and clearly show you on screen.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    name: '2D / 3D / 4D & HD Ultrasound',
+    description: 'Multiple imaging modes so you see your baby in stunning detail — face, hands, and more.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" stroke-linecap="round"/></svg>`,
+  },
+  {
+    name: "Listen to Baby's Heartbeat",
+    description: "Hear the heartbeat live during your session — one of the most memorable moments of pregnancy.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`,
+  },
+  {
+    name: '4 Printed Pictures',
+    description: 'Walk out with four printed ultrasound photos — a keepsake for you, your partner, or to share at your reveal.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+];
+
+const howItWorks = [
+  {
+    step: '1',
+    heading: 'Book a Saturday Spot',
+    body: 'Gender reveal sessions are Saturday only. Pick your time and reserve your spot online — slots go fast.',
+  },
+  {
+    step: '2',
+    heading: 'Come In & See Your Baby',
+    body: 'Arrive with a full or partially full bladder. Your sonographer will start the scan and reveal the gender during the session.',
+  },
+  {
+    step: '3',
+    heading: 'Leave With Printed Photos',
+    body: 'Take home four printed ultrasound pictures right after your appointment. Perfect for a reveal party or to keep as a memory.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How far along do I need to be?',
+    a: 'We recommend at least 16 weeks for the most reliable gender determination. At 16–18 weeks the probability is very high; by 18+ weeks it is nearly certain.',
+  },
+  {
+    q: 'Can I bring family or friends?',
+    a: 'Absolutely. You are welcome to bring your partner, family, or friends to share the moment. Let us know when you book if you have a larger group.',
+  },
+  {
+    q: 'What if baby isn\'t cooperating?',
+    a: 'Babies move around — that\'s normal. Our sonographers will take their time and try different positions. In rare cases where gender cannot be confirmed, we will discuss options with you.',
+  },
+  {
+    q: 'Do I need a referral or prescription?',
+    a: 'No. This is an elective keepsake ultrasound. No referral, no insurance, no paperwork — just book and come in.',
+  },
+  {
+    q: 'Is this a medical ultrasound?',
+    a: 'This is an elective keepsake session, not a diagnostic medical exam. It does not replace your OB\'s clinical scans. For medical concerns during pregnancy, follow your provider\'s guidance.',
+  },
+];
+---
+
+<BaseLayout
+  title="Gender Reveal Ultrasound Las Vegas | $125 | Signal View Screenings"
+  description="$125 gender reveal ultrasound in Las Vegas every Saturday. 15–20 minute scan, 2D/3D/4D & HD imaging, baby's heartbeat, and 4 printed photos. No referral needed."
+>
+  <EmergencyBanner />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark/60 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gold/3 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+
+    <div class="container-site relative py-20 md:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div class="order-first lg:order-last fade-in-up">
+          <Image
+            src={heroImage}
+            alt="Sonographer performing a gender reveal ultrasound at Signal View Screenings in Las Vegas"
+            class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+            widths={[480, 768, 1024]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+
+        <div>
+          <div class="inline-flex items-center gap-2 bg-gold/15 text-gold text-sm font-sans font-medium px-3 py-1.5 rounded-full mb-4 fade-in-up">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Every Saturday
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
+            Find Out the Big News. Right Here. This Saturday.
+          </h1>
+          <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
+            <span class="text-gold font-semibold">${PRICE}</span> · Gender Reveal Ultrasound
+          </p>
+          <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
+            See your baby in 2D/3D/4D & HD, hear the heartbeat, find out the gender — and leave with four printed photos. All in one 15–20 minute Saturday session.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 mb-8 fade-in-up">
+            <a href={GENDER_REVEAL_BOOKING_URL} class="btn-primary text-center">
+              Book Gender Reveal — ${PRICE} →
+            </a>
+            <a href={"tel:" + siteConfig.phone.replace(/\D/g, '')} class="btn-secondary text-center">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
+            {[
+              { icon: 'clock', text: '15–20 Minutes' },
+              { icon: 'camera', text: '4 Printed Photos' },
+              { icon: 'heart', text: 'Heartbeat Audio' },
+              { icon: 'calendar', text: 'Saturdays Only' },
+            ].map((point) => (
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                  {point.icon === 'clock' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/>
+                    </svg>
+                  )}
+                  {point.icon === 'camera' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                      <circle cx="12" cy="13" r="3"/>
+                    </svg>
+                  )}
+                  {point.icon === 'heart' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                  )}
+                  {point.icon === 'calendar' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                  )}
+                </div>
+                <span class="text-sm text-white/70 font-sans">{point.text}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Location -->
+          <div class="mt-6 flex items-start gap-2.5 text-sm text-white/70 font-sans fade-in-up">
+            <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="leading-relaxed">
+              {siteConfig.screeningLocation.address} · {siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}
+              <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors whitespace-nowrap ml-1">— Get Directions →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section-padding bg-white">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Everything in ${PRICE}</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Everything Included in Your Session</h2>
+        <p class="mt-4 text-base text-slate font-sans">One session, one price — no add-ons, no surprises. Everything below is included when you book.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto fade-in-up">
+        {included.map((item) => (
+          <div class="p-6 rounded-2xl border border-warmgray/20 bg-ivory/50 text-center">
+            <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mb-4 text-gold mx-auto" set:html={item.icon} />
+            <h3 class="font-sans font-semibold text-charcoal text-base mb-2">{item.name}</h3>
+            <p class="text-sm text-slate font-sans">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- When Can You Find Out -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Timing</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">When Can You Find Out?</h2>
+      </div>
+      <div class="bg-white rounded-2xl border border-warmgray/20 p-8 fade-in-up">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-24 h-24 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mx-auto md:mx-0">
+            <span class="text-3xl font-serif text-gold">16+</span>
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-charcoal text-xl mb-2">16 Weeks or Later</h3>
+            <p class="text-slate font-sans leading-relaxed">Gender can typically be determined at 16 weeks, with accuracy increasing as you progress. By 18–20 weeks, gender confirmation is highly reliable. If you are earlier than 16 weeks, we recommend waiting a little longer for the clearest result — we want your reveal to be definitive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">The Process</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">How It Works</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {howItWorks.map((item) => (
+          <div class="text-center fade-in-up">
+            <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4 mx-auto">
+              <span class="text-2xl font-serif text-gold">{item.step}</span>
+            </div>
+            <h3 class="font-sans font-semibold text-charcoal text-base mb-2">{item.heading}</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Saturday Callout -->
+  <section class="bg-navy-dark border-y border-gold/20">
+    <div class="container-site py-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left fade-in-up">
+        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-white font-sans font-semibold text-lg">Saturday Sessions Only</p>
+          <p class="text-white/60 font-sans text-sm mt-1">Gender reveal sessions are offered exclusively on Saturdays. Spots are limited — book early so your big moment doesn't get pushed back.</p>
+        </div>
+        <a href={GENDER_REVEAL_BOOKING_URL} class="shrink-0 btn-primary whitespace-nowrap">
+          Book This Saturday →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">FAQ</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Common Questions</h2>
+      </div>
+      <div class="space-y-4 fade-in-up">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-2xl border border-warmgray/20 p-6">
+            <h3 class="font-sans font-semibold text-charcoal mb-2">{faq.q}</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-3xl text-center fade-in-up">
+      <div class="flex items-center justify-center gap-1 mb-3">
+        {[1,2,3,4,5].map(() => (
+          <svg class="w-7 h-7 text-gold" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        ))}
+      </div>
+      <p class="text-lg font-sans text-charcoal mb-2">5-Star Rated on Google</p>
+      <p class="text-slate font-sans text-sm mb-6">Real reviews from real patients in Las Vegas</p>
+      <a href={siteConfig.googleReviewsUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+        Read Our Reviews →
+      </a>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Find Out This Saturday. Four Printed Photos to Take Home."
+    subtext={`$${PRICE} · 15–20 minute session · 2D/3D/4D & HD · 4 printed photos · Saturdays only`}
+    ctaText={`Book Gender Reveal — $${PRICE}`}
+    ctaHref={GENDER_REVEAL_BOOKING_URL}
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalTest",
+    "name": "Gender Reveal Ultrasound",
+    "description": "Elective gender reveal ultrasound session in Las Vegas. Includes 2D/3D/4D & HD imaging, gender determination, heartbeat audio, and 4 printed photos. Available every Saturday.",
+    "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
+    "offers": {
+      "@type": "Offer",
+      "name": "Gender Reveal Ultrasound",
+      "price": PRICE,
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.legalName,
+      "telephone": siteConfig.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.screeningLocation.address,
+        "addressLocality": siteConfig.screeningLocation.city,
+        "addressRegion": siteConfig.screeningLocation.state
+      }
+    }
+  })} />
+</BaseLayout>
