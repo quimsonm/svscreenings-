@@ -123,8 +123,14 @@ const faqs = [
           </p>
 
           <!-- IntakeQ booking widget -->
-          <div class="mb-8 fade-in-up" id="book">
+          <div class="mb-4 fade-in-up" id="book">
             <div id="intakeq" style="width: 100%;"></div>
+          </div>
+
+          <div class="mb-8 fade-in-up">
+            <a href={"tel:" + siteConfig.phone.replace(/\D/g, '')} class="btn-primary text-center w-full sm:w-auto inline-block">
+              Call {siteConfig.phone}
+            </a>
           </div>
 
           <!-- Trust strip -->
