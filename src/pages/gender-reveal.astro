@@ -7,7 +7,6 @@ import heroImage from '../assets/images/carotid-screening.jpg';
 import { siteConfig } from '../data/siteConfig';
 
 const PRICE = 125;
-const GENDER_REVEAL_BOOKING_URL = 'https://signalview.intakeq.com/booking?serviceId=4737a3b0-41d3-4872-a68f-e11668001dbe';
 
 const included = [
   {
@@ -123,13 +122,9 @@ const faqs = [
             See your baby in 2D/3D/4D & HD, hear the heartbeat, find out the gender — and leave with four printed photos. All in one 15–20 minute Saturday session.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-3 mb-8 fade-in-up">
-            <a href={GENDER_REVEAL_BOOKING_URL} class="btn-primary text-center">
-              Book Gender Reveal — ${PRICE} →
-            </a>
-            <a href={"tel:" + siteConfig.phone.replace(/\D/g, '')} class="btn-secondary text-center">
-              Call {siteConfig.phone}
-            </a>
+          <!-- IntakeQ booking widget -->
+          <div class="mb-8 fade-in-up" id="book">
+            <div id="intakeq" style="width: 100%;"></div>
           </div>
 
           <!-- Trust strip -->
@@ -260,7 +255,7 @@ const faqs = [
           <p class="text-white font-sans font-semibold text-lg">Saturday Sessions Only</p>
           <p class="text-white/60 font-sans text-sm mt-1">Gender reveal sessions are offered exclusively on Saturdays. Spots are limited — book early so your big moment doesn't get pushed back.</p>
         </div>
-        <a href={GENDER_REVEAL_BOOKING_URL} class="shrink-0 btn-primary whitespace-nowrap">
+        <a href="#book" class="shrink-0 btn-primary whitespace-nowrap">
           Book This Saturday →
         </a>
       </div>
@@ -307,7 +302,7 @@ const faqs = [
     heading="Find Out This Saturday. Four Printed Photos to Take Home."
     subtext={`$${PRICE} · 15–20 minute session · 2D/3D/4D & HD · 4 printed photos · Saturdays only`}
     ctaText={`Book Gender Reveal — $${PRICE}`}
-    ctaHref={GENDER_REVEAL_BOOKING_URL}
+    ctaHref="#book"
   />
 
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -335,3 +330,15 @@ const faqs = [
     }
   })} />
 </BaseLayout>
+
+<script is:inline>
+  (function (c) {
+    window.intakeq = "6a34384c4c7aa072929fbe5f";
+    window.intakeqServiceId = "4737a3b0-41d3-4872-a68f-e11668001dbe";
+    var i = c.createElement("script");
+    i.type = "text/javascript";
+    i.async = true;
+    i.src = "https://intakeq.com/js/widget.min.js?1";
+    document.head.appendChild(i);
+  })(document);
+</script>
