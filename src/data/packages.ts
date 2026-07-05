@@ -10,7 +10,7 @@ export interface Package {
   location: string;
   features: string[];
   extras?: string[];
-  squareUrl: string;
+  bookingUrl: string;
 }
 
 export const packages: Package[] = [
@@ -29,7 +29,7 @@ export const packages: Package[] = [
       'Leg Arterial Ultrasound',
       'Physician-interpreted report — delivered within 2 business days',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0GR90314NDDP/services/NFKPOQ3TZNUTK3EXQMH7YDQ3',
+    bookingUrl: '/essential',
   },
   {
     slug: 'executive-heart',
@@ -48,7 +48,7 @@ export const packages: Package[] = [
       'Echocardiogram (Heart Ultrasound)',
       'Physician-interpreted report — delivered within 2 business days',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0GR90314NDDP/services/HCX6T2SKQJIWQJ5GI64CLPFC',
+    bookingUrl: '/screenings',
   },
   {
     slug: 'gold-standard',
@@ -71,6 +71,6 @@ export const packages: Package[] = [
       'Flexible scheduling at your convenience',
       'Physician-interpreted report — delivered within 2 business days',
     ],
-    squareUrl: 'https://book.squareup.com/appointments/1scmcc76vpn2fe/location/L0YY91RC4GBKX/services/4TZYQODZ6I6DUIR2SSRU7EXB',
+    bookingUrl: '/pricing#gold-standard-inquiry',
   },
 ];

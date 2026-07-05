@@ -104,7 +104,7 @@ const isHighlighted = pkg.highlighted;
     {isGold ? (
       <>
         <a
-          href={link('/pricing#gold-standard-inquiry')}
+          href={link(pkg.bookingUrl)}
           class="block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200 bg-gold hover:bg-gold-hover text-white shadow-sm hover:shadow-md"
         >
           Request Your Appointment
@@ -123,9 +123,7 @@ const isHighlighted = pkg.highlighted;
     ) : (
       <>
         <a
-          href={pkg.squareUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={link(pkg.bookingUrl)}
           onclick={`window.svs_track && window.svs_track('begin_checkout', { package_name: '${pkg.name}', value: ${pkg.price}, currency: 'USD' })`}
           class:list={[
             'block w-full text-center py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-200',
