@@ -11,77 +11,104 @@ const ACCENT = '#9B8EC4';
 
 const included = [
   {
-    name: '15–20 Minute Ultrasound Scan',
-    description: 'A dedicated session focused entirely on your baby — unhurried and personal.',
+    name: '20-Minute Dedicated Session',
+    description: 'Unhurried and personal — this time is entirely yours and your baby\'s.',
     icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>`,
   },
   {
-    name: 'Gender Determination & Confirmation',
-    description: 'Our experienced sonographer will confirm the sex and clearly show you on screen.',
-    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  },
-  {
-    name: '2D / 3D / 4D & HD Ultrasound',
-    description: 'Multiple imaging modes so you see your baby in stunning detail — face, hands, and more.',
+    name: '2D / 3D / 4D & HD Imaging',
+    description: 'See your baby\'s face, hands, and movements in stunning detail across multiple imaging modes.',
     icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" stroke-linecap="round"/></svg>`,
   },
   {
-    name: "Listen to Baby's Heartbeat",
-    description: "Hear the heartbeat live during your session — one of the most memorable moments of pregnancy.",
+    name: 'Gender Determination',
+    description: 'Available from 14 weeks. We\'ll clearly confirm and show you on screen.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    name: "Baby's Heartbeat — Live",
+    description: "Hear it in real time during your session. One of those moments you don't forget.",
     icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`,
   },
   {
-    name: '4 Printed Pictures',
-    description: 'Walk out with four printed ultrasound photos — a keepsake for you, your partner, or to share at your reveal.',
+    name: '4 Printed Photos to Take Home',
+    description: 'Walk out with four printed ultrasound photos — yours to keep, share, or save for the reveal.',
     icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    name: 'Re-Scan if Baby Isn\'t Cooperating',
+    description: 'Babies have their own plans. If we can\'t get a clear look, we\'ll keep trying until we do.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+  },
+];
+
+const trimesters = [
+  {
+    weeks: '8–13 Weeks',
+    label: 'First Trimester',
+    body: 'Early reassurance. Confirm the heartbeat, see your baby for the first time, and verify your due date. The most anxiety-relieving visit you can give yourself in those early weeks.',
+  },
+  {
+    weeks: '14–26 Weeks',
+    label: 'Second Trimester',
+    body: 'The classic sneak peek. Find out the gender, see your baby\'s features in 3D for the first time, and leave with printed photos ready for your reveal party.',
+  },
+  {
+    weeks: '27–40 Weeks',
+    label: 'Third Trimester',
+    body: 'One last look before you meet them. Watch them move, see their face up close, and take home a final set of photos before delivery day arrives.',
   },
 ];
 
 const howItWorks = [
   {
     step: '1',
-    heading: 'Book a Saturday Spot',
-    body: 'Gender reveal sessions are Saturday only. Pick your time and reserve your spot online — slots go fast.',
+    heading: 'Pick Your Day & Book Online',
+    body: 'We offer sneak peek sessions Wednesday, Friday, and Saturday. Choose the time that works for you and reserve your spot — it only takes a minute.',
   },
   {
     step: '2',
-    heading: 'Come In & See Your Baby',
-    body: 'Arrive with a full or partially full bladder. Your sonographer will start the scan and reveal the gender during the session.',
+    heading: 'Come In and See Your Baby',
+    body: 'Arrive with a comfortably full bladder. Your sonographer will walk you through everything, take the time you need, and make sure you see what you came for.',
   },
   {
     step: '3',
-    heading: 'Leave With Printed Photos',
-    body: 'Take home four printed ultrasound pictures right after your appointment. Perfect for a reveal party or to keep as a memory.',
+    heading: 'Leave With Photos in Hand',
+    body: 'Four printed photos, right after your appointment. Keep them, frame them, or pull them out at the reveal — they\'re yours.',
   },
 ];
 
 const faqs = [
   {
     q: 'How far along do I need to be?',
-    a: 'We recommend at least 16 weeks for the most reliable gender determination. At 16–18 weeks the probability is very high; by 18+ weeks it is nearly certain.',
+    a: 'We welcome any trimester. For gender determination, we recommend 16 weeks or later for the highest accuracy — by 18 weeks it\'s nearly certain. First and third trimester visits are welcome at any gestational age.',
   },
   {
-    q: 'Can I bring family or friends?',
-    a: 'Absolutely. You are welcome to bring your partner, family, or friends to share the moment. Let us know when you book if you have a larger group.',
+    q: 'Can I bring my partner, family, or kids?',
+    a: 'Absolutely. You\'re welcome to bring whoever you want to share the moment. Let us know when you book if you have a larger group so we can make sure everyone is comfortable.',
   },
   {
     q: 'What if baby isn\'t cooperating?',
-    a: 'Babies move around — that\'s normal. Our sonographers will take their time and try different positions. In rare cases where gender cannot be confirmed, we will discuss options with you.',
+    a: 'It happens. We\'ll take our time, try different positions, and do everything we can to get you a clear view. A re-scan is included — we\'re not rushing you out the door.',
   },
   {
-    q: 'Do I need a referral or prescription?',
-    a: 'No. This is an elective keepsake ultrasound. No referral, no insurance, no paperwork — just book and come in.',
+    q: 'Do I need a referral or insurance?',
+    a: 'No referral, no insurance, no paperwork. This is an elective session — just book online and come in.',
   },
   {
-    q: 'Is this a medical ultrasound?',
-    a: 'This is an elective keepsake session, not a diagnostic medical exam. It does not replace your OB\'s clinical scans. For medical concerns during pregnancy, follow your provider\'s guidance.',
+    q: 'Is this the same as my OB\'s ultrasound?',
+    a: 'This is an elective keepsake session, not a diagnostic medical exam. It\'s a bonding visit — it does not replace your OB\'s clinical scans. For any medical concerns during your pregnancy, always follow your provider\'s guidance.',
+  },
+  {
+    q: 'Who performs the scan?',
+    a: 'Our team brings years of clinical diagnostic ultrasound experience from hospital and imaging center settings across Las Vegas. You\'re not with someone trained only for elective scans — you\'re with people who read ultrasound for a living.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Gender Reveal Ultrasound Las Vegas | $125 | Signal View Screenings"
-  description="$125 gender reveal ultrasound in Las Vegas every Saturday. 15–20 minute scan, 2D/3D/4D & HD imaging, baby's heartbeat, and 4 printed photos. No referral needed."
+  title="Elective Sneak Peek Ultrasound Las Vegas | $125 | Signal View Screenings"
+  description="See your baby any trimester for $125. Gender reveal, early reassurance, or third trimester bonding — 20-minute session, 2D/3D/4D & HD, heartbeat, and 4 printed photos. Las Vegas."
 >
   <EmergencyBanner />
 
@@ -97,7 +124,7 @@ const faqs = [
         <div class="order-first lg:order-last fade-in-up">
           <Image
             src={heroImage}
-            alt="Sonographer performing a gender reveal ultrasound at Signal View Screenings in Las Vegas"
+            alt="3D ultrasound image of a baby at Signal View Screenings in Las Vegas"
             class="rounded-2xl shadow-2xl shadow-black/30 w-full"
             widths={[480, 768, 1024]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -108,19 +135,19 @@ const faqs = [
         <div>
           <div class="inline-flex items-center gap-2 text-sm font-sans font-medium px-3 py-1.5 rounded-full mb-4 fade-in-up" style={`background-color: ${ACCENT}25; color: ${ACCENT}`}>
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
-            Every Saturday
+            Any Trimester Welcome
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
-            Find Out the Big News. Right Here. This Saturday.
+            The Moment You've Been Counting Down To.
           </h1>
           <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-            <span class="font-semibold" style={`color: ${ACCENT}`}>${PRICE}</span> · Gender Reveal Ultrasound
+            <span class="font-semibold" style={`color: ${ACCENT}`}>${PRICE}</span> · Elective Sneak Peek Ultrasound
           </p>
           <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
-            See your baby in 2D/3D/4D & HD, hear the heartbeat, find out the gender — and leave with four printed photos. All in one 15–20 minute Saturday session.
+            See their face. Hear their heartbeat. Leave with four printed photos and a memory that stays with you. Whatever trimester you're in, whatever brings you here — we're ready for you.
           </p>
 
           <!-- IntakeQ booking widget -->
@@ -129,7 +156,7 @@ const faqs = [
           </div>
 
           <div class="mb-8 fade-in-up">
-            <a href={"tel:" + siteConfig.phone.replace(/\D/g, '')} class="inline-flex items-center justify-center px-6 py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+            <a href={"tel:" + siteConfig.phoneTel} class="inline-flex items-center justify-center px-6 py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
               Call {siteConfig.phone}
             </a>
           </div>
@@ -137,10 +164,10 @@ const faqs = [
           <!-- Trust strip -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
             {[
-              { icon: 'clock', text: '15–20 Minutes' },
+              { icon: 'clock', text: '20 Minutes' },
               { icon: 'camera', text: '4 Printed Photos' },
-              { icon: 'heart', text: 'Heartbeat Audio' },
-              { icon: 'calendar', text: 'Saturdays Only' },
+              { icon: 'heart', text: 'Heartbeat Live' },
+              { icon: 'star', text: 'Any Trimester' },
             ].map((point) => (
               <div class="flex items-center gap-2.5">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={`background-color: ${ACCENT}25`}>
@@ -160,9 +187,9 @@ const faqs = [
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
                     </svg>
                   )}
-                  {point.icon === 'calendar' && (
+                  {point.icon === 'star' && (
                     <svg class="w-4 h-4" style={`color: ${ACCENT}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                     </svg>
                   )}
                 </div>
@@ -178,10 +205,63 @@ const faqs = [
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             <p class="leading-relaxed">
-              {siteConfig.screeningLocation.address} · {siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}
+              Summerlin, Las Vegas · {siteConfig.screeningLocation.landmark}
               <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="transition-colors whitespace-nowrap ml-1" style={`color: ${ACCENT}`}>— Get Directions →</a>
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Is Different -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-5xl">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline mb-3" style={`color: ${ACCENT}`}>Your Peace of Mind Matters to Us</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Feel Completely at Ease While This Is Happening.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
+        <div class="prose prose-slate max-w-none">
+          <p class="text-base text-slate font-sans leading-relaxed mb-4">
+            This is one of the moments you'll remember forever. You shouldn't spend it wondering if you're in good hands.
+          </p>
+          <p class="text-base text-slate font-sans leading-relaxed mb-4">
+            Our team brings years of clinical diagnostic ultrasound experience — the kind earned in hospitals and imaging centers, not just elective studios. We use hospital-grade equipment and we genuinely care about what you're seeing on that screen, not just showing you something that looks good.
+          </p>
+          <p class="text-base text-slate font-sans leading-relaxed">
+            If anything ever looks unusual during your session, you're with people who know what they're looking at and will make sure you're taken care of.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {[
+            {
+              heading: 'Experience You Can Feel',
+              body: 'Our team\'s clinical background means you\'re getting more than a keepsake. You\'re getting genuine expertise and someone who\'s fully focused on you.',
+            },
+            {
+              heading: 'Equipment That Shows You More',
+              body: 'Hospital-grade ultrasound captures more detail, more clearly. You\'ll see things a lower-end machine simply can\'t show you.',
+            },
+            {
+              heading: 'A Setting That Feels Safe',
+              body: 'Located inside a professional medical office building in Summerlin. Clean, calm, and clinical — exactly where you want to be for a moment this important.',
+            },
+          ].map((item) => (
+            <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-warmgray/20 shadow-sm">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={`background-color: ${ACCENT}18`}>
+                <svg class="w-5 h-5" style={`color: ${ACCENT}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-sans font-semibold text-charcoal text-sm mb-1">{item.heading}</h3>
+                <p class="text-sm text-slate font-sans leading-relaxed">{item.body}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -191,9 +271,9 @@ const faqs = [
   <section class="section-padding bg-white">
     <div class="container-site">
       <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
-        <p class="overline mb-3" style={`color: ${ACCENT}`}>Everything in ${PRICE}</p>
+        <p class="overline mb-3" style={`color: ${ACCENT}`}>Everything at ${PRICE}</p>
         <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Everything Included in Your Session</h2>
-        <p class="mt-4 text-base text-slate font-sans">One session, one price — no add-ons, no surprises. Everything below is included when you book.</p>
+        <p class="mt-4 text-base text-slate font-sans">One price. No add-ons. No surprises.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto fade-in-up">
         {included.map((item) => (
@@ -207,23 +287,23 @@ const faqs = [
     </div>
   </section>
 
-  <!-- When Can You Find Out -->
+  <!-- Any Trimester -->
   <section class="section-padding bg-ivory">
-    <div class="container-site max-w-3xl">
-      <div class="text-center mb-10 fade-in-up">
-        <p class="overline mb-3" style={`color: ${ACCENT}`}>Timing</p>
-        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">When Can You Find Out?</h2>
+    <div class="container-site max-w-5xl">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline mb-3" style={`color: ${ACCENT}`}>Whenever You're Ready</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">We're Ready for You at Every Stage.</h2>
       </div>
-      <div class="bg-white rounded-2xl border border-warmgray/20 p-8 fade-in-up">
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-          <div class="w-24 h-24 rounded-full flex items-center justify-center shrink-0 mx-auto md:mx-0" style={`background-color: ${ACCENT}18`}>
-            <span class="text-3xl font-serif" style={`color: ${ACCENT}`}>16+</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in-up">
+        {trimesters.map((t) => (
+          <div class="bg-white rounded-2xl border border-warmgray/20 p-8 text-center shadow-sm">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={`background-color: ${ACCENT}18`}>
+              <span class="text-xs font-sans font-semibold" style={`color: ${ACCENT}`}>{t.weeks}</span>
+            </div>
+            <p class="text-xs font-sans font-semibold uppercase tracking-widest mb-2" style={`color: ${ACCENT}`}>{t.label}</p>
+            <p class="text-sm text-slate font-sans leading-relaxed">{t.body}</p>
           </div>
-          <div>
-            <h3 class="font-sans font-semibold text-charcoal text-xl mb-2">16 Weeks or Later</h3>
-            <p class="text-slate font-sans leading-relaxed">Gender can typically be determined at 16 weeks, with accuracy increasing as you progress. By 18–20 weeks, gender confirmation is highly reliable. If you are earlier than 16 weeks, we recommend waiting a little longer for the clearest result — we want your reveal to be definitive.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -249,7 +329,7 @@ const faqs = [
     </div>
   </section>
 
-  <!-- Saturday Callout -->
+  <!-- Availability Callout -->
   <section class="bg-navy-dark" style={`border-top: 1px solid ${ACCENT}30; border-bottom: 1px solid ${ACCENT}30`}>
     <div class="container-site py-8">
       <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left fade-in-up">
@@ -259,11 +339,11 @@ const faqs = [
           </svg>
         </div>
         <div>
-          <p class="text-white font-sans font-semibold text-lg">Saturday Sessions Only</p>
-          <p class="text-white/60 font-sans text-sm mt-1">Gender reveal sessions are offered exclusively on Saturdays. Spots are limited — book early so your big moment doesn't get pushed back.</p>
+          <p class="text-white font-sans font-semibold text-lg">Available Wednesday, Friday & Saturday</p>
+          <p class="text-white/60 font-sans text-sm mt-1">Spots are limited each week — book early so your moment doesn't get pushed back.</p>
         </div>
         <a href="#book" class="shrink-0 inline-flex items-center justify-center px-6 py-3 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap">
-          Book This Saturday →
+          Book Your Session →
         </a>
       </div>
     </div>
@@ -299,28 +379,28 @@ const faqs = [
       </div>
       <p class="text-lg font-sans text-charcoal mb-2">5-Star Rated on Google</p>
       <p class="text-slate font-sans text-sm mb-6">Real reviews from real patients in Las Vegas</p>
-      <a href={siteConfig.googleReviewsUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+      <a href={siteConfig.googleLeaveReviewUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
         Read Our Reviews →
       </a>
     </div>
   </section>
 
   <CTABanner
-    heading="Find Out This Saturday. Four Printed Photos to Take Home."
-    subtext={`$${PRICE} · 15–20 minute session · 2D/3D/4D & HD · 4 printed photos · Saturdays only`}
-    ctaText={`Book Gender Reveal — $${PRICE}`}
+    heading="Ready to See Your Baby?"
+    subtext={`$${PRICE} · Any trimester · Wed, Fri & Sat · 4 printed photos included`}
+    ctaText={`Book Your Sneak Peek — $${PRICE}`}
     ctaHref="#book"
   />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MedicalTest",
-    "name": "Gender Reveal Ultrasound",
-    "description": "Elective gender reveal ultrasound session in Las Vegas. Includes 2D/3D/4D & HD imaging, gender determination, heartbeat audio, and 4 printed photos. Available every Saturday.",
+    "name": "Elective Sneak Peek Ultrasound",
+    "description": "Elective sneak peek ultrasound session in Las Vegas. Any trimester welcome. Includes 20-minute session, 2D/3D/4D & HD imaging, gender determination, heartbeat audio, and 4 printed photos.",
     "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
     "offers": {
       "@type": "Offer",
-      "name": "Gender Reveal Ultrasound",
+      "name": "Elective Sneak Peek Ultrasound",
       "price": PRICE,
       "priceCurrency": "USD"
     },
