@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: 'Signal View Screenings',
-  legalName: 'Signal View Screening Services',
+  name: 'Signal View Ultrasound',
+  legalName: 'Signal View Ultrasound',
   tagline: 'Preventative Ultrasound Screenings in Las Vegas',
   phone: '702.843.6612',
   phoneTel: '+17028436612',
