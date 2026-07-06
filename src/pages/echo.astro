@@ -317,4 +317,32 @@ const whoShouldGet = [
     i.src = "https://intakeq.com/js/widget.min.js?1";
     document.head.appendChild(i);
   })(document);
+
+  // Fire Meta Pixel Purchase when IntakeQ booking completes
+  (function() {
+    window.dataLayer = window.dataLayer || [];
+    var _push = window.dataLayer.push.bind(window.dataLayer);
+    window.dataLayer.push = function(obj) {
+      _push(obj);
+      if (obj && obj.event === 'appointment_booked') {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Purchase', { value: 300.00, currency: 'USD', content_name: 'Echocardiogram' });
+        }
+      }
+    };
+    window.addEventListener('message', function(e) {
+      if (!e.data) return;
+      var d = e.data;
+      if (
+        d.type === 'intakeqBookingCreated' ||
+        d.type === 'appointmentBooked' ||
+        d.action === 'appointmentCreated' ||
+        d.event === 'appointment_booked'
+      ) {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Purchase', { value: 300.00, currency: 'USD', content_name: 'Echocardiogram' });
+        }
+      }
+    });
+  })();
 </script>
