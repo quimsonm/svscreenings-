@@ -21,7 +21,7 @@ export const packages: Package[] = [
     highlighted: false,
     description: 'Three critical vascular screenings to evaluate your stroke risk, aneurysm risk, and leg circulation.',
     bestFor: 'General cardiovascular health check',
-    duration: '~30 minutes',
+    duration: '~15 minutes',
     location: 'At our clinic',
     features: [
       'Carotid Artery Ultrasound',

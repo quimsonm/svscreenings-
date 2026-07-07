@@ -26,7 +26,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'About Our Screenings',
     question: 'How long does a screening take?',
-    answer: 'Depending on your package, screenings take between 30–60 minutes. The Essential Wellness package takes approximately 30 minutes, the Executive Heart about 45 minutes, and The Gold Standard approximately 60 minutes.',
+    answer: 'Depending on your package, screenings take between 15–60 minutes. The Essential Wellness package takes approximately 15 minutes, the Executive Heart about 30 minutes, and The Gold Standard approximately 60 minutes.',
   },
   {
     category: 'About Our Screenings',
