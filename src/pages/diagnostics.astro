@@ -31,7 +31,7 @@ const diagnosticServices = [
   },
   {
     name: 'Leg Arterial (PAD)',
-    price: 300,
+    price: 250,
     description: 'Checks blood flow in the arteries of your legs to detect peripheral artery disease (PAD). Left untreated, PAD can lead to serious complications. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'leg',
     landingPage: '/pad',
@@ -45,21 +45,21 @@ const diagnosticServices = [
   },
   {
     name: 'Abdominal Complete',
-    price: 300,
+    price: 250,
     description: 'Comprehensive view of the liver, gallbladder, kidneys, spleen, pancreas, and aorta. Detects gallstones, cysts, fatty liver, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     landingPage: '/abdomen',
   },
   {
     name: 'Thyroid Ultrasound',
-    price: 300,
+    price: 250,
     description: 'Evaluates the size, shape, and structure of your thyroid gland. Detects nodules, cysts, enlargement, and other abnormalities. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     landingPage: '/thyroid',
   },
   {
     name: 'Renal Ultrasound',
-    price: 300,
+    price: 250,
     description: 'Checks the size, structure, and appearance of both kidneys and bladder. Detects kidney stones, cysts, masses, and signs of obstruction. Physician-interpreted report delivered within 2–3 business days.',
     icon: 'general',
     landingPage: '/renal',
@@ -91,7 +91,7 @@ const iconMap: Record<string, string> = {
 
 <BaseLayout
   title="Cash-Pay Diagnostic Ultrasound | No Insurance Needed | Signal View Las Vegas"
-  description="Affordable cash-pay diagnostic ultrasound in Las Vegas. All studies $300 — echo, vascular, abdominal, thyroid, renal, and more. Physician-interpreted. No insurance or referral required."
+  description="Affordable cash-pay diagnostic ultrasound in Las Vegas. Studies from $250 — abdominal, thyroid, renal, PAD, echo, and more. Physician-interpreted. No insurance or referral required."
 >
   <PageHero
     title="Cash-Pay Diagnostic Ultrasound"
@@ -192,7 +192,7 @@ const iconMap: Record<string, string> = {
         <div class="bg-white rounded-card p-5 border-2 border-gold shadow-md">
           <div class="flex items-baseline justify-between">
             <span class="text-sm text-gold-hover font-sans font-semibold">Signal View cash-pay diagnostic</span>
-            <span class="text-lg font-serif text-gold">$300</span>
+            <span class="text-lg font-serif text-gold">From $250</span>
           </div>
         </div>
         <p class="text-center text-sm text-slate font-sans italic">
@@ -242,11 +242,11 @@ const iconMap: Record<string, string> = {
             <option value="Echocardiogram ($300)">Echocardiogram — $300</option>
             <option value="Carotid Ultrasound ($300)">Carotid Ultrasound — $300</option>
             <option value="Aorta Ultrasound ($300)">Aorta Ultrasound — $300</option>
-            <option value="Lower Extremity Arterial ($300)">Lower Extremity Arterial — $300</option>
-            <option value="Lower Extremity Venous ($300)">Lower Extremity Venous — $300</option>
-            <option value="Abdominal Complete ($300)">Abdominal Complete — $300</option>
-            <option value="Thyroid Ultrasound ($300)">Thyroid Ultrasound — $300</option>
-            <option value="Renal Ultrasound ($300)">Renal Ultrasound — $300</option>
+            <option value="Lower Extremity Arterial ($250)">Lower Extremity Arterial — $250</option>
+            <option value="Lower Extremity Venous ($250)">Lower Extremity Venous — $250</option>
+            <option value="Abdominal Complete ($250)">Abdominal Complete — $250</option>
+            <option value="Thyroid Ultrasound ($250)">Thyroid Ultrasound — $250</option>
+            <option value="Renal Ultrasound ($250)">Renal Ultrasound — $250</option>
             <option value="OB Ultrasound ($300)">OB Ultrasound — $300</option>
             <option value="Multiple studies">Multiple studies — describe below</option>
           </select>
