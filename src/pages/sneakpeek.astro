@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 import heroImage from '../assets/images/gender-reveal-hero.png';
 import { siteConfig } from '../data/siteConfig';
 
-const PRICE = 125;
+const PRICE = 79;
 const ACCENT = '#9B8EC4';
 
 const included = [
@@ -59,7 +59,7 @@ const howItWorks = [
   {
     step: '1',
     heading: 'Pick Your Day & Book Online',
-    body: 'We offer sneak peek sessions Wednesday, Friday, and Saturday. Choose the time that works for you and reserve your spot — it only takes a minute.',
+    body: 'We offer sneak peek sessions Wednesday, Friday, and Saturday. Spots fill fast — choose your day and reserve online in under a minute.',
   },
   {
     step: '2',
@@ -102,8 +102,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Elective Sneak Peek Ultrasound Las Vegas | $125 | Signal View Ultrasound"
-  description="See your baby any trimester for $125. Gender reveal, early reassurance, or third trimester bonding — 20-minute session, 2D/3D/4D & HD, heartbeat, and 4 printed photos. Las Vegas."
+  title="Elective Sneak Peek Ultrasound Las Vegas | $79 | Signal View Ultrasound"
+  description="See your baby any trimester for $79. Gender reveal, early reassurance, or third trimester bonding — 10-minute session, 2D/3D/4D & HD, heartbeat, and 4 printed photos. Las Vegas."
 >
   <EmergencyBanner />
 
@@ -159,7 +159,7 @@ const faqs = [
           <!-- Trust strip -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
             {[
-              { icon: 'clock', text: '15 Minutes' },
+              { icon: 'clock', text: '10 Minutes' },
               { icon: 'camera', text: '4 Printed Photos' },
               { icon: 'heart', text: 'Heartbeat Live' },
               { icon: 'star', text: 'Any Trimester' },
@@ -268,7 +268,7 @@ const faqs = [
       <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
         <p class="overline mb-3" style={`color: ${ACCENT}`}>Everything at ${PRICE}</p>
         <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Everything Included in Your Session</h2>
-        <p class="mt-4 text-base text-slate font-sans">One price. No add-ons. No surprises.</p>
+        <p class="mt-4 text-base text-slate font-sans">Everything below is included at ${PRICE}. Optional add-ons available at your visit.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto fade-in-up">
         {included.map((item) => (
@@ -278,6 +278,19 @@ const faqs = [
             <p class="text-sm text-slate font-sans">{item.description}</p>
           </div>
         ))}
+      </div>
+
+      <!-- Clinic add-ons -->
+      <div class="mt-10 max-w-2xl mx-auto text-center fade-in-up">
+        <p class="text-xs font-sans font-semibold uppercase tracking-widest text-slate/60 mb-3">Also Available at Your Visit</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="inline-flex items-center gap-1.5 text-xs font-sans px-3 py-1.5 rounded-full border" style={`border-color: ${ACCENT}40; color: ${ACCENT}`}>
+            <svg class="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            USB Memory Stick with Video Clips — $20
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -391,7 +404,7 @@ const faqs = [
     "@context": "https://schema.org",
     "@type": "MedicalTest",
     "name": "Elective Sneak Peek Ultrasound",
-    "description": "Elective sneak peek ultrasound session in Las Vegas. Any trimester welcome. Includes 20-minute session, 2D/3D/4D & HD imaging, gender determination, heartbeat audio, and 4 printed photos.",
+    "description": "Elective sneak peek ultrasound session in Las Vegas. Any trimester welcome. Includes 10-minute session, 2D/3D/4D & HD imaging, gender determination, heartbeat audio, and 4 printed photos.",
     "usesDevice": { "@type": "MedicalDevice", "name": "Ultrasound" },
     "offers": {
       "@type": "Offer",
@@ -432,7 +445,7 @@ const faqs = [
       _push(obj);
       if (obj && obj.event === 'appointment_booked') {
         if (typeof fbq === 'function') {
-          fbq('track', 'Purchase', { value: 125.00, currency: 'USD', content_name: 'Sneak Peek Ultrasound' });
+          fbq('track', 'Purchase', { value: 79.00, currency: 'USD', content_name: 'Sneak Peek Ultrasound' });
         }
       }
     };
@@ -446,7 +459,7 @@ const faqs = [
         d.event === 'appointment_booked'
       ) {
         if (typeof fbq === 'function') {
-          fbq('track', 'Purchase', { value: 125.00, currency: 'USD', content_name: 'Sneak Peek Ultrasound' });
+          fbq('track', 'Purchase', { value: 79.00, currency: 'USD', content_name: 'Sneak Peek Ultrasound' });
         }
       }
     });
