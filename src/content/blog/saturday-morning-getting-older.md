@@ -59,7 +59,7 @@ You might be totally fine. Most people who come in leave with peace of mind.
 
 ---
 
-*Our Essential Wellness package starts at $199 — carotid, aorta, and leg arterial screenings in one visit. We screen Wednesdays, Fridays, and Saturdays at our Summerlin clinic. Prefer we come to you? Our Gold Standard package ($597) brings every screening to your home or office — anywhere in Greater Las Vegas.*
+*Our Essential Wellness package starts at $199 — carotid, aorta, and leg arterial screenings in one visit. We screen Wednesdays, Fridays, and Saturdays at our Summerlin clinic. Want the full picture? Our Gold Standard package ($697) covers six ultrasound studies in one 60-minute visit — heart, vascular, abdomen, and thyroid.*
 
 *Want to know what these screenings actually catch? Read: [5 Silent Vascular Conditions You Can Catch Before They Catch You](/blog/5-silent-vascular-conditions)*
 

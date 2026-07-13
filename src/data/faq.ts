@@ -26,7 +26,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'About Our Screenings',
     question: 'How long does a screening take?',
-    answer: 'Depending on your package, screenings take between 15–60 minutes. The Essential Wellness package takes approximately 15 minutes, the Executive Heart about 30 minutes, and The Gold Standard approximately 60 minutes.',
+    answer: 'Depending on your package, screenings take between 15–60 minutes. The Essential Wellness package takes approximately 15 minutes, the Executive Heart about 30 minutes, and The Gold Standard approximately 60 minutes — six studies in one visit.',
   },
   {
     category: 'About Our Screenings',
@@ -48,7 +48,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Pricing & Payment',
     question: 'How much do screenings cost?',
-    answer: 'We offer three packages: Essential Wellness ($199), Executive Heart ($349), and The Gold Standard ($597). All pricing is transparent with no hidden fees. Visit our pricing page for full details on what\'s included in each package.',
+    answer: 'We offer three packages: Essential Wellness ($199), Executive Heart ($349), and The Gold Standard ($697). All pricing is transparent with no hidden fees. Visit our pricing page for full details on what\'s included in each package.',
   },
   {
     category: 'Pricing & Payment',
@@ -75,12 +75,12 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'Where is your clinic?',
-    answer: 'Our in-clinic screenings are performed at Frontline Medical Group, located at 3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128. For Gold Standard patients, we come to you anywhere in the Greater Las Vegas area.',
+    answer: 'All screenings are performed at Frontline Medical Group, located at 3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128.',
   },
   {
     category: 'Booking & Location',
     question: 'What are your hours?',
-    answer: 'Our in-clinic screening appointments are available Wednesdays and Fridays from 12–5pm, and Saturdays from 9am–1pm. Gold Standard mobile appointments are available by arrangement during reasonable daytime and evening hours.',
+    answer: 'Screening appointments are available Wednesdays and Fridays from 12–5pm, and Saturdays from 9am–1pm.',
   },
   {
     category: 'Booking & Location',
@@ -90,7 +90,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'Can you come to me?',
-    answer: 'Yes! Our Gold Standard package ($597) includes mobile service anywhere in the Greater Las Vegas area — including Henderson, Summerlin, and North Las Vegas. We bring hospital-grade equipment directly to your home or office at a time that works for you.',
+    answer: 'All packages are performed in-clinic at our Summerlin location — Frontline Medical Group, 3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128. We are conveniently located for patients throughout Las Vegas, Henderson, Summerlin, and North Las Vegas.',
   },
   {
     category: 'Booking & Location',

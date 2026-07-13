@@ -113,7 +113,7 @@ Not because you're sick. Not because something's wrong. But because you'd rather
 
 That's what we do at Signal View Screening Services. We're not trying to replace your doctor. We're trying to give you — and your doctor — information that doesn't exist until someone looks. We're a team of highly trained and experienced sonographers with over a decade of clinical experience who set up shop in Las Vegas for one reason: to give people like you access to the same imaging that catches these conditions early — before they catch you.
 
-Our Essential Wellness package — $199 — covers your carotids, your aorta, and your leg arteries in one visit. Every package includes a physician-interpreted report delivered within 2 business days. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you'd rather not come to us, our Gold Standard package ($597) means we come to you, anywhere in the Greater Las Vegas area, on your schedule.
+Our Essential Wellness package — $199 — covers your carotids, your aorta, and your leg arteries in one visit. Every package includes a physician-interpreted report delivered within 2 business days. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you want everything in one appointment, our Gold Standard package ($697) covers six studies in 60 minutes — heart, vascular, abdomen, and thyroid.
 
 No referral needed. No insurance runaround. No six-week wait for an appointment.
 

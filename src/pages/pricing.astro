@@ -8,12 +8,11 @@ import { packages } from '../data/packages';
 import { services } from '../data/services';
 import { link } from '../utils/links';
 
-import conciergeHome from '../assets/images/concierge-home.png';
 ---
 
 <BaseLayout
   title="Screening Packages & Pricing | From $199 | Signal View Ultrasound Las Vegas"
-  description="Transparent pricing for ultrasound screening packages. Essential Wellness $199, Executive Heart $349, Gold Standard $597 with mobile concierge service. No hidden fees."
+  description="Transparent pricing for ultrasound screening packages. Essential Wellness $199, Executive Heart $349, Gold Standard $697 — six studies in one visit. No hidden fees. Las Vegas."
 >
   <PageHero
     title="Transparent, Simple Pricing"
@@ -146,37 +145,6 @@ import conciergeHome from '../assets/images/concierge-home.png';
                 ))}
               </tr>
             ))}
-            <!-- Extra features -->
-            <tr class="border-b border-warmgray/50">
-              <td class="py-3.5 px-4 text-sm font-sans text-charcoal">Mobile Service (We Come to You)</td>
-              {packages.map((pkg) => (
-                <td class="py-3.5 px-4 text-center">
-                  {pkg.slug === 'gold-standard' ? (
-                    <svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg class="w-5 h-5 text-warmgray mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                    </svg>
-                  )}
-                </td>
-              ))}
-            </tr>
-            <tr class="border-b border-warmgray/50">
-              <td class="py-3.5 px-4 text-sm font-sans text-charcoal">Flexible Scheduling</td>
-              {packages.map((pkg) => (
-                <td class="py-3.5 px-4 text-center">
-                  {pkg.slug === 'gold-standard' ? (
-                    <svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                  ) : (
-                    <span class="text-xs text-slate font-sans">Wed, Fri, Sat</span>
-                  )}
-                </td>
-              ))}
-            </tr>
             <!-- Duration row -->
             <tr>
               <td class="py-3.5 px-4 text-sm font-sans font-semibold text-charcoal">Duration</td>
@@ -308,115 +276,26 @@ import conciergeHome from '../assets/images/concierge-home.png';
     </div>
   </section>
 
-  <!-- Gold Standard Concierge Inquiry -->
+  <!-- Gold Standard Booking -->
   <section id="gold-standard-inquiry" class="section-padding bg-white">
     <div class="container-site max-w-5xl">
-      <div id="booking" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in-up">
-        <!-- Left: Image + Benefits -->
-        <div>
-          <video
-            id="gold-standard-video"
-            muted
-            playsinline
-            preload="metadata"
-            poster={conciergeHome.src}
-            class="rounded-2xl w-full aspect-[4/3] object-cover shadow-lg mb-6"
-          >
-            <source src={link('/hero-video.mp4')} type="video/mp4" />
-          </video>
-          <ul class="space-y-3">
-            {['All ultrasound screenings included', 'We come to your home or office', 'Flexible scheduling at your convenience', 'Physician-interpreted report within 2 business days'].map((item) => (
-              <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
-                <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <!-- Right: Inquiry Form -->
-        <div>
-          <p class="overline text-gold mb-3">The Gold Standard — $597</p>
-          <h2 class="text-2xl md:text-3xl font-serif text-charcoal mb-2">Request Your Concierge Appointment</h2>
-          <p class="text-slate font-sans text-sm mb-6">Tell us your preferred schedule and location. We'll call you within 1 business day to confirm.</p>
-
-          <form id="gold-standard-form" class="bg-ivory rounded-card border border-warmgray/40 p-6 space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="gs-name" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Full Name *</label>
-                <input type="text" id="gs-name" name="name" required
-                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                  placeholder="Your full name" />
-              </div>
-              <div>
-                <label for="gs-phone" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Phone Number *</label>
-                <input type="tel" id="gs-phone" name="phone" required
-                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                  placeholder="(702) 555-0123" />
-              </div>
-            </div>
-
-            <div>
-              <label for="gs-email" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Email Address *</label>
-              <input type="email" id="gs-email" name="email" required
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="you@example.com" />
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="gs-dates" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Date(s) *</label>
-                <input type="text" id="gs-dates" name="dates" required
-                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                  placeholder="e.g. Any Wednesday or Friday in May" />
-              </div>
-              <div>
-                <label for="gs-time" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Preferred Time</label>
-                <select id="gs-time" name="time"
-                  class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white">
-                  <option value="flexible">Flexible</option>
-                  <option value="morning">Morning</option>
-                  <option value="afternoon">Afternoon</option>
-                  <option value="evening">Evening</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label for="gs-location" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Screening Location *</label>
-              <input type="text" id="gs-location" name="location" required
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                placeholder="Home address or preferred location" />
-            </div>
-
-            <div>
-              <label for="gs-notes" class="block text-sm font-sans font-medium text-charcoal mb-1.5">Special Notes</label>
-              <textarea id="gs-notes" name="notes" rows="2"
-                class="w-full px-4 py-3 border border-warmgray rounded-lg text-sm font-sans text-charcoal placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
-                placeholder="Any questions or special requests..."></textarea>
-            </div>
-
-            <!-- Honeypot -->
-            <div class="hidden" aria-hidden="true">
-              <input type="text" name="website" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <button type="submit" class="w-full py-3.5 bg-gold hover:bg-gold-hover text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
-              Request Your Appointment
-            </button>
-
-            <p class="text-center text-xs text-slate font-sans">
-              We'll call you within 1 business day to confirm. Payment processed securely via Square after scheduling.
-            </p>
-          </form>
-
-          <p class="text-center mt-4 text-sm text-slate font-sans">
-            Prefer to call?
-            <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-medium hover:text-gold transition-colors">{siteConfig.phone}</a>
-          </p>
-        </div>
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">The Gold Standard — $697</p>
+        <h2 class="text-2xl md:text-3xl font-serif text-charcoal">Book Your Full Body Scan</h2>
+        <p class="text-slate font-sans text-sm mt-2 max-w-xl mx-auto">Six ultrasound studies in one 60-minute in-clinic visit. The most comprehensive scan we offer.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in-up">
+        <ul class="space-y-3">
+          {['Carotid Artery Ultrasound', 'Aorta Aneurysm Screening', 'Leg Arterial Ultrasound', 'Echocardiogram (Heart Ultrasound)', 'Abdomen Complete Ultrasound', 'Thyroid Ultrasound', 'Physician-interpreted report within 2 business days'].map((item) => (
+            <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
+              <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div id="intakeq-gold" style="width: 100%;"></div>
       </div>
     </div>
   </section>
@@ -493,59 +372,37 @@ import conciergeHome from '../assets/images/concierge-home.png';
           }
         });
       }
+    });
+  </script>
 
-      // Auto-play video when arriving via anchor link
-      var video = document.getElementById('gold-standard-video');
-      if (video && (window.location.hash === '#gold-standard-inquiry' || window.location.hash === '#booking')) {
-        video.play();
+  <script is:inline>
+    (function (c) {
+      window.intakeq = "6a34384c4c7aa072929fbe5f";
+      window.intakeqServiceId = "90f5acc3-6f0b-4dbc-ad3e-503b3220b6ac";
+      var i = c.createElement("script");
+      i.type = "text/javascript";
+      i.async = true;
+      i.src = "https://intakeq.com/js/widget.min.js?1";
+      document.head.appendChild(i);
+      // Move widget into gold section container after load
+      i.onload = function() {
+        var target = document.getElementById('intakeq-gold');
+        var widget = document.getElementById('intakeq');
+        if (target && widget && widget !== target) target.appendChild(widget);
+      };
+    })(document);
+
+    window.addEventListener('message', function(e) {
+      if (!e.data) return;
+      var d = e.data;
+      if (
+        d.type === 'intakeqBookingCreated' ||
+        d.type === 'appointmentBooked' ||
+        d.action === 'appointmentCreated' ||
+        d.event === 'appointment_booked'
+      ) {
+        window.svs_track && window.svs_track('generate_lead', { form_name: 'gold_standard', value: 697, currency: 'USD' });
       }
-
-      // Also play when section scrolls into view
-      if (video) {
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              video.play();
-              observer.disconnect();
-            }
-          });
-        }, { threshold: 0.3 });
-        observer.observe(video);
-      }
-
-      var form = document.getElementById('gold-standard-form');
-      if (!form) return;
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var honeypot = form.querySelector('input[name="website"]');
-        if (honeypot && honeypot.value) return;
-
-        var data = new FormData(form);
-        var entries = {};
-        data.forEach(function(value, key) { entries[key] = value; });
-
-        var subject = encodeURIComponent('Gold Standard Concierge Request');
-        var body = encodeURIComponent(
-          'Name: ' + entries.name +
-          '\nPhone: ' + entries.phone +
-          '\nEmail: ' + entries.email +
-          '\nPreferred Date(s): ' + entries.dates +
-          '\nPreferred Time: ' + entries.time +
-          '\nLocation: ' + entries.location +
-          '\nNotes: ' + (entries.notes || 'None')
-        );
-        window.svs_track && window.svs_track('generate_lead', { form_name: 'gold_standard', value: 597, currency: 'USD' });
-        window.location.href = 'mailto:info@svscreenings.com?subject=' + subject + '&body=' + body;
-
-        var btn = form.querySelector('button[type="submit"]');
-        if (btn) {
-          btn.textContent = 'Opening Email — Thank You!';
-          btn.classList.remove('bg-gold', 'hover:bg-gold-hover');
-          btn.classList.add('bg-green-600');
-          btn.disabled = true;
-        }
-      });
     });
   </script>
 </BaseLayout>
