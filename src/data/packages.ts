@@ -69,6 +69,6 @@ export const packages: Package[] = [
       'Thyroid Ultrasound',
       'Physician-interpreted report — delivered within 2 business days',
     ],
-    bookingUrl: '/pricing#gold-standard-inquiry',
+    bookingUrl: '/gold-standard',
   },
 ];
