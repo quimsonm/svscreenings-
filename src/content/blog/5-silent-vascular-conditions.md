@@ -67,7 +67,7 @@ Left unchecked, PAD doesn't just mean leg pain. It means increased risk of heart
 
 I know. Nobody wants to read that word. **But I'd rather you read it here than hear it in a hospital.**
 
-The good news: a leg arterial ultrasound can map blood flow in your lower extremities and flag narrowing or blockages that you'd never feel on your own. It's painless. It's fast. And it gives you a clear picture of what's happening in your legs and feet so you can act on it.
+The good news: a leg artery screening with ABI can map blood flow in your lower extremities and flag narrowing or blockages that you'd never feel on your own. It's painless. It's fast. And it gives you a clear picture of what's happening in your legs and feet so you can act on it.
 
 PAD symptoms to watch for: leg pain or cramping during walking that goes away when you rest. Numbness or weakness in your legs. Coldness in one foot compared to the other. Sores on your feet or legs that won't heal. If any of that sounds familiar, don't chalk it up to getting older. Get it checked.
 
@@ -113,7 +113,7 @@ Not because you're sick. Not because something's wrong. But because you'd rather
 
 That's what we do at Signal View Screening Services. We're not trying to replace your doctor. We're trying to give you — and your doctor — information that doesn't exist until someone looks. We're a team of highly trained and experienced sonographers with over a decade of clinical experience who set up shop in Las Vegas for one reason: to give people like you access to the same imaging that catches these conditions early — before they catch you.
 
-Our Essential Wellness package — $199 — covers your carotids, your aorta, and your leg arteries in one visit. Every package includes a physician-interpreted report delivered within 2 business days. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you want everything in one appointment, our Gold Standard package ($697) covers six studies in 60 minutes — heart, vascular, abdomen, and thyroid.
+Our Essential Wellness package — $199 — covers your carotids, your aorta, and a leg artery screening with ABI in one visit. Every package includes a physician-interpreted report delivered within 2 business days. If you want the full picture — heart included — the Executive Heart package adds an echocardiogram for $349. And if you want everything in one appointment, our Gold Standard package ($697) covers six studies in 60 minutes — heart, vascular, abdomen, and thyroid.
 
 No referral needed. No insurance runaround. No six-week wait for an appointment.
 

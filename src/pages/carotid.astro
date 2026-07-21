@@ -53,8 +53,8 @@ const whatYouGet = [
 ---
 
 <BaseLayout
-  title="Carotid Ultrasound Las Vegas | $300 Diagnostic Scan | Signal View Ultrasound"
-  description="$300 diagnostic carotid ultrasound and CIMT (carotid intima-media thickness) test in Las Vegas. Checks for plaque buildup and stroke risk in 15 minutes. Physician-interpreted results. No referral needed."
+  title="Carotid Ultrasound Las Vegas | $250 Diagnostic Scan | Signal View Ultrasound"
+  description="$250 diagnostic carotid ultrasound and CIMT (carotid intima-media thickness) test in Las Vegas. Checks for plaque buildup and stroke risk in 15 minutes. Physician-interpreted results. No referral needed."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden bg-navy">
@@ -82,7 +82,7 @@ const whatYouGet = [
           Know Your Stroke Risk
         </h1>
         <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
-          <span class="text-gold font-semibold">$300</span> · Carotid Artery / CIMT Ultrasound
+          <span class="text-gold font-semibold">$250</span> · Carotid Artery / CIMT Ultrasound
         </p>
         <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
           A 15-minute carotid intima-media thickness (CIMT) ultrasound that checks for plaque buildup and arterial thickening — before it becomes an emergency.
@@ -181,7 +181,7 @@ const whatYouGet = [
 
         <div class="bg-white rounded-2xl border border-warmgray/30 p-8 text-center fade-in-up">
           <p class="overline text-gold mb-2">Carotid / CIMT Ultrasound</p>
-          <p class="text-6xl font-serif text-charcoal mb-1">$300</p>
+          <p class="text-6xl font-serif text-charcoal mb-1">$250</p>
           <p class="text-sm text-slate font-sans mb-6">15-minute diagnostic scan · Physician-interpreted</p>
           <a
             href="#book"
@@ -358,8 +358,8 @@ const whatYouGet = [
   <!-- Final CTA -->
   <CTABanner
     heading="Know Your Stroke Risk in 15 Minutes."
-    subtext="$300 · Carotid ultrasound + CIMT measurement · Physician-interpreted report in 1 business day · No referral needed."
-    ctaText="Book Your Carotid Ultrasound — $300"
+    subtext="$250 · Carotid ultrasound + CIMT measurement · Physician-interpreted report in 1 business day · No referral needed."
+    ctaText="Book Your Carotid Ultrasound — $250"
     ctaHref="#book"
   />
 
@@ -376,7 +376,7 @@ const whatYouGet = [
     },
     "offers": {
       "@type": "Offer",
-      "price": "300",
+      "price": "250",
       "priceCurrency": "USD",
     },
     "provider": {
@@ -412,7 +412,7 @@ const whatYouGet = [
       _push(obj);
       if (obj && obj.event === 'appointment_booked') {
         if (typeof fbq === 'function') {
-          fbq('track', 'Purchase', { value: 300.00, currency: 'USD', content_name: 'Carotid Ultrasound' });
+          fbq('track', 'Purchase', { value: 250.00, currency: 'USD', content_name: 'Carotid Ultrasound' });
         }
       }
     };
@@ -426,7 +426,7 @@ const whatYouGet = [
         d.event === 'appointment_booked'
       ) {
         if (typeof fbq === 'function') {
-          fbq('track', 'Purchase', { value: 300.00, currency: 'USD', content_name: 'Carotid Ultrasound' });
+          fbq('track', 'Purchase', { value: 250.00, currency: 'USD', content_name: 'Carotid Ultrasound' });
         }
       }
     });

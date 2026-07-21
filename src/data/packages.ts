@@ -26,7 +26,7 @@ export const packages: Package[] = [
     features: [
       'Carotid Artery Ultrasound',
       'Aorta Aneurysm Screening',
-      'Leg Arterial Ultrasound',
+      'Leg Artery Screening with ABI',
       'Physician-interpreted report — delivered within 2 business days',
     ],
     bookingUrl: '/essential',
@@ -44,7 +44,7 @@ export const packages: Package[] = [
     features: [
       'Carotid Artery Ultrasound',
       'Aorta Aneurysm Screening',
-      'Leg Arterial Ultrasound',
+      'Leg Artery Screening with ABI',
       'Echocardiogram (Heart Ultrasound)',
       'Physician-interpreted report — delivered within 2 business days',
     ],
@@ -63,7 +63,7 @@ export const packages: Package[] = [
     features: [
       'Carotid Artery Ultrasound',
       'Aorta Aneurysm Screening',
-      'Leg Arterial Ultrasound',
+      'Leg Artery Screening with ABI',
       'Echocardiogram (Heart Ultrasound)',
       'Abdomen Complete Ultrasound',
       'Thyroid Ultrasound',
