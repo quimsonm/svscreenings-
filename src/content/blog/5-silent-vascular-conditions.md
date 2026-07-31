@@ -119,7 +119,7 @@ No referral needed. No insurance runaround. No six-week wait for an appointment.
 
 **Just answers.**
 
-We screen Wednesdays, Fridays, and Saturdays at our clinic in the Summerlin area — because we know your weekdays are already spoken for. Most clients get in within a week or two of booking. If you've read this far, something in here resonated. Don't let that feeling pass.
+We screen Tuesday through Saturday, 9am–4pm, at our clinic in Ackerman Plaza — because we know your schedule doesn't always cooperate. Most clients get in within a week or two of booking. If you've read this far, something in here resonated. Don't let that feeling pass.
 
 Pick up the phone. Book online. Or just come in and talk to us.
 

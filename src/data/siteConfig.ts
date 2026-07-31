@@ -17,7 +17,7 @@ export const siteConfig = {
     fullAddress: '2400 N Tenaya Way, Suite 129, Las Vegas, NV 89128',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2400+N+Tenaya+Way+Suite+129+Las+Vegas+NV+89128',
   },
-  hours: 'Wed 12–5pm | Fri 12–5pm | Sat 9am–1pm',
+  hours: 'Tue–Sat 9am–4pm',
   googleReviewsUrl: 'https://g.page/r/CbQeS1Xa-WUYEBM',
   googleLeaveReviewUrl: 'https://g.page/r/CbQeS1Xa-WUYEBM/review',
   squareBookingBase: 'https://book.squareup.com/appointments/65hfsxzse0og5r/location/L0YY91RC4GBKX/services',

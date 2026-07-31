@@ -59,7 +59,7 @@ You might be totally fine. Most people who come in leave with peace of mind.
 
 ---
 
-*Our Essential Wellness package starts at $199 — carotid, aorta, and leg artery screening (with ABI) in one visit. We screen Wednesdays, Fridays, and Saturdays at our Summerlin clinic. Want the full picture? Our Gold Standard package ($697) covers six ultrasound studies in one 60-minute visit — heart, vascular, abdomen, and thyroid.*
+*Our Essential Wellness package starts at $199 — carotid, aorta, and leg artery screening (with ABI) in one visit. We screen Tuesday through Saturday, 9am–4pm, at our clinic in Ackerman Plaza. Want the full picture? Our Gold Standard package ($697) covers six ultrasound studies in one 60-minute visit — heart, vascular, abdomen, and thyroid.*
 
 *Want to know what these screenings actually catch? Read: [5 Silent Vascular Conditions You Can Catch Before They Catch You](/blog/5-silent-vascular-conditions)*
 

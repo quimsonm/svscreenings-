@@ -80,7 +80,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'What are your hours?',
-    answer: 'Screening appointments are available Wednesdays and Fridays from 12–5pm, and Saturdays from 9am–1pm.',
+    answer: 'Screening appointments are available Tuesday through Saturday, 9am–4pm.',
   },
   {
     category: 'Booking & Location',

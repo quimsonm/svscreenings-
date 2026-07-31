@@ -57,7 +57,7 @@ Our abdominal complete ultrasound is $250. It covers all six organs. Cash pay, n
 
 If your doctor has been ordering bloodwork but hasn't sent you for imaging yet — or if you've been sitting on a referral that keeps getting pushed — this is how you stop waiting and start knowing.
 
-We're in Summerlin, right off Tenaya Way. Wednesday, Friday, and Saturday.
+We're at 2400 N Tenaya Way, Suite 129 — Ackerman Plaza. Open Tuesday through Saturday, 9am–4pm.
 
 **If your gut's been trying to tell you something, it might be time to actually listen.**
 

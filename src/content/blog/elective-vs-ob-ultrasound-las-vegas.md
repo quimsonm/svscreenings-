@@ -39,7 +39,7 @@ Most of our patients already have their OB appointments on the calendar. They co
 
 ---
 
-Here in Las Vegas, we offer sneak peek sessions at our Summerlin clinic — Wednesdays, Fridays, and Saturdays. Sessions start at $79 and include 2D/3D/4D & HD imaging, your baby's live heartbeat, and four printed photos to take home. Gender determination is available from 14 weeks if you want to find out — or confirm what you already suspect.
+Here in Las Vegas, we offer sneak peek sessions at our clinic in Ackerman Plaza — Tuesday through Saturday, 9am–4pm. Sessions start at $79 and include 2D/3D/4D & HD imaging, your baby's live heartbeat, and four printed photos to take home. Gender determination is available from 14 weeks if you want to find out — or confirm what you already suspect.
 
 No referral. No insurance. No paperwork.
 
