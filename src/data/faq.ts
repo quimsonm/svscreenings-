@@ -75,7 +75,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'Where is your clinic?',
-    answer: 'All screenings are performed at Frontline Medical Group, located at 3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128.',
+    answer: 'All screenings are performed at Frontline Medical Group, located at 2400 N Tenaya Way, Suite 129, Las Vegas, NV 89128.',
   },
   {
     category: 'Booking & Location',
@@ -90,7 +90,7 @@ export const faqs: FAQItem[] = [
   {
     category: 'Booking & Location',
     question: 'Can you come to me?',
-    answer: 'All packages are performed in-clinic at our Summerlin location — Frontline Medical Group, 3150 N Tenaya Wy Suite 400, Las Vegas, NV 89128. We are conveniently located for patients throughout Las Vegas, Henderson, Summerlin, and North Las Vegas.',
+    answer: 'All packages are performed in-clinic at our Summerlin location — Frontline Medical Group, 2400 N Tenaya Way, Suite 129, Las Vegas, NV 89128. We are conveniently located for patients throughout Las Vegas, Henderson, Summerlin, and North Las Vegas.',
   },
   {
     category: 'Booking & Location',
