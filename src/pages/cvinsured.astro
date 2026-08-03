@@ -1,0 +1,361 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import { Image } from 'astro:assets';
+import echoHero from '../assets/images/echo-hero.png';
+import serviceResults from '../assets/images/service-results.png';
+import { siteConfig } from '../data/siteConfig';
+import { testimonials } from '../data/testimonials';
+import { link } from '../utils/links';
+
+const services = [
+  {
+    name: 'Echocardiogram',
+    description: 'Evaluates heart muscle function, valve health, and chamber size.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  },
+  {
+    name: 'Carotid Artery Ultrasound',
+    description: 'Checks for plaque buildup in the neck arteries that supply blood to your brain.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 4v16M8 8c2 2 4 2 6 0M8 16c2-2 4-2 6 0" stroke-linecap="round"/></svg>`,
+  },
+  {
+    name: 'Aortic Aneurysm Ultrasound',
+    description: 'Screens for a dangerous bulge in the body\'s main artery that can rupture without warning.',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4M12 17v4M10 7c-2 2-3 4-3 7s1 3 3 3h4c2 0 3 0 3-3s-1-5-3-7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.5"/></svg>`,
+  },
+  {
+    name: 'Leg Artery Screening with ABI',
+    description: 'Checks blood flow in the leg arteries to detect peripheral artery disease (PAD).',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M11 3c0 2-1 5-1 8s1 5 1 8M13 3c0 2 1 5 1 8s-1 5-1 8" stroke-linecap="round"/><path d="M9 9h6M9 15h6" stroke-linecap="round" opacity="0.5"/></svg>`,
+  },
+];
+
+const steps = [
+  {
+    number: '1',
+    heading: 'Fill Out the Form Below',
+    body: 'Complete the short form and upload a photo or scan of your doctor\'s order. Don\'t have it handy? Submit what you have and we\'ll help you get the rest.',
+  },
+  {
+    number: '2',
+    heading: 'We Verify Your Coverage',
+    body: 'Our team checks your Medicare Part B eligibility. We handle the insurance side so you don\'t have to.',
+  },
+  {
+    number: '3',
+    heading: 'We Call You to Schedule',
+    body: 'Within 1–2 business days, someone from our team will call you to confirm your coverage and book your appointment.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Do you accept Medicare Advantage plans?',
+    a: 'At this time we accept Original Medicare Part B only. If you have a Medicare Advantage plan, please call us and we can discuss your options.',
+  },
+  {
+    q: 'What if I don\'t have my doctor\'s order yet?',
+    a: 'Go ahead and submit the form. Leave the upload blank and add a note in the comments field. We\'ll follow up with your doctor\'s office directly.',
+  },
+  {
+    q: 'How long until someone contacts me?',
+    a: 'Within 1–2 business days. If you need to reach us sooner, call or text us at ' + siteConfig.phone + '.',
+  },
+  {
+    q: 'Is there anything I need to bring to my appointment?',
+    a: 'Your Medicare card, a photo ID, and your doctor\'s order if you have a paper copy. We\'ll send you prep instructions before your visit.',
+  },
+  {
+    q: 'Will I owe anything out of pocket?',
+    a: 'Medicare Part B typically covers 80% of approved diagnostic ultrasound services after your deductible is met. Your copay or deductible balance is your responsibility. We\'ll go over this with you when we call.',
+  },
+];
+---
+
+<BaseLayout
+  title="Medicare Part B Ultrasound Las Vegas | Signal View Ultrasound"
+  description="Signal View Ultrasound accepts Medicare Part B for echocardiograms and vascular ultrasounds in Las Vegas. Have a doctor's order? Submit it here and we'll call you within 1–2 business days to schedule."
+>
+  <EmergencyBanner />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark/60 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+
+    <div class="container-site relative py-12 md:py-16">
+      <div class="max-w-3xl fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-5">
+          <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          <span class="text-gold text-sm font-sans font-semibold">We Accept Medicare Part B</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-serif text-white leading-tight mb-4">
+          Your Doctor Sent the Order.<br />We Handle the Rest.
+        </h1>
+        <p class="text-lg text-white/80 font-sans mb-4 max-w-2xl">
+          Signal View Ultrasound accepts Medicare Part B for cardiac and vascular ultrasound studies. Fill out the short form below, upload your doctor's order, and our team will verify your coverage and call you to schedule — within 1–2 business days.
+        </p>
+
+        <!-- Trust strip -->
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70 font-sans mb-8">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            ARDMS-Certified Sonographers
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            Physician-Interpreted Reports
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            No Runaround — We Call You
+          </span>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-start gap-2.5 text-sm text-white/70 font-sans">
+          <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <p>
+            {siteConfig.screeningLocation.address} · {siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}
+            <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors ml-1">— Get Directions →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Covered -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Medicare Part B Covered Studies</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Studies We Can Perform With Your Doctor's Order</h2>
+        <p class="mt-3 text-base text-slate font-sans max-w-2xl mx-auto">If your doctor ordered any of these studies, you're in the right place. One visit can cover multiple studies if ordered together.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-in-up">
+        {services.map((s) => (
+          <div class="bg-ivory rounded-xl p-5 border border-warmgray/40">
+            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-3 text-gold" set:html={s.icon} />
+            <h3 class="font-sans font-semibold text-charcoal text-sm mb-2">{s.name}</h3>
+            <p class="text-xs text-slate font-sans leading-relaxed">{s.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">How It Works</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Three Simple Steps</h2>
+      </div>
+
+      <div class="space-y-5 fade-in-up">
+        {steps.map((step) => (
+          <div class="flex items-start gap-5 bg-white rounded-xl p-6 border border-warmgray/40 shadow-sm">
+            <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-white font-sans font-bold text-sm shrink-0">
+              {step.number}
+            </div>
+            <div>
+              <h3 class="font-sans font-semibold text-charcoal text-base mb-1">{step.heading}</h3>
+              <p class="text-sm text-slate font-sans leading-relaxed">{step.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-6 bg-navy/5 border border-navy/10 rounded-xl p-5 text-center fade-in-up">
+        <p class="text-sm text-slate font-sans">Prefer to talk to someone first?
+          <a href={`tel:${siteConfig.phoneTel}`} class="text-navy font-semibold hover:text-gold transition-colors ml-1">{siteConfig.phone}</a>
+          — call or text us and we'll walk you through it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intake Form -->
+  <section id="form" class="section-padding bg-white">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-8 fade-in-up">
+        <p class="overline text-gold mb-3">Step 1 — Submit Your Information</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Upload Your Doctor's Order</h2>
+        <p class="mt-3 text-base text-slate font-sans max-w-xl mx-auto">
+          Fill out the form below. We'll take it from there.
+        </p>
+      </div>
+
+      <div class="bg-ivory rounded-2xl border border-warmgray/40 p-4 md:p-6 fade-in-up">
+        <iframe
+          src="https://intakeq.com/new/pxccw3"
+          frameborder="0"
+          scrolling="yes"
+          style="width:100%; min-height:900px; border:none;"
+          title="Medicare Referral Intake Form"
+        ></iframe>
+      </div>
+
+      <p class="text-center text-xs text-slate font-sans mt-4">
+        This form is encrypted and HIPAA-compliant. Your information is never shared without your consent.
+      </p>
+    </div>
+  </section>
+
+  <!-- What Happens After -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-8 fade-in-up">
+        <p class="overline text-gold mb-2">After You Submit</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">What to Expect Next</h2>
+      </div>
+      <div class="space-y-4 fade-in-up">
+        <div class="flex items-start gap-3 bg-white rounded-card p-5 border border-warmgray/40">
+          <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          <p class="text-sm font-sans text-charcoal">Our team reviews your form and verifies your Medicare Part B eligibility — usually within 1 business day.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white rounded-card p-5 border border-warmgray/40">
+          <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          <p class="text-sm font-sans text-charcoal">We call you at the number you provided to confirm your benefits and schedule your appointment at a time that works for you.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white rounded-card p-5 border border-warmgray/40">
+          <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          <p class="text-sm font-sans text-charcoal">Come in for your study. A board-certified physician interprets your results and a written report is sent to your ordering doctor.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white rounded-card p-5 border border-warmgray/40">
+          <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          <p class="text-sm font-sans text-charcoal"><strong>Medicare Part B typically covers 80%</strong> of approved diagnostic ultrasound services after your deductible is met. We'll confirm your out-of-pocket responsibility before your visit — no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="fade-in-up">
+          <p class="overline text-gold mb-3">Why Signal View Ultrasound</p>
+          <h2 class="text-3xl font-serif text-charcoal mb-4">Hospital-Grade Imaging.<br />Without the Hospital Wait.</h2>
+          <p class="text-base text-slate font-sans leading-relaxed mb-4">
+            Our sonographers have 10+ years of diagnostic ultrasound experience working alongside Las Vegas physicians. Same equipment. Same training. Easier access and a shorter wait to get seen.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'ARDMS-certified sonographers',
+              'Board-certified physician reads every study',
+              'Results sent directly to your ordering doctor',
+              'Convenient location — Ackerman Plaza, Las Vegas',
+              'Tuesday–Saturday, 9am–4pm',
+            ].map((item) => (
+              <li class="flex items-center gap-2.5 text-sm font-sans text-charcoal">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="fade-in-up">
+          <Image
+            src={serviceResults}
+            alt="Physician reviewing ultrasound report at Signal View Ultrasound Las Vegas"
+            class="rounded-2xl w-full shadow-lg object-cover"
+            widths={[480, 768]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Common Questions</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Medicare Questions, Answered</h2>
+      </div>
+
+      <div class="space-y-4 fade-in-up">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-warmgray/40">
+            <h3 class="font-sans font-semibold text-charcoal text-sm mb-2">{faq.q}</h3>
+            <p class="text-sm text-slate font-sans leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-6xl">
+      <div class="text-center mb-10 fade-in-up">
+        <div class="flex items-center justify-center gap-1 mb-3">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+        <p class="overline text-gold mb-2">5.0 ★ on Google</p>
+        <h2 class="text-3xl font-serif text-charcoal">What Our Patients Say</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 fade-in-up">
+        {testimonials.map((t) => (
+          <div class="bg-ivory rounded-2xl p-6 border border-warmgray/40 shadow-sm flex flex-col">
+            <div class="flex gap-0.5 mb-3">
+              {Array.from({ length: t.rating }).map(() => (
+                <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-sm text-charcoal font-sans leading-relaxed mb-4 italic flex-1">&ldquo;{t.quote}&rdquo;</p>
+            <p class="text-xs font-sans font-semibold text-slate">— {t.name}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <a href={siteConfig.googleReviewsUrl} target="_blank" rel="noopener noreferrer"
+          class="inline-block text-sm font-sans font-medium text-navy hover:text-gold transition-colors">
+          See All Reviews on Google →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Have a Doctor's Order? We're Ready."
+    subtext="Fill out the form above and our team will call you within 1–2 business days to confirm your Medicare Part B coverage and get you scheduled."
+    ctaText="Submit Your Referral Form"
+    ctaHref="#form"
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": siteConfig.legalName,
+    "description": "Signal View Ultrasound accepts Medicare Part B for echocardiograms and vascular ultrasounds in Las Vegas, NV.",
+    "telephone": siteConfig.phone,
+    "openingHours": "Tu-Sa 09:00-16:00",
+    "paymentAccepted": "Medicare Part B",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": siteConfig.screeningLocation.address,
+      "addressLocality": siteConfig.screeningLocation.city,
+      "addressRegion": siteConfig.screeningLocation.state,
+      "postalCode": siteConfig.screeningLocation.zip
+    }
+  })} />
+</BaseLayout>
