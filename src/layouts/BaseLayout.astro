@@ -35,6 +35,20 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
       };
     </script>
 
+    <!-- UTM Capture: saves utm_source/medium/campaign + gclid to sessionStorage on first touch -->
+    <script is:inline>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        ['utm_source','utm_medium','utm_campaign','gclid'].forEach(function(key) {
+          var val = params.get(key);
+          if (val) sessionStorage.setItem(key, val);
+        });
+        window.intakeqUtmSource   = sessionStorage.getItem('utm_source')   || 'direct';
+        window.intakeqUtmMedium   = sessionStorage.getItem('utm_medium')   || 'none';
+        window.intakeqUtmCampaign = sessionStorage.getItem('utm_campaign') || 'none';
+      })();
+    </script>
+
     <!-- Meta Pixel -->
     <script is:inline>
       !function(f,b,e,v,n,t,s)
