@@ -93,23 +93,26 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
     <!-- Structured Data -->
     <slot name="schema" />
 
-    <!-- Healthy Bites popup: fade-in animation + mobile sizing -->
+    <!-- Healthy Bites popup: viewport centering + mobile sizing -->
     <style>
-      @keyframes svsPopupFade {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      .svs-popup-animate {
-        animation: svsPopupFade 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+      div:has(> #popup-hm0FFkIf2lsBdJV94YwG),
+      div:has(iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]) {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 999999 !important;
+        width: 560px !important;
+        max-width: 92vw !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
       }
       @media (max-width: 640px) {
         div:has(> #popup-hm0FFkIf2lsBdJV94YwG),
         div:has(iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]) {
           width: 92vw !important;
-          max-height: 72vh !important;
+          max-height: 75vh !important;
           overflow-y: auto !important;
-          border-radius: 12px !important;
-          margin: 0 auto !important;
         }
       }
     </style>
@@ -147,12 +150,10 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
           if (!node || node._svsAnimated) return;
           node._svsAnimated = true;
           node.style.opacity = '0';
-          node.style.transform = 'translateY(22px)';
-          node.style.transition = 'opacity 0.5s cubic-bezier(0.22,1,0.36,1), transform 0.5s cubic-bezier(0.22,1,0.36,1)';
+          node.style.transition = 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)';
           requestAnimationFrame(function() {
             requestAnimationFrame(function() {
               node.style.opacity = '1';
-              node.style.transform = 'translateY(0)';
             });
           });
         }
