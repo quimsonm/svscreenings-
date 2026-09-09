@@ -143,12 +143,25 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
     </script>
     <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a7a049da8b7a425b34a6f99" data-source="WEB_USER" is:inline></script>
 
-    <!-- Fade-in: watches for GHL popup container and applies smooth transition via inline styles -->
+    <!-- Healthy Bites popup: once per session + smooth fade-in -->
     <script is:inline>
       (function() {
+        var FORM_ID = 'hm0FFkIf2lsBdJV94YwG';
+        var SHOWN_KEY = 'svs-hb-shown';
+
+        // If already shown this session, remove the iframe before GHL processes it
+        if (sessionStorage.getItem(SHOWN_KEY)) {
+          document.addEventListener('DOMContentLoaded', function() {
+            var el = document.getElementById('popup-' + FORM_ID);
+            if (el) el.parentNode.removeChild(el);
+          });
+          return;
+        }
+
         function fadeIn(node) {
           if (!node || node._svsAnimated) return;
           node._svsAnimated = true;
+          sessionStorage.setItem(SHOWN_KEY, '1');
           node.style.opacity = '0';
           node.style.transition = 'opacity 0.5s cubic-bezier(0.22,1,0.36,1)';
           requestAnimationFrame(function() {
@@ -158,32 +171,24 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
           });
         }
 
-        function checkNode(node) {
-          if (node.nodeType !== 1) return;
-          if (
-            node.querySelector('#popup-hm0FFkIf2lsBdJV94YwG') ||
-            node.querySelector('iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]')
-          ) {
-            fadeIn(node);
-          }
-        }
-
+        // Only watch direct children of body — GHL appends its modal directly there
         var obs = new MutationObserver(function(mutations) {
           mutations.forEach(function(m) {
-            m.addedNodes.forEach(checkNode);
-            if (m.type === 'attributes' && m.target && m.target.querySelector) {
-              if (m.target.querySelector('#popup-hm0FFkIf2lsBdJV94YwG, iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]')) {
-                fadeIn(m.target);
+            m.addedNodes.forEach(function(node) {
+              if (node.nodeType !== 1) return;
+              if (
+                node.querySelector('#popup-' + FORM_ID) ||
+                node.querySelector('iframe[data-form-id="' + FORM_ID + '"]')
+              ) {
+                fadeIn(node);
+                obs.disconnect();
               }
-            }
+            });
           });
         });
 
-        obs.observe(document.documentElement, {
-          childList: true,
-          subtree: true,
-          attributes: true,
-          attributeFilter: ['style', 'class']
+        document.addEventListener('DOMContentLoaded', function() {
+          obs.observe(document.body, { childList: true, subtree: false });
         });
       })();
     </script>
