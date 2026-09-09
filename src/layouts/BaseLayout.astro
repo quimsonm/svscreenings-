@@ -92,6 +92,27 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
 
     <!-- Structured Data -->
     <slot name="schema" />
+
+    <!-- Healthy Bites popup: fade-in animation + mobile sizing -->
+    <style>
+      @keyframes svsPopupFade {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .svs-popup-animate {
+        animation: svsPopupFade 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+      }
+      @media (max-width: 640px) {
+        div:has(> #popup-hm0FFkIf2lsBdJV94YwG),
+        div:has(iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]) {
+          width: 92vw !important;
+          max-height: 72vh !important;
+          overflow-y: auto !important;
+          border-radius: 12px !important;
+          margin: 0 auto !important;
+        }
+      }
+    </style>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
@@ -118,6 +139,27 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
       });
     </script>
     <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a7a049da8b7a425b34a6f99" data-source="WEB_USER" is:inline></script>
+
+    <!-- Fade-in observer: applies animation class when GHL popup container appears -->
+    <script is:inline>
+      (function() {
+        var obs = new MutationObserver(function(mutations) {
+          mutations.forEach(function(m) {
+            m.addedNodes.forEach(function(node) {
+              if (node.nodeType !== 1) return;
+              var hasPopup = node.querySelector && (
+                node.querySelector('#popup-hm0FFkIf2lsBdJV94YwG') ||
+                node.querySelector('iframe[data-form-id="hm0FFkIf2lsBdJV94YwG"]')
+              );
+              if (hasPopup) node.classList.add('svs-popup-animate');
+            });
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          obs.observe(document.body, { childList: true, subtree: false });
+        });
+      })();
+    </script>
 
     <!-- Healthy Bites newsletter popup -->
     <iframe
