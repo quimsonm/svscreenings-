@@ -1,7 +1,7 @@
 ---
-title: "What Is a CIMT Test — and Why Is Everyone Talking About It?"
-description: "CIMT (carotid intima-media thickness) is one of the most important screenings most people have never heard of. Here's what it is, why it's trending, and where to get one in Las Vegas for $99."
-author: "Signal View Screening Team"
+title: "CIMT Test: What It Is, Cost & What to Expect | Las Vegas"
+description: "A CIMT test uses ultrasound to detect early stroke risk by measuring artery wall thickness. 15 min, no needles, no referral. Walk-in screenings in Las Vegas for $99."
+author: "Mike Quimson, RVT"
 pubDate: 2026-04-27
 image: "/images/blog/carotid-screening.jpg"
 ---
@@ -55,9 +55,9 @@ That's it. You're in and out.
 
 Most CIMT tests ordered through a doctor require a referral, an office visit, and weeks of waiting. We skip all of that.
 
-At **Signal View Screening Services**, we offer a **[$99 carotid / CIMT screening](/carotid)** — walk in, get screened one-on-one by an experienced sonographer, and have your results reviewed by a board-certified radiologist. No referral needed. No insurance hassle. HSA/FSA eligible.
+At **Signal View Ultrasound**, we offer a **[$99 standalone CIMT screening](/cimt)** — a focused 15-minute ultrasound of both carotid arteries, reviewed by a board-certified physician. No referral needed. No insurance hassle. HSA/FSA eligible.
 
-**[→ Book your $99 CIMT screening today](/carotid)**
+**[→ Book your $99 CIMT screening today](/cimt)**
 
 Or call/text us at **[702.843.6612](tel:+17028436612)**.
 
@@ -65,7 +65,7 @@ Or call/text us at **[702.843.6612](tel:+17028436612)**.
 
 ## Who We Are
 
-We're not a pop-up screening event and we're not an assembly line. Signal View Screening Services is a team of experienced sonographers with over a decade of clinical vascular and cardiac ultrasound experience — the same professionals who perform full diagnostic studies in hospitals and clinics across Las Vegas.
+We're not a pop-up screening event and we're not an assembly line. Signal View Ultrasound is a team of experienced sonographers with over a decade of clinical vascular and cardiac ultrasound experience — the same professionals who perform full diagnostic studies in hospitals and clinics across Las Vegas.
 
 We built this service because we believe preventive screenings shouldn't require a referral, a waiting list, or a $2,000 hospital bill. You deserve access to the same hospital-grade technology in a one-on-one setting where someone actually takes the time to explain what they're seeing.
 
@@ -73,7 +73,7 @@ We built this service because we believe preventive screenings shouldn't require
 
 Your health. Your peace of mind.
 
-**[→ Book your $99 CIMT screening](/carotid)** | **[Learn about all our packages](/pricing)**
+**[→ Book your $99 CIMT screening](/cimt)** | **[Learn about all our packages](/pricing)**
 
 ---
 

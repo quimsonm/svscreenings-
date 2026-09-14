@@ -1,0 +1,427 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { Image } from 'astro:assets';
+import carotidImg from '../assets/images/carotid-screening.jpg';
+import { siteConfig } from '../data/siteConfig';
+import { link } from '../utils/links';
+
+const trustPoints = [
+  { icon: 'clock', text: '15 Minutes' },
+  { icon: 'shield', text: 'No Referral Needed' },
+  { icon: 'heart', text: 'No Needles or Radiation' },
+  { icon: 'check', text: 'Results in 1 Business Day' },
+];
+
+const whyItMatters = [
+  {
+    stat: '80%',
+    heading: 'of strokes are preventable',
+    description: 'Most strokes are caused by a blockage that builds up silently over years. Measuring arterial thickening early changes outcomes.',
+  },
+  {
+    stat: '40s–50s',
+    heading: 'when changes begin',
+    description: 'CIMT thickening often begins decades before a stroke. A baseline measurement in your 40s or 50s gives you a reference point that matters later.',
+  },
+  {
+    stat: '15 min',
+    heading: 'is all it takes',
+    description: 'A focused, painless ultrasound of your neck arteries measures what you can\'t feel — before it becomes an emergency.',
+  },
+];
+
+const whoShouldGet = [
+  'Over 40 years old',
+  'Family history of stroke or heart disease',
+  'High blood pressure or high cholesterol',
+  'Diabetes or pre-diabetes',
+  'Smoker or former smoker',
+  'Simply want a baseline measurement',
+];
+
+const whatYouGet = [
+  'Focused 15-minute ultrasound of both carotid arteries',
+  'CIMT measurement — intima-media thickness of arterial walls',
+  'B-mode imaging to detect visible plaque buildup',
+  'One-on-one with an experienced, RVT-credentialed sonographer',
+  'Results reviewed by a board-certified physician',
+  'Report delivered within 1 business day',
+];
+---
+
+<BaseLayout
+  title="CIMT Test Las Vegas | $99 Carotid Intima-Media Thickness | Signal View Ultrasound"
+  description="$99 CIMT (carotid intima-media thickness) test in Las Vegas. Measures arterial wall thickness to detect early stroke risk. 15 minutes, no needles, no referral. Physician-reviewed results."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-dark/60 to-transparent"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gold/3 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+
+    <div class="container-site relative py-20 md:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Hero image -->
+        <div class="order-first lg:order-last fade-in-up">
+          <Image
+            src={carotidImg}
+            alt="Sonographer performing a CIMT carotid ultrasound screening on a patient"
+            class="rounded-2xl shadow-2xl shadow-black/30 w-full"
+            widths={[480, 768, 1024]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={85}
+          />
+        </div>
+
+        <div>
+          <div class="inline-block bg-gold/15 border border-gold/30 text-gold text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-4 fade-in-up">
+            Entry-Level Screening
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 fade-in-up">
+            Know Your Stroke Risk Early
+          </h1>
+          <p class="text-xl md:text-2xl text-white/80 font-sans mb-2 fade-in-up">
+            <span class="text-gold font-semibold">$99</span> · CIMT Test (Carotid Intima-Media Thickness)
+          </p>
+          <p class="text-lg text-white/60 font-sans mb-8 max-w-2xl fade-in-up">
+            A focused 15-minute ultrasound that measures the thickness of your carotid artery walls — one of the earliest detectable signs of cardiovascular risk. No doppler. No fasting. No referral.
+          </p>
+
+          <!-- IntakeQ booking widget -->
+          <div class="mb-8 fade-in-up" id="book">
+            <div id="intakeq" style="width: 100%;"></div>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up">
+            {trustPoints.map((point) => (
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                  {point.icon === 'clock' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+                    </svg>
+                  )}
+                  {point.icon === 'shield' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  )}
+                  {point.icon === 'heart' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                    </svg>
+                  )}
+                  {point.icon === 'check' && (
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <span class="text-sm text-white/70 font-sans">{point.text}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Location -->
+          <div class="mt-6 flex items-start gap-2.5 text-sm text-white/70 font-sans fade-in-up">
+            <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <p class="leading-relaxed">
+              {siteConfig.screeningLocation.address} · {siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}
+              <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light transition-colors whitespace-nowrap ml-1">— Get Directions →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section-padding bg-white">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="overline text-gold mb-3">Why It Matters</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Strokes Don't Warn You. This Screening Does.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {whyItMatters.map((item) => (
+          <div class="text-center p-6 rounded-2xl border border-warmgray/30 bg-ivory/50 fade-in-up">
+            <p class="text-5xl font-serif text-gold mb-2">{item.stat}</p>
+            <p class="text-lg font-sans font-semibold text-charcoal mb-2">{item.heading}</p>
+            <p class="text-sm text-slate font-sans leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Get -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div class="fade-in-up">
+          <p class="overline text-gold mb-3">What's Included</p>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-6">Your $99 CIMT Screening</h2>
+          <ul class="space-y-4">
+            {whatYouGet.map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-base font-sans text-charcoal">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-6 text-sm text-slate font-sans leading-relaxed bg-white border border-warmgray/30 rounded-xl p-4">
+            <strong class="text-charcoal">Note:</strong> The CIMT screening is a focused B-mode measurement study — not a full carotid doppler. If your doctor has ordered a diagnostic carotid duplex with flow velocities, see our <a href={link('/carotid')} class="text-navy hover:text-gold transition-colors font-medium">$250 Carotid Diagnostic</a> instead.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-warmgray/30 p-8 text-center fade-in-up">
+          <p class="overline text-gold mb-2">CIMT Screening</p>
+          <p class="text-6xl font-serif text-charcoal mb-1">$99</p>
+          <p class="text-sm text-slate font-sans mb-6">15-minute focused scan · Physician-interpreted</p>
+          <a
+            href="#book"
+            class="block w-full py-4 bg-gold hover:bg-gold-hover text-white font-sans font-semibold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl mb-4"
+          >
+            Book Your CIMT Test →
+          </a>
+          <p class="text-xs text-slate font-sans">HSA/FSA eligible · Same-week appointments available</p>
+          <div class="mt-4 pt-4 border-t border-warmgray/20">
+            <p class="text-xs text-slate font-sans">Or text us to book:</p>
+            <a
+              href={`sms:${siteConfig.phoneTel}`}
+              onclick="window.svs_track && window.svs_track('click_text', { link_location: 'cimt_pricing_card' })"
+              class="text-sm font-sans font-semibold text-navy hover:text-gold transition-colors"
+            >
+              {siteConfig.phone}
+            </a>
+          </div>
+          <div class="mt-4 pt-4 border-t border-warmgray/20 text-left">
+            <div class="flex items-start gap-2.5 text-sm font-sans text-charcoal">
+              <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-charcoal mb-0.5">In-Clinic Location</p>
+                <div>{siteConfig.screeningLocation.address}</div>
+                <div>{siteConfig.screeningLocation.city}, {siteConfig.screeningLocation.state} {siteConfig.screeningLocation.zip}</div>
+                <div class="text-slate text-xs mt-0.5">{siteConfig.screeningLocation.floor} · {siteConfig.screeningLocation.landmark}</div>
+                <a href={siteConfig.screeningLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-navy font-medium hover:text-gold transition-colors">Get Directions →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is CIMT -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade-in-up">
+        <div>
+          <p class="overline text-gold mb-3">The Science Behind It</p>
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal mb-4">What Is a CIMT Test?</h2>
+          <p class="text-base font-sans text-slate leading-relaxed mb-4">
+            CIMT stands for <strong class="text-charcoal">Carotid Intima-Media Thickness</strong> — a non-invasive ultrasound measurement of the inner lining of your carotid arteries. It's one of the earliest detectable markers of cardiovascular disease, often visible years before any symptoms appear.
+          </p>
+          <p class="text-base font-sans text-slate leading-relaxed">
+            Doctors, cardiologists, and longevity experts increasingly recommend CIMT as a baseline screening. It measures what blood work alone can't see: the actual condition of your artery walls. Two people with identical cholesterol numbers can have very different CIMT results.
+          </p>
+        </div>
+        <div class="bg-ivory rounded-2xl border border-warmgray/20 p-6">
+          <p class="text-sm font-sans font-semibold text-charcoal mb-4">CIMT screening can detect:</p>
+          <ul class="space-y-3">
+            {[
+              'Arterial wall thickening before plaque forms',
+              'Early-stage plaque buildup (atherosclerosis)',
+              'Elevated stroke and heart attack risk',
+              'Changes over time when used as a baseline',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm font-sans text-charcoal">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Get Screened -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Is This For You?</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">You Should Get Screened If...</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto fade-in-up">
+        {whoShouldGet.map((item) => (
+          <div class="flex items-center gap-3 p-4 rounded-xl bg-white border border-warmgray/20">
+            <div class="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="text-base font-sans text-charcoal">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Upgrade Section -->
+  <section class="section-padding bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="text-center mb-10 fade-in-up">
+        <p class="overline text-gold mb-3">Want More?</p>
+        <h2 class="text-3xl md:text-4xl font-serif text-charcoal">While You're Here</h2>
+        <p class="mt-3 text-slate font-sans max-w-xl mx-auto">Most clients add a more comprehensive study after seeing their CIMT results. Ask your sonographer about upgrading when you arrive — or book a full package from the start.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto fade-in-up">
+        <!-- Full Carotid Doppler -->
+        <div class="rounded-2xl border border-warmgray/30 bg-white p-6">
+          <p class="text-sm font-sans font-medium text-slate mb-1">Full Carotid Diagnostic</p>
+          <p class="text-3xl font-serif text-charcoal mb-1">$250</p>
+          <p class="text-xs text-slate font-sans mb-4">Includes CIMT + complete doppler with flow velocities</p>
+          <ul class="space-y-2 mb-6">
+            {['Full carotid duplex doppler', 'Blood flow velocity measurements', 'Plaque characterization', 'Stenosis evaluation'].map((item) => (
+              <li class="flex items-start gap-2 text-sm font-sans text-slate">
+                <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href={link('/carotid')} class="block w-full text-center py-2.5 rounded-lg font-sans font-semibold text-sm bg-navy hover:bg-navy/90 text-white transition-all duration-200">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Essential Wellness -->
+        <div class="rounded-2xl border border-gold shadow-lg shadow-gold/10 ring-1 ring-gold/30 bg-white p-6">
+          <div class="inline-block bg-gold text-white text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-2">Best Value</div>
+          <p class="text-sm font-sans font-medium text-slate mb-1">Essential Wellness Package</p>
+          <p class="text-3xl font-serif text-gold mb-1">$199</p>
+          <p class="text-xs text-slate font-sans mb-4">Three vascular studies in one visit</p>
+          <ul class="space-y-2 mb-6">
+            {['Carotid + CIMT', 'Aortic Aneurysm Screening', 'Leg Artery Screening with ABI'].map((item) => (
+              <li class="flex items-start gap-2 text-sm font-sans text-slate">
+                <svg class="w-4 h-4 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href={link('/essential')} class="block w-full text-center py-2.5 rounded-lg font-sans font-semibold text-sm bg-gold hover:bg-gold-hover text-white transition-all duration-200">
+            Learn More →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl text-center fade-in-up">
+      <div class="flex items-center justify-center gap-1 mb-3">
+        {[1,2,3,4,5].map(() => (
+          <svg class="w-7 h-7 text-gold" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-lg font-sans text-charcoal mb-2">5-Star Rated on Google</p>
+      <p class="text-slate font-sans text-sm mb-6">Real reviews from real patients in Las Vegas</p>
+      <a
+        href={siteConfig.googleReviewsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-sans font-medium text-navy hover:text-gold transition-colors"
+      >
+        Read Our Reviews →
+      </a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CTABanner
+    heading="Know Where You Stand for $99."
+    subtext="15-minute CIMT test · Physician-interpreted report in 1 business day · No referral needed · HSA/FSA eligible."
+    ctaText="Book Your CIMT Test — $99"
+    ctaHref="#book"
+  />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalTest",
+    "name": "CIMT Test — Carotid Intima-Media Thickness Screening",
+    "alternateName": "Carotid Intima-Media Thickness Test",
+    "description": "A focused 15-minute ultrasound screening that measures carotid artery wall thickness (CIMT) to detect early cardiovascular risk and stroke markers.",
+    "usesDevice": {
+      "@type": "MedicalDevice",
+      "name": "Ultrasound"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "99",
+      "priceCurrency": "USD",
+    },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.legalName,
+      "telephone": siteConfig.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.screeningLocation.address,
+        "addressLocality": siteConfig.screeningLocation.city,
+        "addressRegion": siteConfig.screeningLocation.state
+      }
+    }
+  })} />
+</BaseLayout>
+
+<script is:inline>
+  (function (c) {
+    window.intakeq = "6a34384c4c7aa072929fbe5f";
+    window.intakeqServiceId = "ef91eb53-6c56-4d00-ab32-81ade8f1156c";
+    var i = c.createElement("script");
+    i.type = "text/javascript";
+    i.async = true;
+    i.src = "https://intakeq.com/js/widget.min.js?1";
+    document.head.appendChild(i);
+  })(document);
+
+  // Fire Meta Pixel Purchase when IntakeQ booking completes
+  (function() {
+    window.addEventListener('message', function(e) {
+      if (!e.data) return;
+      var d = e.data;
+      if (
+        d.type === 'intakeqBookingCreated' ||
+        d.type === 'appointmentBooked' ||
+        d.action === 'appointmentCreated' ||
+        d.event === 'appointment_booked'
+      ) {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Purchase', { value: 99.00, currency: 'USD', content_name: 'CIMT Test' });
+        }
+      }
+    });
+  })();
+</script>

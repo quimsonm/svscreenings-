@@ -158,6 +158,42 @@ import { link } from '../utils/links';
     </div>
   </section>
 
+  <!-- CIMT Entry-Level -->
+  <section class="section-padding bg-ivory">
+    <div class="container-site max-w-3xl">
+      <div class="bg-white rounded-2xl border border-warmgray/40 p-8 md:p-10 fade-in-up">
+        <div class="flex flex-col md:flex-row md:items-center gap-8">
+          <div class="flex-1">
+            <div class="inline-block bg-navy/8 border border-navy/20 text-navy text-xs font-sans font-semibold tracking-wide px-3 py-1 rounded-full mb-3">Entry-Level Option</div>
+            <h3 class="text-2xl font-serif text-charcoal mb-1">CIMT Test — Carotid Intima-Media Thickness</h3>
+            <p class="text-sm text-slate font-sans mb-4">Not ready for a full package? Start here. A focused 15-minute ultrasound that measures arterial wall thickness — one of the earliest detectable markers of stroke risk.</p>
+            <ul class="space-y-2">
+              {['15-minute focused carotid ultrasound', 'CIMT measurement + visible plaque check', 'Physician-interpreted report in 1 business day', 'HSA/FSA eligible · No referral needed'].map((item) => (
+                <li class="flex items-center gap-2 text-sm font-sans text-slate">
+                  <svg class="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="md:text-right shrink-0">
+            <p class="text-5xl font-serif text-charcoal mb-1">$99</p>
+            <p class="text-sm text-slate font-sans mb-4">Standalone screening</p>
+            <a
+              href={link('/cimt')}
+              class="inline-block px-8 py-3 bg-navy hover:bg-navy/90 text-white font-sans font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+              onclick="window.svs_track && window.svs_track('cta_click', { link_text: 'Book CIMT Test', link_location: 'pricing_cimt' })"
+            >
+              Book CIMT Test →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Bundles -->
   <section id="bundles" class="section-padding bg-ivory">
     <div class="container-site">
