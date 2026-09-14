@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  trailingSlash: 'always',
   integrations: [tailwind(), sitemap()],
   site: 'https://svscreenings.com',
   base: '/',
