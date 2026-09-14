@@ -10,13 +10,13 @@ image: "/images/blog/carotid-screening.jpg"
 
 You've probably heard your doctor mention cholesterol, blood pressure, maybe even a calcium score. But there's a test gaining serious traction in preventive health circles that most people still haven't heard of.
 
-It's called a **CIMT test** — and it might be the most important 15 minutes you spend on your health this year.
+It's called a **CIMT test**. It might be the most important 15 minutes you spend on your health this year.
 
 ## CIMT in Plain English
 
 CIMT stands for **Carotid Intima-Media Thickness**. That sounds technical, but here's what it actually means:
 
-A sonographer places an ultrasound probe on your neck and measures the thickness of the inner lining of your carotid arteries — the two major blood vessels that carry blood from your heart to your brain.
+A sonographer places an ultrasound probe on your neck and measures the thickness of the inner lining of your carotid arteries, the two major blood vessels that carry blood from your heart to your brain.
 
 If that lining is thicker than it should be, it's an early sign that plaque is building up. And plaque buildup in your carotid arteries is the **#1 cause of stroke**.
 
@@ -55,9 +55,9 @@ That's it. You're in and out.
 
 Most CIMT tests ordered through a doctor require a referral, an office visit, and weeks of waiting. We skip all of that.
 
-At **Signal View Ultrasound**, we offer a **[$99 standalone CIMT screening](/cimt)** — a focused 15-minute ultrasound of both carotid arteries, reviewed by a board-certified physician. No referral needed. No insurance hassle. HSA/FSA eligible.
+At **Signal View Ultrasound**, we offer a **[$99 standalone CIMT screening](/cimt)**: a focused 15-minute ultrasound of both carotid arteries, reviewed by a board-certified physician. No referral needed. No insurance hassle. HSA/FSA eligible.
 
-**[→ Book your $99 CIMT screening today](/cimt)**
+**[Book your $99 CIMT screening today](/cimt)**
 
 Or call/text us at **[702.843.6612](tel:+17028436612)**.
 
@@ -65,15 +65,15 @@ Or call/text us at **[702.843.6612](tel:+17028436612)**.
 
 ## Who We Are
 
-We're not a pop-up screening event and we're not an assembly line. Signal View Ultrasound is a team of experienced sonographers with over a decade of clinical vascular and cardiac ultrasound experience — the same professionals who perform full diagnostic studies in hospitals and clinics across Las Vegas.
+We're not a pop-up screening event and we're not an assembly line. Signal View Ultrasound is a team of experienced sonographers with over a decade of clinical vascular and cardiac ultrasound experience, the same professionals who perform full diagnostic studies in hospitals and clinics across Las Vegas.
 
 We built this service because we believe preventive screenings shouldn't require a referral, a waiting list, or a $2,000 hospital bill. You deserve access to the same hospital-grade technology in a one-on-one setting where someone actually takes the time to explain what they're seeing.
 
-![The Signal View Screening Services team — Jackie, Priya, Remi, and Mike](/images/blog/Team.jpg)
+![The Signal View Screening Services team: Jackie, Priya, Remi, and Mike](/images/blog/Team.jpg)
 
 Your health. Your peace of mind.
 
-**[→ Book your $99 CIMT screening](/cimt)** | **[Learn about all our packages](/pricing)**
+**[Book your $99 CIMT screening](/cimt)** | **[Learn about all our packages](/pricing)**
 
 ---
 

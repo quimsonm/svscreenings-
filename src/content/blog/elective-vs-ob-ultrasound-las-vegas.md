@@ -1,6 +1,6 @@
 ---
-title: "OB Ultrasound vs. Elective Ultrasound in Las Vegas — What You're Actually Looking For"
-description: "You searched for 'OB ultrasound Las Vegas' and ended up here. Before you call, let me explain the difference — and why what you're actually looking for might already exist."
+title: "OB Ultrasound vs. Elective Ultrasound in Las Vegas: What You're Actually Looking For"
+description: "You searched for 'OB ultrasound Las Vegas' and ended up here. Before you call, let me explain the difference, and why what you're actually looking for might already exist."
 author: "Signal View Screening Team"
 pubDate: 2026-07-07
 ---
@@ -9,7 +9,7 @@ You searched for "OB ultrasound Las Vegas" and ended up here. I get it. And I wa
 
 **We are not your OB's office.** We don't do diagnostic prenatal care. We won't check your cervix or monitor your baby's growth the way your medical provider does.
 
-But here's the thing — that might not actually be what you're looking for.
+But here's the thing. That might not actually be what you're looking for.
 
 Because when I talk to the women who call us after finding this page, what they almost always describe isn't a clinical need. It's something simpler.
 
@@ -27,7 +27,7 @@ That's a completely different thing. And it has a completely different solution.
 
 **Do not skip it.**
 
-**An elective sneak peek ultrasound is something else entirely.** No clinical data. No measurements. No insurance. No referral needed. Just a dedicated session where a trained sonographer focuses on one thing — showing you your baby as clearly as possible. Their face. Their hands. The way they're already curling their little fingers. Their heartbeat, live, on screen.
+**An elective sneak peek ultrasound is something else entirely.** No clinical data. No measurements. No insurance. No referral needed. Just a dedicated session where a trained sonographer focuses on one thing: showing you your baby as clearly as possible. Their face. Their hands. The way they're already curling their little fingers. Their heartbeat, live, on screen.
 
 It's not a replacement for your OB care. It's the moment your OB care doesn't have time to give you.
 
@@ -39,13 +39,13 @@ Most of our patients already have their OB appointments on the calendar. They co
 
 ---
 
-Here in Las Vegas, we offer sneak peek sessions at our clinic in Ackerman Plaza — Tuesday through Saturday, 9am–4pm. Sessions start at $79 and include 2D/3D/4D & HD imaging, your baby's live heartbeat, and four printed photos to take home. Gender determination is available from 14 weeks if you want to find out — or confirm what you already suspect.
+Here in Las Vegas, we offer sneak peek sessions at our clinic in Ackerman Plaza, Tuesday through Saturday, 9am–4pm. Sessions start at $79 and include 2D/3D/4D & HD imaging, your baby's live heartbeat, and four printed photos to take home. Gender determination is available from 14 weeks if you want to find out, or confirm what you already suspect.
 
 No referral. No insurance. No paperwork.
 
 Bring whoever you want in the room with you. And if you want your session clips on a USB stick to share or keep? We have that too.
 
-Any trimester welcome — 8 weeks through 40.
+Any trimester welcome: 8 weeks through 40.
 
 If you've been waiting for a sign that it's okay to just go see your baby early, **this is it.**
 
@@ -53,4 +53,4 @@ If you've been waiting for a sign that it's okay to just go see your baby early,
 
 *This is an elective keepsake session, not a diagnostic medical exam. It does not replace your OB's clinical scans or prenatal care. For any medical concerns during your pregnancy, always follow your physician's guidance.*
 
-*Ready to see your baby? [Book your sneak peek →](/sneakpeek)*
+*Ready to see your baby? [Book your sneak peek](/sneakpeek)*
