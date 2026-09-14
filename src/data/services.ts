@@ -15,7 +15,7 @@ export const services: Service[] = [
   {
     slug: 'carotid-artery',
     title: 'Carotid Artery Screening',
-    shortTitle: 'Carotid Artery',
+    shortTitle: 'Carotid / CIMT',
     icon: 'artery',
     shortDescription: 'Ultrasound of the carotid arteries in the neck to evaluate for plaque buildup and blockages — the #1 screening for stroke prevention.',
     whatItIs: 'A non-invasive ultrasound of the carotid arteries in your neck — the brain\'s main blood supply.',
@@ -28,7 +28,7 @@ export const services: Service[] = [
       'Diabetics',
     ],
     whatToExpect: 'A painless, non-invasive scan that takes approximately 15–20 minutes. A small probe is gently placed on your neck while our sonographer captures detailed images of blood flow through your carotid arteries.',
-    includedIn: ['Essential Wellness', 'Executive Heart', 'The Gold Standard'],
+    includedIn: ['CIMT Test', 'Essential Wellness', 'Executive Heart', 'The Gold Standard'],
   },
   {
     slug: 'aorta-aneurysm',

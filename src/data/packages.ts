@@ -15,6 +15,24 @@ export interface Package {
 
 export const packages: Package[] = [
   {
+    slug: 'cimt-test',
+    name: 'CIMT Test',
+    price: 99,
+    badge: 'Entry-Level',
+    highlighted: false,
+    description: 'A focused carotid intima-media thickness measurement — the earliest detectable marker of stroke risk. Perfect starting point.',
+    bestFor: 'First-time screening or stroke risk baseline',
+    duration: '~15 minutes',
+    location: 'At our clinic',
+    features: [
+      'Carotid / CIMT Ultrasound',
+      'Intima-media thickness measurement',
+      'B-mode plaque detection',
+      'Physician-interpreted report — delivered within 1 business day',
+    ],
+    bookingUrl: '/cimt',
+  },
+  {
     slug: 'essential-wellness',
     name: 'Essential Wellness',
     price: 199,
