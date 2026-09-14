@@ -31,7 +31,7 @@ Every clinic is different, but here's what cash-pay ultrasound pricing generally
 - **Abdominal ultrasound** (liver, gallbladder, kidneys, pancreas): $250 to $325
 - **Pregnancy/OB scans:** varies by gestational age and number of views
 
-We keep our full, flat pricing on our [pricing page](/pricing/), because guessing games aren't fair to you.
+We keep our full, flat pricing on our [pricing page](/diagnostics/), because guessing games aren't fair to you.
 
 ## What You're Actually Paying For
 
@@ -51,7 +51,7 @@ Every study has one flat, upfront price. No hidden fees. No "we'll bill you late
 
 And if the full amount is tight right now? We offer flexible payment options through CareCredit, with 6 or 12 months financing, so cost is never the reason you put off a scan you need. Health doesn't wait for payday, and neither should you.
 
-**[See current pricing and options](/pricing/)**
+**[See current pricing and options](/diagnostics/)**
 
 ## Frequently Asked Questions
 
@@ -59,7 +59,7 @@ And if the full amount is tight right now? We offer flexible payment options thr
 No. You can book as a self-pay patient. No referral, no insurance card, no waiting on approval.
 
 **How much is an ultrasound without insurance in Las Vegas?**
-Most diagnostic ultrasounds run $250 to $325. Echocardiograms are typically $350 to $450. Every scan at Signal View has a posted flat price. See our [pricing page](/pricing/).
+Most diagnostic ultrasounds run $250 to $325. Echocardiograms are typically $350 to $450. Every scan at Signal View has a posted flat price. See our [pricing page](/diagnostics/).
 
 **Is a self-pay ultrasound the same quality as an insurance-billed one?**
 Yes. Same machine. Same trained sonographer. Same physician review. The only thing that changes is how you pay, not what you get.
@@ -76,7 +76,7 @@ You didn't come here for a runaround. You came here for a number, a plan, and so
 
 That's what cash pay is supposed to feel like.
 
-**[Book your scan today](/pricing/)** | **[702.843.6612](tel:+17028436612)**
+**[Book your scan today](/diagnostics/)** | **[702.843.6612](tel:+17028436612)**
 
 ---
 
