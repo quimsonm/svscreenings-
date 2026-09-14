@@ -47,7 +47,7 @@ You don't need symptoms to benefit from this screening. It's especially valuable
 
 You lie down on an exam table. The sonographer applies gel to your neck and uses an ultrasound probe to capture images of both carotid arteries. You'll see the images in real time on the screen next to you.
 
-The sonographer measures the intima-media thickness and checks for any visible plaque. The images are then reviewed by a board-certified radiologist, and you'll receive your results within one business day.
+The sonographer measures the intima-media thickness and checks for any visible plaque. The images are then reviewed by a board-certified radiologist, and you'll receive your results within 2 business days.
 
 That's it. You're in and out.
 

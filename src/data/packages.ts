@@ -28,7 +28,7 @@ export const packages: Package[] = [
       'Carotid / CIMT Ultrasound',
       'Intima-media thickness measurement',
       'B-mode plaque detection',
-      'Physician-interpreted report — delivered within 1 business day',
+      'Physician-interpreted report — delivered within 2 business days',
     ],
     bookingUrl: '/cimt',
   },
