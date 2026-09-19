@@ -214,6 +214,12 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, 'https://svscreeni
       title="Healthy Bites"
       data-modal-height="500"
     ></iframe>
-    <script src="https://link.msgsndr.com/js/form_embed.js" is:inline></script>
+    <script is:inline>
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://link.msgsndr.com/js/form_embed.js';
+        document.body.appendChild(s);
+      }, 1500);
+    </script>
   </body>
 </html>
